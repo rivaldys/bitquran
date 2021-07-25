@@ -1,0 +1,41 @@
+.menubar-wrapper
+{
+    height: 65px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menubar-wrapper.scrolled
+{
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+    transition: 300ms linear;
+}
+
+.menubar
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menubar a
+{
+    color: #757575;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    padding: 5px 20px;
+    transition: 0.3s;
+}
+
+.menubar a:hover
+{
+    color: #039BE5;
+    cursor: pointer;
+}

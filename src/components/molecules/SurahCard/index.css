@@ -1,0 +1,17 @@
+.surah-card
+{
+    height: 75px;
+    padding: 8px;
+    border-radius: 7px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.surah-card:hover
+{
+    border: 1px solid #4DB6AC;
+    cursor: pointer;
+}

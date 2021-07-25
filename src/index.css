@@ -1,0 +1,100 @@
+/* 
+ * Qur'an Web
+ * Copyright 2021 · Ahmad Rivaldy S
+ */
+
+
+@import url('./assets/css/font-config.css');
+
+/* General */
+*
+{
+    color: #555;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    padding: 0;
+    margin: 0;
+}
+
+:root
+{
+    --content-width: 1200px;
+}
+
+::-webkit-scrollbar
+{
+    width: 14px;
+}
+
+::-webkit-scrollbar-track
+{
+    border-radius: 7px;
+    background-color: rgba(204, 204, 204, 0.5);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgba(204, 204, 204, 0.9);
+    border-radius: 7px;
+}
+
+body
+{
+    background-color: #f8f8f8;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+b
+{
+    font-weight: 600;
+}
+
+.content
+{
+    width: var(--content-width);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.surah-list-wrapper
+{
+    margin-top: 30px;
+}
+
+.header-background
+{
+    width: calc(var(--content-width) - 30px);
+    background: linear-gradient(150deg, #C5E1A5, #009688);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 95px;
+}
+
+.header-illustration
+{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    background-size: 30%;
+    background-image: url('./assets/images/al-quran.png');
+    background-repeat: no-repeat;
+    background-position: bottom -50px right -20px;
+    border-radius: 10px;
+}
+
+.header-illustration h1
+{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+}
