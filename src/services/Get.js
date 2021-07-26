@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://equran.id/api'
+const baseURL = 'https://api.quran.sutanlab.id'
 
 const Get = (path) =>
 {

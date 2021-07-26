@@ -20,7 +20,7 @@
 
 :root
 {
-    --content-width: 1200px;
+    --content-width: 1024px;
 }
 
 ::-webkit-scrollbar
@@ -64,9 +64,14 @@ b
     box-sizing: border-box;
 }
 
-.surah-list-wrapper
+.content-bg
 {
-    margin-top: 30px;
+    width: calc(var(--content-width) - 30px);
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(234, 234, 234, 0.8);
 }
 
 .header-background
@@ -76,6 +81,7 @@ b
     border-radius: 10px;
     margin: auto;
     margin-top: 95px;
+    margin-bottom: 30px;
 }
 
 .header-illustration
@@ -83,7 +89,6 @@ b
     height: 250px;
     display: flex;
     align-items: center;
-    padding-left: 50px;
     background-size: 30%;
     background-image: url('./assets/images/al-quran.png');
     background-repeat: no-repeat;
@@ -91,10 +96,33 @@ b
     border-radius: 10px;
 }
 
-.header-illustration h1
+.header-text
+{
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.header-text > *
 {
     color: #fff;
+}
+
+.header-text h1
+{
     font-size: 36px;
     font-weight: 600;
     line-height: 43px;
+}
+
+.header-text hr
+{
+    border: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.header-text p
+{
+    font-size: 20px;
+    line-height: 27px;
 }

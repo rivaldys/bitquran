@@ -1,10 +1,10 @@
 import Get from './Get'
 
 // Get All Surahs
-const getSurahList = () => Get('surat')
+const getSurahList = () => Get('surah')
 
 // Get Specific Surah
-const getSurah = (id) => Get(`surat/${id}`)
+const getSurah = (id) => Get(`surah/${id}`)
 
 const QuranAPI = 
 {

@@ -1,0 +1,58 @@
+.ayah-card
+{
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.ayah-card:last-child
+{
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.ayah-toolbar
+{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #E0F2F1;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.ayah-number
+{
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #80CBC4;
+}
+
+.ayah-ar
+{
+    color: #757575;
+    font-family: 'Saleem Quran', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 48px;
+    text-align: right;
+}
+
+.ayah-idn
+{
+    color: #757575;
+    font-style: italic;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

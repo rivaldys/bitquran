@@ -5,6 +5,21 @@
 
 
 /* 
+ * --- Font Family: Saleem Quran
+ * --- Font Styles: Regular
+ */
+
+@font-face
+{
+    font-family: 'Saleem Quran';
+    src: url('../fonts/saleem-quran/saleem-quran.woff2') format('woff2'),
+         url('../fonts/saleem-quran/saleem-quran.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 
  * --- Font Family: Rubik
  * --- Font Styles: Light 300, Light 300 Italic, Regular 400, Regular 400 Italic, Medium 500, Medium 500 Italic, Semi-bold 600, Semi-bold 600 Italic, Bold 700, Bold 700 Italic, Extra-bold 800, Extra-bold 800 Italic, Black 900, Black 900 Italic
  */

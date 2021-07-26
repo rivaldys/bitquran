@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { AyahCard } from '../../components'
 import QuranAPI from '../../services'
 
 export class Surah extends Component
@@ -14,9 +15,9 @@ export class Surah extends Component
 
         QuranAPI.getSurah(id).then(result =>
         {
-            // console.log('Ini suratnya: ', result)
+            // console.log('Ini suratnya: ', result.data)
             this.setState({
-                ayahList: result.ayat
+                ayahList: result.data.verses
             })
         })
     }
@@ -29,14 +30,24 @@ export class Surah extends Component
     render()
     {
         return (
-            <div className="content surah-list-wrapper">
-                {
-                    this.state.ayahList.map(ayah =>
+            <>
+                <div className="header-background">
+                    <div className="header-illustration">
+                        <div className="header-text">
+                            <h1>Daftar Surat dalam Al-Qur'an</h1>
+                            <p>Nama Surat</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="content content-bg">
                     {
-                        return <p key={ayah.id}>{ayah.ar}</p>
-                    })
-                }
-            </div>
+                        this.state.ayahList.map(ayah =>
+                        {
+                            return <AyahCard key={ayah.number.inSurah} ayah={ayah} />
+                        })
+                    }
+                </div>
+            </>
         )
     }
 }

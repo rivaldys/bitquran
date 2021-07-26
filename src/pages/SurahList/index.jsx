@@ -13,8 +13,9 @@ class SurahList extends Component
     {
         QuranAPI.getSurahList().then(result =>
         {
+            // console.log('Data: ', result.data)
             this.setState({
-                surahList: result
+                surahList: result.data
             })
         })
     }
@@ -32,21 +33,24 @@ class SurahList extends Component
     render()
     {
         return (
-            <div>
+            <>
                 <div className="header-background">
                     <div className="header-illustration">
-                        <h1>Daftar Surat dalam Al-Qur'an</h1>
+                        <div className="header-text">
+                            <h1>Daftar Surat dalam Al-Qur'an</h1>
+                            <p>114 Surat &middot; Makkiyah &middot; Madaniyah</p>
+                        </div>
                     </div>
                 </div>
                 <div className="content surah-list-wrapper">
                     {
                         this.state.surahList.map(surah =>
                         {
-                            return <SurahCard key={surah.nomor} data={surah} detail={this.handleDetail} />
+                            return <SurahCard key={surah.number} data={surah} detail={this.handleDetail} />
                         })
                     }
                 </div>
-            </div>
+            </>
         )
     }
 }
