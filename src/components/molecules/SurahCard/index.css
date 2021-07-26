@@ -18,6 +18,11 @@
     transition: 0.5s;
 }
 
+.surah-card:last-child
+{
+    margin-bottom: 0;
+}
+
 .surah-card:hover
 {
     background-position: -100% 0;

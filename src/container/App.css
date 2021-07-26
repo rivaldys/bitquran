@@ -36,6 +36,80 @@
 
 .menubar a:hover
 {
-    color: #039BE5;
+    color: #4CAF50;
     cursor: pointer;
+}
+
+.goto-top
+{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(150deg, #C5E1A5, #009688);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.goto-top.show
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.goto-top:hover
+{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.goto-top svg
+{
+    width: 18px;
+    stroke: #fff;
+}
+
+.footer-wrapper
+{
+    height: 75px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-wrapper p,
+.footer-wrapper a
+{
+    color: #999;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.footer-wrapper a
+{
+    transition: 0.3s;
+}
+
+.footer-wrapper a:hover
+{
+    color: #4CAF50;
+}
+
+.footer-wrapper svg
+{
+    fill: #999;
+    width: 14px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
 }

@@ -3,7 +3,6 @@ import './index.css'
 
 const SurahCard = (props) =>
 {
-    console.log(props)
     return (
         <div className="surah-card" onClick={() => props.detail(props.data.number)}>
             <div className="surah-number-wrapper">
