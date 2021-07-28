@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 // Pages
-import { About, Surah, SurahList } from '../pages'
+import { About, Surah, SurahList, Tafsir } from '../pages'
 
 // Style
 import './App.css'
@@ -70,7 +70,7 @@ class App extends Component
                 <>
                     {/* Menubar */}
                     <div className="menubar-wrapper">
-                        <div className="content menubar">
+                        <div className="menubar">
                             <Link to="/">Beranda</Link>
                             <Link to="/tentang">Tentang</Link>
                         </div>
@@ -79,7 +79,8 @@ class App extends Component
                     {/* Route Mapping */}
                     <Route path="/" exact component={SurahList} />
                     <Route path="/surat" exact component={SurahList} />
-                    <Route path="/surat/:id" component={Surah} />
+                    <Route path="/surat/:id" exact component={Surah} />
+                    <Route path="/surat/:id/tafsir/:tafsirId" component={Tafsir} />
                     <Route path="/tentang" component={About} />
 
                     {/* Go to Top Button */}

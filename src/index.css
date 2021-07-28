@@ -58,6 +58,7 @@ b
 .content
 {
     width: var(--content-width);
+    min-height: calc(100vh - 200px);
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
@@ -67,11 +68,18 @@ b
 .content-bg
 {
     width: calc(var(--content-width) - 30px);
-    background-color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    min-height: calc(100vh - 200px);
+    padding: 15px;
+    margin: auto;
     border-radius: 10px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(234, 234, 234, 0.8);
+    box-sizing: border-box;
+}
+
+.content-margin
+{
+    margin-top: 95px;
 }
 
 .header-background

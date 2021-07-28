@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 
-export class About extends Component {
-    render() {
+class About extends Component
+{
+    render()
+    {
         return (
-            <div>
-                
+            <div className="content-bg content-margin">
+                Halaman Tentang
             </div>
         )
     }

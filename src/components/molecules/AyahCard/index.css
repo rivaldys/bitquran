@@ -1,3 +1,8 @@
+:root
+{
+    --toolbar-icon: #80CBC4;
+}
+
 .ayah-card
 {
     width: 100%;
@@ -18,6 +23,9 @@
 
 .ayah-toolbar
 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     border-radius: 5px;
     background-color: #E0F2F1;
@@ -36,7 +44,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #80CBC4;
+    background-color: var(--toolbar-icon);
 }
 
 .ayah-ar
@@ -57,35 +65,46 @@
     padding-bottom: 15px;
 }
 
-.audio-wrapper
+.action-wrapper
 {
     display: flex;
     align-items: center;
 }
 
-.audio-button
+.audio-button,
+.tafsir-button
 {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    border-radius: 50%;
-    fill: salmon;
-    padding: 10px;
+    background-color: transparent;
     box-sizing: border-box;
-    margin-top: 30px;
-    margin-right: 15px;
     transition: 0.5s;
 }
 
-.audio-button:hover
+.audio-button
 {
-    cursor: pointer;
+    fill: var(--toolbar-icon);
+    margin-right: 5px;
 }
 
-.audio-button:focus
+.audio-button svg
+{
+    height: 18px;
+}
+
+.audio-button:hover,
+.tafsir-button:hover
+{
+    cursor: pointer;
+    opacity: 0.55;
+}
+
+.audio-button:focus,
+.tafsir-button:focus
 {
     outline: none;
 }
@@ -93,4 +112,15 @@
 .fa-pause
 {
     display: none;
+}
+
+.tafsir-button
+{
+    fill: none;
+    stroke: var(--toolbar-icon);
+}
+
+.tafsir-button svg
+{
+    height: 22px;
 }

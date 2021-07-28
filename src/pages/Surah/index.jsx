@@ -29,7 +29,7 @@ class Surah extends Component
         let id = this.props.match.params.id
 
         QuranAPI.getSurah(id).then(result =>
-        {            
+        {
             let data              = result.data
             let preBismillah      = data.preBismillah == null ? '' : data.preBismillah.text.arab
             let preBismillahAudio = data.preBismillah == null ? '' : data.preBismillah.audio.primary
@@ -100,6 +100,16 @@ class Surah extends Component
     {
         this.getSurah()
     }
+
+    componentDidUpdate()
+    {
+        document.title = `${this.state.name.transliteration} – Quran Web App`
+    }
+
+    componentWillUnmount()
+    {
+        document.title = 'Quran Web App'
+    }
     
     render()
     {
@@ -134,7 +144,7 @@ class Surah extends Component
                         }
                     </div>
                 </div>
-                <div className="content content-bg">
+                <div className="content-bg">
                     {
                         surah.ayahList.map(ayah =>
                         {
