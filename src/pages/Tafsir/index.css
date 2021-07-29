@@ -1,0 +1,55 @@
+.tafsir-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 25px;
+}
+
+.tafsir-title
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tafsir-title h3,
+.tafsir-title p
+{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.tafsir-back,
+.tafsir-next
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E0F2F1;
+    fill: none;
+    stroke: #80CBC4;
+    box-sizing: border-box;
+}
+
+.tafsir-back svg,
+.tafsir-next svg
+{
+    width: 25px;
+}
+
+.tafsir-card
+{
+    padding: 15px;
+    line-height: 26px;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+}

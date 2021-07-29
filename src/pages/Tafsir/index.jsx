@@ -1,12 +1,37 @@
 import React, { Component } from 'react'
-// import './index.css'
+import './index.css'
 import '../../components/molecules/AyahCard/index.css'
 
 class Tafsir extends Component
 {
+    state =
+    {
+        data: [],
+        prevPage: 0,
+        nextPage: 0
+    }
+
+    componentDidMount()
+    {
+        const dataSet = this.props.location.state
+
+        this.setState({
+            data: dataSet,
+            nextPage: dataSet.ayah.number.inSurah + 1
+        })
+    }
+
+    componentDidUpdate()
+    {
+        console.log(this.state)
+    }
+
     render()
     {
-        const data = this.props.location.state
+        const history = this.props.history
+        const data    = this.props.location.state
+        // const data    = this.state.data
+
         const surahNumber = data.surahNumber
         const ayahNumber  = data.ayah.number.inSurah
         const srcAudio    = data.ayah.audio.primary
@@ -17,7 +42,24 @@ class Tafsir extends Component
 
         return (
             <div className="content-bg content-margin">
-                <p>Halaman Tafsir</p>
+                <div className="tafsir-header">
+                    <button className="tafsir-back" onClick={() => this.history.goBack()}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M328 112L184 256l144 144"/>
+                        </svg>
+                    </button>
+                    <div className="tafsir-title">
+                        <p>Tafsir</p>
+                        <h3>{data.surahName}</h3>
+                        <span>Ayat {ayahNumber}</span>
+                    </div>
+                    <button className="tafsir-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M184 112l144 144-144 144"/>
+                        </svg>
+                    </button>
+                </div>
+
                 <div className="ayah-card">
                     <div className="ayah-toolbar">
                         <div className="ayah-number">{ayahNumber}</div>
@@ -35,8 +77,11 @@ class Tafsir extends Component
                         </div>
                     </div>
 
-                    <p className="ayah-ar"></p>
-                    <p className="ayah-idn"></p>
+                    <p className="ayah-ar">{data.ayah.text.arab}</p>
+                    <p className="ayah-idn">{data.ayah.translation.id}</p>
+                </div>
+                <div className="tafsir-card">
+                    {data.ayah.tafsir.id.long}
                 </div>
             </div>
         )

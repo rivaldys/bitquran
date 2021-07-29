@@ -115,6 +115,8 @@ class Surah extends Component
     {
         const surah = this.state
 
+        console.log(surah)
+
         return (
             <>
                 <div className="surah-header-background">
@@ -148,7 +150,7 @@ class Surah extends Component
                     {
                         surah.ayahList.map(ayah =>
                         {
-                            return <AyahCard key={ayah.number.inSurah} surahNumber={surah.surahNumber} ayah={ayah} getPlay={this.playAudio} />
+                            return <AyahCard key={ayah.number.inSurah} surahName={surah.name.transliteration} surahNumber={surah.surahNumber} numberOfAyahs={surah.numberOfAyahs} ayah={ayah} getPlay={this.playAudio} />
                         })
                     }
                 </div>

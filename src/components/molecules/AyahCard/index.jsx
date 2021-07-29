@@ -21,11 +21,15 @@ const AyahCard = (props) =>
             pathname: `${pathName}/tafsir/${ayahNumber}`,
             state:
             {
+                surahName: props.surahName,
                 surahNumber,
+                numberOfAyahs: props.numberOfAyahs,
                 ayah: props.ayah
             }
         })
     }
+
+    console.log(props)
 
     return (
         <div className="ayah-card">
