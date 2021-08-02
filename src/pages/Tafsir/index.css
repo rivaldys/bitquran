@@ -5,7 +5,7 @@
     align-items: center;
     padding-bottom: 15px;
     border-bottom: 1px solid #dedede;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .tafsir-title
@@ -65,6 +65,21 @@
 .tafsir-next svg
 {
     width: 25px;
+}
+
+.tafsir-link
+{
+    color: #80CBC4;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.tafsir-link:hover
+{
+    text-decoration: underline;
 }
 
 .tafsir-card

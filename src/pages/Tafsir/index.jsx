@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { AyahCard } from '../../components'
 import QuranAPI from '../../services'
 import './index.css'
-import '../../components/molecules/AyahCard/index.css'
 
 class Tafsir extends Component
 {
@@ -28,10 +29,10 @@ class Tafsir extends Component
         }
     }
 
-    getTafsir = () =>
+    getTafsir = (surahNumber, page) =>
     {
-        let id     = this.props.match.params.id
-        let ayahId = this.props.match.params.tafsirId
+        let id     = surahNumber == null ? this.props.match.params.id : surahNumber
+        let ayahId = page == null ? this.props.match.params.tafsirId : page
 
         QuranAPI.getAyah(id, ayahId).then(result =>
         {
@@ -64,6 +65,7 @@ class Tafsir extends Component
     goToPrevOrNext = (surahNumber, page) =>
     {
         this.props.history.push(`/surat/${surahNumber}/tafsir/${page}`)
+        this.getTafsir(surahNumber, page)
     }
 
     playAudio = (getAudio, getButtonDataPlay, getPlayIcon, getPauseIcon) =>
@@ -110,12 +112,21 @@ class Tafsir extends Component
 
     componentDidMount()
     {
-        this.getTafsir()
+        const surahNumber = null
+        const page = null
+
+        this.getTafsir(surahNumber, page)
     }
 
     componentDidUpdate()
     {
-        // console.log(this.props)
+        document.title = `Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number} – Quran Web App`
+        // console.log(this.state)
+    }
+
+    componentWillUnmount()
+    {
+        document.title = 'Quran Web App'
     }
 
     render()
@@ -124,13 +135,9 @@ class Tafsir extends Component
         const ayah  = this.state.ayah
         const page  = this.state.page
 
-        const audioId   = `surah-${surah.number}-audio-${ayah.number}`
-        const buttonId  = `audio-button-${surah.number}-${ayah.number}`
-        const playIcon  = `play-${surah.number}-${ayah.number}`
-        const pauseIcon = `pause-${surah.number}-${ayah.number}`
-
         return (
             <div className="content-bg content-margin">
+                {/* Tafsir Header */}
                 <div className="tafsir-header">
                     {
                         page.prev !== null 
@@ -169,29 +176,23 @@ class Tafsir extends Component
                             </svg>
                         </button>
                     }
-                    
                 </div>
 
-                <div className="ayah-card">
-                    <div className="ayah-toolbar">
-                        <div className="ayah-number">{ayah.number}</div>
-                        
-                        <div className="action-wrapper">
-                            <audio id={audioId} src={ayah.audio} />
-                            <button id={buttonId} className="audio-button" title="Audio Ayat/Murottal" onClick={() => this.playAudio(audioId, buttonId, playIcon, pauseIcon)} data-play="false">
-                                <svg aria-hidden="true" id={playIcon} focusable="false" data-prefix="fas" data-icon="play" className="svg-inline--fa fa-play fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                                </svg>
-                                <svg aria-hidden="true" id={pauseIcon} focusable="false" data-prefix="fas" data-icon="pause" className="svg-inline--fa fa-pause fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                <Link to={`/surat/${surah.number}`} className="tafsir-link">&larr; Kembali ke Surat</Link>
 
-                    <p className="ayah-ar">{ayah.text}</p>
-                    <p className="ayah-idn">{ayah.translation}</p>
-                </div>
+                {/* Ayah */}
+                <AyahCard
+                    key={ayah.number}
+                    surahNumber={surah.number}
+                    ayahNumber={ayah.number}
+                    ayahAudio={ayah.audio}
+                    ayah={ayah.text}
+                    ayahTranslation={ayah.translation}
+                    getPlay={this.playAudio}
+                    isSurahPage="no"
+                />
+                
+                {/* Tafsir */}
                 <div className="tafsir-card">
                     {ayah.tafsir}
                 </div>

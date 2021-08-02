@@ -150,6 +150,7 @@ class Surah extends Component
                                         ayah={ayah.text.arab}
                                         ayahTranslation={ayah.translation.id}
                                         getPlay={this.playAudio}
+                                        isSurahPage="yes"
                                     />
                         })
                     }
