@@ -37,6 +37,28 @@
     fill: none;
     stroke: #80CBC4;
     box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.tafsir-back:hover,
+.tafsir-next:hover
+{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.tafsir-back.disabled,
+.tafsir-next.disabled
+{
+    background-color: #eaeaea;
+    stroke: #ccc;
+}
+
+.tafsir-back.disabled:hover,
+.tafsir-next.disabled:hover
+{
+    cursor: unset;
+    opacity: unset;
 }
 
 .tafsir-back svg,

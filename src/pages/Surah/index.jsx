@@ -144,14 +144,11 @@ class Surah extends Component
                         {
                             return <AyahCard
                                         key={ayah.number.inSurah}
-                                        surahName={surah.name}
                                         surahNumber={surah.number}
-                                        numberOfAyahs={surah.numberOfAyahs}
                                         ayahNumber={ayah.number.inSurah}
                                         ayahAudio={ayah.audio.primary}
                                         ayah={ayah.text.arab}
                                         ayahTranslation={ayah.translation.id}
-                                        ayahTest={ayah}
                                         getPlay={this.playAudio}
                                     />
                         })

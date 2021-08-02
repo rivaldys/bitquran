@@ -7,7 +7,7 @@ const AyahCard = (props) =>
     const history  = useHistory()
     const pathName = history.location.pathname
 
-    const { surahName, surahNumber, numberOfAyahs, ayahNumber, ayahAudio, ayah, ayahTranslation, getPlay } = props
+    const { surahNumber, ayahNumber, ayahAudio, ayah, ayahTranslation, getPlay } = props
 
     const audioId   = `surah-${surahNumber}-audio-${ayahNumber}`
     const buttonId  = `audio-button-${surahNumber}-${ayahNumber}`
@@ -16,19 +16,8 @@ const AyahCard = (props) =>
 
     const goToTafsir = () =>
     {
-        history.push({
-            pathname: `${pathName}/tafsir/${ayahNumber}`,
-            state:
-            {
-                surahName,
-                surahNumber,
-                numberOfAyahs,
-                ayah: props.ayahTest
-            }
-        })
+        history.push(`${pathName}/tafsir/${ayahNumber}`)
     }
-
-    // console.log(props)
 
     return (
         <div className="ayah-card">
