@@ -3,8 +3,10 @@ import './index.css'
 
 const SurahCard = (props) =>
 {
+    const { number, name, nameAr, nameTranslation, detail } = props
+    
     return (
-        <div className="surah-card" onClick={() => props.detail(props.data.number)}>
+        <div className="surah-card" onClick={() => detail(number)}>
             <div className="surah-number-wrapper">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.84 282.84">
                     <g id="Layer_2" data-name="Layer 2">
@@ -13,15 +15,15 @@ const SurahCard = (props) =>
                         </g>
                     </g>
                 </svg>
-                <p>{props.data.number}</p>
+                <p>{number}</p>
             </div>
 
             <div className="surah-name-wrapper">
                 <div className="surah-name">
-                    <p>{props.data.name.transliteration.id}</p>
-                    <span>{props.data.name.translation.id}</span>
+                    <p>{name}</p>
+                    <span>{nameTranslation}</span>
                 </div>
-                <p className="surah-name-ar">{props.data.name.short}</p>
+                <p className="surah-name-ar">{nameAr}</p>
             </div>
         </div>
     )

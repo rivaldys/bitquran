@@ -46,7 +46,14 @@ class SurahList extends Component
                     {
                         this.state.surahList.map(surah =>
                         {
-                            return <SurahCard key={surah.number} data={surah} detail={this.handleDetail} />
+                            return <SurahCard 
+                                        key={surah.number}
+                                        number={surah.number}
+                                        name={surah.name.transliteration.id}
+                                        nameAr={surah.name.short}
+                                        nameTranslation={surah.name.translation.id}
+                                        detail={this.handleDetail}
+                                    />
                         })
                     }
                 </div>

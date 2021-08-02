@@ -7,13 +7,10 @@ class Surah extends Component
 {
     state =
     {
-        name:
-        {
-            arabic: '',
-            transliteration: '',
-            translation: ''
-        },
-        surahNumber: 0,
+        number: 0,
+        name: '',
+        nameAr: '',
+        nameTranslation: '',
         numberOfAyahs: 0,
         revelation: '',
         preBismillah:
@@ -35,13 +32,10 @@ class Surah extends Component
             let preBismillahAudio = data.preBismillah == null ? '' : data.preBismillah.audio.primary
 
             this.setState({
-                name:
-                {
-                    arabic: data.name.long,
-                    transliteration: data.name.transliteration.id,
-                    translation: data.name.translation.id
-                },
-                surahNumber: data.number,
+                number: data.number,
+                name: data.name.transliteration.id,
+                nameAr: data.name.long,
+                nameTranslation: data.name.translation.id,
                 numberOfAyahs: data.numberOfVerses,
                 revelation: data.revelation.id,
                 preBismillah:
@@ -103,7 +97,7 @@ class Surah extends Component
 
     componentDidUpdate()
     {
-        document.title = `${this.state.name.transliteration} – Quran Web App`
+        document.title = `${this.state.name} – Quran Web App`
     }
 
     componentWillUnmount()
@@ -115,16 +109,14 @@ class Surah extends Component
     {
         const surah = this.state
 
-        console.log(surah)
-
         return (
             <>
                 <div className="surah-header-background">
                     <div className="surah-header-illustration"></div>
                     <div className="surah-header-text">
-                        <p className="arabic-name">{surah.name.arabic}</p>
-                        <h1>{surah.name.transliteration}</h1>
-                        <p>{surah.name.translation}</p>
+                        <p className="arabic-name">{surah.nameAr}</p>
+                        <h1>{surah.name}</h1>
+                        <p>{surah.nameTranslation}</p>
                         <hr />
                         <h5>{surah.revelation} &middot; {surah.numberOfAyahs} Ayat</h5>
                         {
@@ -150,7 +142,18 @@ class Surah extends Component
                     {
                         surah.ayahList.map(ayah =>
                         {
-                            return <AyahCard key={ayah.number.inSurah} surahName={surah.name.transliteration} surahNumber={surah.surahNumber} numberOfAyahs={surah.numberOfAyahs} ayah={ayah} getPlay={this.playAudio} />
+                            return <AyahCard
+                                        key={ayah.number.inSurah}
+                                        surahName={surah.name}
+                                        surahNumber={surah.number}
+                                        numberOfAyahs={surah.numberOfAyahs}
+                                        ayahNumber={ayah.number.inSurah}
+                                        ayahAudio={ayah.audio.primary}
+                                        ayah={ayah.text.arab}
+                                        ayahTranslation={ayah.translation.id}
+                                        ayahTest={ayah}
+                                        getPlay={this.playAudio}
+                                    />
                         })
                     }
                 </div>

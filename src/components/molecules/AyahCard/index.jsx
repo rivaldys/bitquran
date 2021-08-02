@@ -7,13 +7,12 @@ const AyahCard = (props) =>
     const history  = useHistory()
     const pathName = history.location.pathname
 
-    const surahNumber = props.surahNumber
-    const ayahNumber  = props.ayah.number.inSurah
-    const srcAudio    = props.ayah.audio.primary
-    const audioId     = `surah-${surahNumber}-audio-${ayahNumber}`
-    const buttonId    = `audio-button-${surahNumber}-${ayahNumber}`
-    const playIcon    = `play-${surahNumber}-${ayahNumber}`
-    const pauseIcon   = `pause-${surahNumber}-${ayahNumber}`
+    const { surahName, surahNumber, numberOfAyahs, ayahNumber, ayahAudio, ayah, ayahTranslation, getPlay } = props
+
+    const audioId   = `surah-${surahNumber}-audio-${ayahNumber}`
+    const buttonId  = `audio-button-${surahNumber}-${ayahNumber}`
+    const playIcon  = `play-${surahNumber}-${ayahNumber}`
+    const pauseIcon = `pause-${surahNumber}-${ayahNumber}`
 
     const goToTafsir = () =>
     {
@@ -21,15 +20,15 @@ const AyahCard = (props) =>
             pathname: `${pathName}/tafsir/${ayahNumber}`,
             state:
             {
-                surahName: props.surahName,
+                surahName,
                 surahNumber,
-                numberOfAyahs: props.numberOfAyahs,
-                ayah: props.ayah
+                numberOfAyahs,
+                ayah: props.ayahTest
             }
         })
     }
 
-    console.log(props)
+    // console.log(props)
 
     return (
         <div className="ayah-card">
@@ -37,8 +36,8 @@ const AyahCard = (props) =>
                 <div className="ayah-number">{ayahNumber}</div>
                 
                 <div className="action-wrapper">
-                    <audio id={audioId} src={srcAudio} />
-                    <button id={buttonId} className="audio-button" title="Audio Ayat/Murottal" onClick={() => props.getPlay(audioId, buttonId, playIcon, pauseIcon)} data-play="false">
+                    <audio id={audioId} src={ayahAudio} />
+                    <button id={buttonId} className="audio-button" title="Audio Ayat/Murottal" onClick={() => getPlay(audioId, buttonId, playIcon, pauseIcon)} data-play="false">
                         <svg aria-hidden="true" id={playIcon} focusable="false" data-prefix="fas" data-icon="play" className="svg-inline--fa fa-play fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
                         </svg>
@@ -56,8 +55,8 @@ const AyahCard = (props) =>
                 </div>
             </div>
 
-            <p className="ayah-ar">{props.ayah.text.arab}</p>
-            <p className="ayah-idn">{props.ayah.translation.id}</p>
+            <p className="ayah-ar">{ayah}</p>
+            <p className="ayah-idn">{ayahTranslation}</p>
         </div>
     )
 }
