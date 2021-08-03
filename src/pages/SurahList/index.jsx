@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { SurahCard } from '../../components'
 import QuranAPI from '../../services'
+import './index.css'
 
 class SurahList extends Component
 {
@@ -42,7 +43,7 @@ class SurahList extends Component
                         </div>
                     </div>
                 </div>
-                <div className="content surah-list-wrapper">
+                <div className="content">
                     {
                         this.state.surahList.map(surah =>
                         {

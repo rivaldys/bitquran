@@ -1,12 +1,7 @@
-.surah-header-background,
-.surah-header-illustration
+.surah-header-background
 {
     width: calc(var(--content-width) - 30px);
     min-height: 300px;
-}
-
-.surah-header-background
-{
     background: linear-gradient(150deg, #C5E1A5, #009688);
     border-radius: 10px;
     margin: auto;
@@ -18,6 +13,8 @@
 
 .surah-header-illustration
 {
+    width: 100%;
+    height: 100%;
     background-size: 35%;
     background-image: url('../../assets/images/al-quran.png');
     background-repeat: no-repeat;

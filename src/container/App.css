@@ -1,6 +1,85 @@
+/* 
+ * Qur'an Web
+ * Copyright 2021 · Ahmad Rivaldy S
+ */
+
+
+@import url('../assets/css/font-config.css');
+
+/* General */
+*
+{
+    color: #757575;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    padding: 0;
+    margin: 0;
+}
+
 :root
 {
     --content-width: 1024px;
+}
+
+::-webkit-scrollbar
+{
+    width: 14px;
+}
+
+::-webkit-scrollbar-track
+{
+    border-radius: 7px;
+    background-color: rgba(204, 204, 204, 0.5);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgba(204, 204, 204, 0.9);
+    border-radius: 7px;
+}
+
+body
+{
+    background-color: #f8f8f8;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+b
+{
+    font-weight: 500;
+}
+
+.content
+{
+    width: var(--content-width);
+    min-height: calc(100vh - 200px);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.content-bg
+{
+    width: calc(var(--content-width) - 30px);
+    min-height: calc(100vh - 200px);
+    padding: 15px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(234, 234, 234, 0.8);
+    box-sizing: border-box;
+}
+
+.content-margin
+{
+    margin-top: 95px;
 }
 
 .menubar-wrapper
@@ -122,4 +201,83 @@
     margin-top: 2px;
     margin-left: 3px;
     margin-right: 3px;
+}
+
+
+/* Responsive Configuration */
+@media (max-width: 1281px)
+{
+    
+}
+
+@media (max-width: 1201px)
+{
+    
+}
+
+@media (max-width: 1025px)
+{
+    
+}
+
+@media (max-width: 769px)
+{
+    .menubar-wrapper,
+    .menubar,
+    .content
+    {
+        width: 100vw;
+    }
+
+    .content-bg,
+    .header-background,
+    .surah-header-background
+    {
+        width: calc(100vw - 30px) !important;
+    }
+}
+
+@media (max-width: 426px)
+{
+    .menubar a
+    {
+        padding: 5px 10px;
+    }
+
+    .ayah-ar
+    {
+        font-size: 26px;
+        line-height: 46px;
+    }
+
+    .ayah-idn
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .card-about h3
+    {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .card-about p,
+    .card-about p i,
+    .card-about p a,
+    .card-about p b
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 376px)
+{
+    
+}
+
+@media (max-width: 321px)
+{
+    
 }
