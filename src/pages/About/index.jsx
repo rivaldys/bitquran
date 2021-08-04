@@ -17,7 +17,7 @@ class About extends Component
                     <p>
                         Aplikasi ini dibangun dalam bentuk website dan tidak dibangun dalam bentuk aplikasi <i>mobile</i>/ponsel
                         alasannya adalah agar dapat digunakan tanpa harus memasang terlebih dulu aplikasi pada perangkat,
-                        sehingga lebih praktis dan tidak memakan ruang penyimpanan yang ada. Selain itu, aplikasi ini juga memungkinkan
+                        sehingga lebih praktis dan tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan
                         untuk diakses dari berbagai perangkat yang berbeda (<i>cross-platform</i>), entah itu dari komputer, ponsel, ataupun tablet.
                     </p>
                 </div>
@@ -40,7 +40,7 @@ class About extends Component
                         disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu,
                         bila menemukan kesalahan/<i>bug</i> seperti misalnya audio <i>murottal</i> tertukar antara
                         ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di <b>hi@rivaldy.net</b>.
-                        Namun selain itu, bila ada saran yang ingin diberikan terkait aplikasi ini silakan sampaikan
+                        Namun selain itu, bila ada saran yang ingin diberikan untuk aplikasi ini silakan sampaikan
                         juga melalui surel yang sama.
                     </p>
                 </div>

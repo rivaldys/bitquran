@@ -102,7 +102,7 @@ class Surah extends Component
 
     componentWillUnmount()
     {
-        document.title = 'Quran Web App'
+        document.title = 'Quran Web App – Baca Al-Qur\'an secara Daring'
     }
     
     render()

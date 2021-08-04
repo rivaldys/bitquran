@@ -205,16 +205,6 @@ b
 
 
 /* Responsive Configuration */
-@media (max-width: 1281px)
-{
-    
-}
-
-@media (max-width: 1201px)
-{
-    
-}
-
 @media (max-width: 1025px)
 {
     
@@ -239,9 +229,163 @@ b
 
 @media (max-width: 426px)
 {
+    .menubar-wrapper
+    {
+        height: 55px;
+    }
+
+    .content-bg
+    {
+        border-radius: 7px;
+    }
+
+    .content-margin
+    {
+        margin-top: 75px;
+    }
+
     .menubar a
     {
+        font-size: 12px;
+        line-height: 19px;
         padding: 5px 10px;
+    }
+
+    .header-background
+    {
+        border-radius: 7px;
+        margin-top: 75px;
+        margin-bottom: 20px;
+    }
+
+    .header-illustration
+    {
+        height: 150px;
+        background-size: 35%;
+        background-position: bottom -25px right -10px;
+        border-radius: 7px;
+    }
+
+    .header-text
+    {
+        padding-left: 25px;
+    }
+
+    .header-text h1
+    {
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .header-text p,
+    .surah-number-wrapper p
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .surah-header-background
+    {
+        min-height: 230px;
+        border-radius: 7px;
+        margin-top: 75px;
+        margin-bottom: 35px;
+    }
+
+    .surah-header-illustration
+    {
+        background-size: 45%;
+        background-position: bottom -25px right 25px;
+        border-radius: 7px;
+    }
+
+    .arabic-name
+    {
+        font-size: 26px !important;
+        line-height: 33px !important;
+    }
+
+    .pre-bismillah
+    {
+        font-size: 26px;
+        line-height: 33px;
+        margin-top: 20px;
+    }
+
+    .pre-bismillah-btn-play
+    {
+        width: 30px;
+        height: 30px;
+        margin-top: 15px;
+    }
+
+    .surah-header-text h1
+    {
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .surah-header-text hr
+    {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    .surah-header-text h5,
+    .surah-header-text > p
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .surah-card
+    {
+        width: calc(100% - 55px);
+        height: 70px;
+        margin-left: 55px;
+        border-radius: 5px;
+    }
+
+    .surah-number-wrapper
+    {
+        width: 40px;
+        height: 40px;
+        left: -55px;
+    }
+
+    .surah-name-wrapper
+    {
+        padding: 0 20px;
+    }
+
+    .surah-name p
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .surah-name span
+    {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .surah-name-ar
+    {
+        font-size: 26px;
+    }
+
+    .ayah-card
+    {
+        margin-bottom: 25px;
+    }
+
+    .ayah-number
+    {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 19px;
     }
 
     .ayah-ar
@@ -254,6 +398,42 @@ b
     {
         font-size: 14px;
         line-height: 21px;
+    }
+
+    .audio-button svg
+    {
+        height: 15px;
+    }
+
+    .tafsir-button svg
+    {
+        height: 19px;
+    }
+
+    .tafsir-title h3,
+    .tafsir-title p
+    {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .tafsir-title span
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .tafsir-link
+    {
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    .tafsir-card
+    {
+        font-size: 14px;
+        line-height: 24px;
+        border-radius: 5px;
     }
 
     .card-about h3
@@ -269,6 +449,25 @@ b
     {
         font-size: 14px;
         line-height: 24px;
+    }
+
+    .goto-top
+    {
+        width: 40px;
+        height: 40px;
+        border-radius: 7px;
+    }
+
+    .footer-wrapper p,
+    .footer-wrapper a
+    {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .footer-wrapper svg
+    {
+        width: 12px;
     }
 }
 
