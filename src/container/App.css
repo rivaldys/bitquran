@@ -205,11 +205,6 @@ b
 
 
 /* Responsive Configuration */
-@media (max-width: 1025px)
-{
-    
-}
-
 @media (max-width: 769px)
 {
     .menubar-wrapper,
@@ -221,9 +216,20 @@ b
 
     .content-bg,
     .header-background,
-    .surah-header-background
+    .surah-header-background,
+    .pick-ayah
     {
         width: calc(100vw - 30px) !important;
+    }
+
+    .pick-ayah
+    {
+        margin-bottom: 20px;
+    }
+
+    .pick-ayah select
+    {
+        border-radius: 5px;
     }
 }
 
@@ -469,14 +475,4 @@ b
     {
         width: 12px;
     }
-}
-
-@media (max-width: 376px)
-{
-    
-}
-
-@media (max-width: 321px)
-{
-    
 }

@@ -20,7 +20,7 @@ const AyahCard = (props) =>
     }
 
     return (
-        <div className="ayah-card">
+        <div className="ayah-card" id={`${surahNumber}-${ayahNumber}`}>
             <div className="ayah-toolbar">
                 <div className="ayah-number">{ayahNumber}</div>
                 

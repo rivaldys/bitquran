@@ -89,6 +89,20 @@ class Surah extends Component
             pauseIcon.style.display = 'none'
         }
     }
+
+    handlePickAyah = (e) =>
+    {
+        const menubarHeight = document.querySelector('.menubar-wrapper').scrollHeight
+        const ayahId        = e.target.selectedIndex
+        const el            = e.target.childNodes[ayahId]
+        const ayahTarget    = el.getAttribute('target')
+
+        if(ayahTarget !== 'empty')
+        {
+            const sectionContent = document.getElementById(ayahTarget).offsetTop - (menubarHeight + 35)
+            window.scrollTo({ top: sectionContent, behavior: 'smooth' })
+        }
+    }
     
     componentDidMount()
     {
@@ -137,6 +151,23 @@ class Surah extends Component
                             : ''
                         }
                     </div>
+                </div>
+                <div className="pick-ayah">
+                    <select name="pick-ayah" id="pick-ayah" onChange={this.handlePickAyah}>
+                        <option value="" target="empty">-Pilih Ayat-</option>
+                        {
+                            surah.ayahList.map(ayah =>
+                            {
+                                return <option
+                                            key={ayah.number.inSurah}
+                                            value={ayah.number.inSurah}
+                                            target={`${surah.number}-${ayah.number.inSurah}`}
+                                        >
+                                            Ayat {ayah.number.inSurah}
+                                        </option>
+                            })
+                        }
+                    </select>
                 </div>
                 <div className="content-bg">
                     {
