@@ -217,16 +217,19 @@ b
     .content-bg,
     .header-background,
     .surah-header-background,
+    .pick-surah,
     .pick-ayah
     {
         width: calc(100vw - 30px) !important;
     }
 
+    .pick-surah,
     .pick-ayah
     {
         margin-bottom: 20px;
     }
 
+    .pick-surah,
     .pick-ayah select
     {
         border-radius: 5px;
@@ -364,6 +367,10 @@ b
         padding: 0 20px;
     }
 
+    .pick-surah select,
+    .pick-ayah select,
+    .pick-surah select option,
+    .pick-ayah select option,
     .surah-name p
     {
         font-size: 14px;
@@ -429,6 +436,13 @@ b
         line-height: 21px;
     }
 
+    .pick-tafsir
+    {
+        width: 100%;
+    }
+
+    .pick-tafsir select,
+    .pick-tafsir select option,
     .tafsir-link
     {
         font-size: 12px;

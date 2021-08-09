@@ -103,10 +103,16 @@ class Surah extends Component
             window.scrollTo({ top: sectionContent, behavior: 'smooth' })
         }
     }
+
+    ToTopOnLoad = () =>
+    {
+        window.scrollTo({ top: 0 })
+    }
     
     componentDidMount()
     {
         this.getSurah()
+        this.ToTopOnLoad()
     }
 
     componentDidUpdate()

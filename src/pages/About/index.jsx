@@ -16,8 +16,8 @@ class About extends Component
                     </p>
                     <p>
                         Aplikasi ini dibangun dalam bentuk website dan tidak dibangun dalam bentuk aplikasi <i>mobile</i>/ponsel
-                        alasannya adalah agar dapat digunakan tanpa harus memasang terlebih dulu aplikasi pada perangkat,
-                        sehingga lebih praktis dan tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan
+                        alasannya adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat,
+                        sehingga tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan
                         untuk diakses dari berbagai perangkat yang berbeda (<i>cross-platform</i>), entah itu dari komputer, ponsel, ataupun tablet.
                     </p>
                 </div>
@@ -34,7 +34,7 @@ class About extends Component
                 <div className="card-about">
                     <h3>Laporkan Kesalahan/Beri Saran</h3>
                     <p>
-                        Sebagaimana hasil buatan manusia pada umumnya, aplikasi ini pun bisa jadi terdapat banyak kesalahan
+                        Sebagaimana hasil buatan manusia pada umumnya, aplikasi ini pun memiliki kekurangan dan mungkin terdapat kesalahan teknis
                         yang terlewat dalam proses pengembangannya. Tentunya Al Qur'an-nya itu sendiri telah diturunkan dengan sempurna
                         sebagai penyempurna dari kitab-kitab sebelumnya. Sehingga bentuk kesalahan yang terdapat pada aplikasi ini murni
                         disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu,

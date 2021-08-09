@@ -6,7 +6,7 @@ const SurahCard = (props) =>
     const { number, name, nameAr, nameTranslation, detail } = props
     
     return (
-        <div className="surah-card" onClick={() => detail(number)}>
+        <div className="surah-card" id={`surat-${number}`} onClick={() => detail(number)}>
             <div className="surah-number-wrapper">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.84 282.84">
                     <g id="Layer_2" data-name="Layer 2">

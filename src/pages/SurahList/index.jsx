@@ -14,7 +14,6 @@ class SurahList extends Component
     {
         QuranAPI.getSurahList().then(result =>
         {
-            // console.log('Data: ', result.data)
             this.setState({
                 surahList: result.data
             })
@@ -26,6 +25,20 @@ class SurahList extends Component
         this.props.history.push(`/surat/${id}`)
     }
 
+    handlePickSurah = (e) =>
+    {
+        const menubarHeight = document.querySelector('.menubar-wrapper').scrollHeight
+        const surahId       = e.target.selectedIndex
+        const el            = e.target.childNodes[surahId]
+        const surahTarget   = el.getAttribute('target')
+
+        if(surahTarget !== 'empty')
+        {
+            const sectionContent = document.getElementById(surahTarget).offsetTop - (menubarHeight + 15)
+            window.scrollTo({ top: sectionContent, behavior: 'smooth' })
+        }
+    }
+
     componentDidMount()
     {
         this.getSurahList()
@@ -33,6 +46,8 @@ class SurahList extends Component
 
     render()
     {
+        const surah = this.state
+
         return (
             <>
                 <div className="header-background">
@@ -43,9 +58,26 @@ class SurahList extends Component
                         </div>
                     </div>
                 </div>
+                <div className="pick-surah">
+                    <select name="pick-surah" id="pick-surah" onChange={this.handlePickSurah}>
+                        <option value="" target="empty">-Pilih Surat-</option>
+                        {
+                            surah.surahList.map(surah =>
+                            {
+                                return <option
+                                            key={surah.number}
+                                            value={surah.number}
+                                            target={`surat-${surah.number}`}
+                                        >
+                                            Surat {surah.number}
+                                        </option>
+                            })
+                        }
+                    </select>
+                </div>
                 <div className="content">
                     {
-                        this.state.surahList.map(surah =>
+                        surah.surahList.map(surah =>
                         {
                             return <SurahCard 
                                         key={surah.number}

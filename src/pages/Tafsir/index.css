@@ -90,3 +90,34 @@
     background-color: #f7f7f7;
     margin-bottom: 15px;
 }
+
+.pick-tafsir
+{
+    width: 250px;
+    margin: auto;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.pick-tafsir select,
+.pick-tafsir select option
+{
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.pick-tafsir select
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #80CBC4;
+}
+
+.pick-tafsir select:focus
+{
+    outline: none;
+    box-shadow: 0 0 10px rgba(178, 223, 219, 0.85);
+}

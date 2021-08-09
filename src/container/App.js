@@ -31,9 +31,8 @@ class App extends Component
     goToTop = () =>
     {
         // ===== Go to the Top
-        const goToTop       = document.querySelector('.goto-top')
-        const vh            = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-        const menubarHeight = document.querySelector('.menubar-wrapper').scrollHeight
+        const goToTop = document.querySelector('.goto-top')
+        const vh      = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
         // When the button is clicked, do the automatic scroll to the top
         goToTop.addEventListener('click', () =>
@@ -46,7 +45,7 @@ class App extends Component
         {
             const winScroll = Math.round(window.pageYOffset)
 
-            if(winScroll >= (vh - menubarHeight))
+            if(winScroll >= (vh / 2))
             {
                 goToTop.classList.add('show')
             }

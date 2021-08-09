@@ -110,6 +110,19 @@ class Tafsir extends Component
         }
     }
 
+    handlePickTafsir = (e) =>
+    {
+        const tafsirId     = e.target.selectedIndex
+        const el           = e.target.childNodes[tafsirId]
+        const tafsirTarget = el.value
+        const tafsirSurah  = el.getAttribute('surah')
+
+        if(tafsirTarget !== 'empty')
+        {
+            this.goToPrevOrNext(tafsirSurah, tafsirTarget)
+        }
+    }
+
     componentDidMount()
     {
         const surahNumber = null
@@ -121,7 +134,6 @@ class Tafsir extends Component
     componentDidUpdate()
     {
         document.title = `Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number} – Quran Web App`
-        // console.log(this.state)
     }
 
     componentWillUnmount()
@@ -134,6 +146,12 @@ class Tafsir extends Component
         const surah = this.state.surah
         const ayah  = this.state.ayah
         const page  = this.state.page
+        const tafsirList = []
+
+        for(let i=1; i <= surah.numberOfAyahs; i++)
+        {
+            tafsirList.push(i)
+        }
 
         return (
             <div className="content-bg content-margin">
@@ -176,6 +194,18 @@ class Tafsir extends Component
                             </svg>
                         </button>
                     }
+                </div>
+
+                <div className="pick-tafsir">
+                    <select name="pick-tafsir" id="pick-tafsir" onChange={this.handlePickTafsir}>
+                        <option value="" target="empty">-Lompat ke Tafsir Lain-</option>
+                        {
+                            tafsirList.map(tafsir =>
+                            {
+                                return <option key={tafsir} surah={surah.number} value={tafsir}>Tafsir {tafsir}</option>
+                            })
+                        }
+                    </select>
                 </div>
 
                 <Link to={`/surat/${surah.number}`} className="tafsir-link">&larr; Kembali ke Surat</Link>
