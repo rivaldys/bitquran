@@ -3,6 +3,16 @@ import './index.css'
 
 class About extends Component
 {
+    ToTopOnLoad = () =>
+    {
+        window.scrollTo({ top: 0 })
+    }
+
+    componentDidMount()
+    {
+        this.ToTopOnLoad()
+    }
+
     render()
     {
         return (
