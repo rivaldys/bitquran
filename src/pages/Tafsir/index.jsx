@@ -123,12 +123,18 @@ class Tafsir extends Component
         }
     }
 
+    ToTopOnLoad = () =>
+    {
+        window.scrollTo({ top: 0 })
+    }
+
     componentDidMount()
     {
         const surahNumber = null
         const page = null
 
         this.getTafsir(surahNumber, page)
+        this.ToTopOnLoad()
     }
 
     componentDidUpdate()
