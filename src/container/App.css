@@ -198,12 +198,13 @@ b
 
 .footer-wrapper a
 {
+    color: #4CAF50;
     transition: 0.3s;
 }
 
 .footer-wrapper a:hover
 {
-    color: #4CAF50;
+    opacity: 0.75;
 }
 
 .footer-wrapper svg
