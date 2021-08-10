@@ -10,7 +10,13 @@ class About extends Component
 
     componentDidMount()
     {
+        document.title = 'Tentang – Bitquran'
         this.ToTopOnLoad()
+    }
+
+    componentWillUnmount()
+    {
+        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
     }
 
     render()
@@ -20,7 +26,7 @@ class About extends Component
                 <div className="card-about">
                     <h3>Tentang</h3>
                     <p>
-                        Qur'an Web App adalah aplikasi berbasis web yang menyajikan kitab suci Al-Qur'an
+                        Bitquran adalah aplikasi berbasis web yang menyajikan kitab suci Al-Qur'an
                         secara digital dalam bentuk website. Dibangunnya aplikasi ini diharapkan dapat memunculkan
                         ketertarikan untuk membaca Al-Qur'an karena dapat diakses dengan mudah.
                     </p>

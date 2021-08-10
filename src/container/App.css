@@ -68,7 +68,7 @@ b
 .content-bg
 {
     width: calc(var(--content-width) - 30px);
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 210px);
     padding: 15px;
     margin: auto;
     border-radius: 10px;
@@ -79,12 +79,12 @@ b
 
 .content-margin
 {
-    margin-top: 95px;
+    margin-top: 105px;
 }
 
 .menubar-wrapper
 {
-    height: 65px;
+    height: 75px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -102,15 +102,27 @@ b
     transition: 300ms linear;
 }
 
-.menubar
+.container
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     width: var(--content-width);
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
     box-sizing: border-box;
+}
+
+.logo
+{
+    height: 45px;
+    width: 142px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../assets/images/bitquran-logo-wide.png');
+    margin-bottom: 10px;
 }
 
 .menubar a
@@ -208,7 +220,7 @@ b
 @media (max-width: 769px)
 {
     .menubar-wrapper,
-    .menubar,
+    .container,
     .content
     {
         width: 100vw;
@@ -240,7 +252,14 @@ b
 {
     .menubar-wrapper
     {
-        height: 55px;
+        height: 65px;
+    }
+
+    .logo
+    {
+        height: 35px;
+        width: 110px;
+        margin-bottom: 5px;
     }
 
     .content-bg
@@ -250,7 +269,7 @@ b
 
     .content-margin
     {
-        margin-top: 75px;
+        margin-top: 85px;
     }
 
     .menubar a
@@ -263,7 +282,7 @@ b
     .header-background
     {
         border-radius: 7px;
-        margin-top: 75px;
+        margin-top: 85px;
         margin-bottom: 20px;
     }
 
@@ -297,7 +316,7 @@ b
     {
         min-height: 230px;
         border-radius: 7px;
-        margin-top: 75px;
+        margin-top: 85px;
         margin-bottom: 35px;
     }
 
@@ -469,13 +488,6 @@ b
     {
         font-size: 14px;
         line-height: 24px;
-    }
-
-    .goto-top
-    {
-        width: 40px;
-        height: 40px;
-        border-radius: 7px;
     }
 
     .footer-wrapper p,

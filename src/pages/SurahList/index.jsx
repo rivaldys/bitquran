@@ -39,9 +39,15 @@ class SurahList extends Component
         }
     }
 
+    ToTopOnLoad = () =>
+    {
+        window.scrollTo({ top: 0 })
+    }
+
     componentDidMount()
     {
         this.getSurahList()
+        this.ToTopOnLoad()
     }
 
     render()

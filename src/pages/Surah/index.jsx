@@ -117,12 +117,12 @@ class Surah extends Component
 
     componentDidUpdate()
     {
-        document.title = `${this.state.name} – Quran Web App`
+        document.title = `${this.state.name} – Bitquran`
     }
 
     componentWillUnmount()
     {
-        document.title = 'Quran Web App – Baca Al-Qur\'an secara Daring'
+        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
     }
     
     render()

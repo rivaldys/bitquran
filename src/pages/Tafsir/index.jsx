@@ -139,12 +139,12 @@ class Tafsir extends Component
 
     componentDidUpdate()
     {
-        document.title = `Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number} – Quran Web App`
+        document.title = `Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number} – Bitquran`
     }
 
     componentWillUnmount()
     {
-        document.title = 'Quran Web App'
+        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
     }
 
     render()
