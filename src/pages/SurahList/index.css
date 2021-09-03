@@ -44,31 +44,10 @@
     line-height: 27px;
 }
 
-.pick-surah
+.search-bar
 {
     width: calc(var(--content-width) - 30px);
     margin: auto;
     margin-bottom: 30px;
     box-sizing: border-box;
-}
-
-.pick-surah select,
-.pick-surah select option
-{
-    color: #fff;
-}
-
-.pick-surah select
-{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 7px;
-    background-color: #80CBC4;
-}
-
-.pick-surah select:focus
-{
-    outline: none;
-    box-shadow: 0 0 10px rgba(178, 223, 219, 0.85);
 }

@@ -354,19 +354,18 @@ b
     .content-bg,
     .header-background,
     .surah-header-background,
-    .pick-surah,
-    .pick-ayah
+    .pick-ayah,
+    .search-bar
     {
         width: calc(100vw - 30px) !important;
     }
 
-    .pick-surah,
-    .pick-ayah
+    .pick-ayah,
+    .search-bar
     {
         margin-bottom: 20px;
     }
 
-    .pick-surah,
     .pick-ayah select
     {
         border-radius: 5px;
@@ -520,10 +519,9 @@ b
         padding: 0 20px;
     }
 
-    .pick-surah select,
     .pick-ayah select,
-    .pick-surah select option,
     .pick-ayah select option,
+    .input,
     .surah-name p
     {
         font-size: 14px;

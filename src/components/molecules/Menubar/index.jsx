@@ -10,7 +10,7 @@ const Menubar = (props) =>
         <ul className={mode}>
             <li><Link to="/" onClick={closeEvent}>Beranda</Link></li>
             <li><Link to="/tentang" onClick={closeEvent}>Tentang</Link></li>
-            <li><Link to="/#" onClick={closeEvent}>Riwayat Pembaruan</Link></li>
+            <li><Link to="/riwayat-pembaruan" onClick={closeEvent}>Riwayat Pembaruan</Link></li>
         </ul>
     )
 }

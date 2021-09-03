@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SurahCard } from '../../components'
+import { Input, SurahCard } from '../../components'
 import QuranAPI from '../../services'
 import './index.css'
 
@@ -8,7 +8,7 @@ class SurahList extends Component
     state =
     {
         surahList: [],
-        search: ''
+        surahListFilter: []
     }
 
     getSurahList = () =>
@@ -16,7 +16,8 @@ class SurahList extends Component
         QuranAPI.getSurahList().then(result =>
         {
             this.setState({
-                surahList: result.data
+                surahList: result.data,
+                surahListFilter: result.data
             })
         })
     }
@@ -42,25 +43,16 @@ class SurahList extends Component
 
     handleSearch = (e) =>
     {
-        const name = e.target.name
+        const surahListFilter = this.state.surahListFilter
+        const search          = e.target.value.toLowerCase()
+        const regex           = new RegExp(search, 'g')
 
-        this.setState({
-            ...this.state,
-            [name]: e.target.value
-        })
-    }
-
-    submitSearch = () =>
-    {
-        const search    = this.state.search.toLowerCase()
-        const surahList = this.state.surahList
-        const regex     = new RegExp(search, 'g')
-
-        const surahFiltered = surahList.filter(surah =>
+        const surahFiltered = surahListFilter.filter(surah =>
         {
             const surahName = surah.name.transliteration.id.toLowerCase()
 
             if(surahName.match(regex)) return surah
+            return false
         })
 
         this.setState({
@@ -81,9 +73,7 @@ class SurahList extends Component
 
     render()
     {
-        const surah = this.state
-
-        console.log('Daftar Surat:', surah)
+        const { surahList } = this.state
 
         return (
             <>
@@ -96,30 +86,13 @@ class SurahList extends Component
                     </div>
                 </div>
 
-                <div className="pick-surah">
-                    <select name="pick-surah" id="pick-surah" onChange={this.handlePickSurah}>
-                        <option value="" target="empty">-Pilih Surat-</option>
-                        {
-                            surah.surahList.map(surah =>
-                            {
-                                return <option
-                                            key={surah.number}
-                                            value={surah.number}
-                                            target={`surat-${surah.number}`}
-                                        >
-                                            Surat {surah.number}
-                                        </option>
-                            })
-                        }
-                    </select>
+                <div className="search-bar">
+                    <Input type="text" name="search" placeholder="Cari nama surat" onChange={this.handleSearch} />
                 </div>
-
-                <input type="text" name="search" onChange={this.handleSearch} />
-                <button onClick={this.submitSearch}>Search</button>
 
                 <div className="content">
                     {
-                        surah.surahList.map(surah =>
+                        surahList.map(surah =>
                         {
                             return <SurahCard 
                                         key={surah.number}
