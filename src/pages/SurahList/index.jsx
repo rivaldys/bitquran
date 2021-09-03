@@ -114,8 +114,8 @@ class SurahList extends Component
                     </select>
                 </div>
 
-                {/* <input type="text" name="search" onChange={this.handleSearch} />
-                <button onClick={this.submitSearch}>Search</button> */}
+                <input type="text" name="search" onChange={this.handleSearch} />
+                <button onClick={this.submitSearch}>Search</button>
 
                 <div className="content">
                     {
