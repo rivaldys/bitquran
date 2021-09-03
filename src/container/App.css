@@ -125,6 +125,31 @@ b
     margin-bottom: 10px;
 }
 
+
+.menubar,
+.menubar-mobile
+{
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.menubar-mobile
+{
+    margin: 0 15px;
+}
+
+.menubar li
+{
+    float: left;
+}
+
+.menubar a,
+.menubar-mobile a
+{
+    display: block;
+}
+
 .menubar a
 {
     color: #757575;
@@ -135,10 +160,109 @@ b
     transition: 0.3s;
 }
 
-.menubar a:hover
+.menubar a:hover,
+.menubar-mobile a:hover
 {
     color: #4CAF50;
     cursor: pointer;
+}
+
+.menubar-mobile a
+{
+    font-size: 14px;
+    line-height: 21px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.menubar-mobile a:hover
+{
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.menu-icon
+{
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-icon:hover
+{
+    cursor: pointer;
+}
+
+.menu-icon svg
+{
+    stroke: #c1c1c1;
+}
+
+.sidemenu
+{
+    display: none;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    margin-right: -250px;
+    padding-top: 52px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    overflow-x: hidden;
+    transition: margin-right 0.3s;
+}
+
+.sidemenu.show
+{
+    margin-right: 0;
+}
+
+.sidemenu .close-button
+{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #c1c1c1;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-bottom-left-radius: 15px;
+}
+
+.sidemenu .close-button:focus
+{
+    outline: none;
+}
+
+.container-cover
+{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    z-index: 2;
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.container-cover.show
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .goto-top
@@ -273,11 +397,20 @@ b
         margin-top: 85px;
     }
 
-    .menubar a
+    .menu-icon
     {
-        font-size: 12px;
-        line-height: 19px;
-        padding: 5px 10px;
+        display: block;
+    }
+
+    .menubar
+    {
+        display: none;
+    }
+
+    .sidemenu,
+    .container-cover
+    {
+        display: block
     }
 
     .header-background
@@ -487,15 +620,15 @@ b
     .card-about p a,
     .card-about p b
     {
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 15px;
+        line-height: 25px;
     }
 
     .footer-wrapper p,
     .footer-wrapper a
     {
-        font-size: 11px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 21px;
     }
 
     .footer-wrapper svg

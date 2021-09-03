@@ -1,6 +1,7 @@
 // Libraries
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { Menubar } from '../components'
 
 // Pages
 import { About, Surah, SurahList, Tafsir } from '../pages'
@@ -27,6 +28,16 @@ class App extends Component
             }
         })
     }
+
+    sidemenuTrigger = () =>
+    {
+        const containerCover = document.querySelector('.container-cover')
+        const sidemenu       = document.querySelector('.sidemenu')
+        
+        containerCover.classList.toggle('show')
+        sidemenu.classList.toggle('show')
+    }
+
 
     goToTop = () =>
     {
@@ -73,9 +84,13 @@ class App extends Component
                             <Link to="/">
                                 <div className="logo"></div>
                             </Link>
-                            <div className="menubar">
-                                <Link to="/">Beranda</Link>
-                                <Link to="/tentang">Tentang</Link>
+
+                            <Menubar mode="desktop" />
+
+                            <div className="menu-icon" onClick={this.sidemenuTrigger}>
+                                <svg xmlns='http://www.w3.org/2000/svg' className='ionicon' viewBox='0 0 512 512'>
+                                    <path strokeLinecap='round' strokeMiterlimit='10' strokeWidth='32' d='M80 160h352M80 256h352M80 352h352'/>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -105,6 +120,18 @@ class App extends Component
                             teh oleh <a href="https://rivaldy.net" target="_blank" rel="noreferrer">Ahmad Rivaldy S</a>
                         </p>
                     </div>
+
+                    {/* Sidemenu (only on mobile mode) */}
+                    <div className="sidemenu">
+                        <div className="close-button" onClick={this.sidemenuTrigger}>
+                            &times;
+                        </div>
+                        
+                        <Menubar mode="mobile" close={this.sidemenuTrigger} />
+                    </div>
+                    
+                    {/* Showing window cover when sidemenu is active */}
+                    <div className="container-cover" onClick={this.sidemenuTrigger}></div>
                 </>
             </Router>
         )
