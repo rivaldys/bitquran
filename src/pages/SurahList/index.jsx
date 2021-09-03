@@ -7,7 +7,8 @@ class SurahList extends Component
 {
     state =
     {
-        surahList: []
+        surahList: [],
+        search: ''
     }
 
     getSurahList = () =>
@@ -39,6 +40,34 @@ class SurahList extends Component
         }
     }
 
+    handleSearch = (e) =>
+    {
+        const name = e.target.name
+
+        this.setState({
+            ...this.state,
+            [name]: e.target.value
+        })
+    }
+
+    submitSearch = () =>
+    {
+        const search    = this.state.search.toLowerCase()
+        const surahList = this.state.surahList
+        const regex     = new RegExp(search, 'g')
+
+        const surahFiltered = surahList.filter(surah =>
+        {
+            const surahName = surah.name.transliteration.id.toLowerCase()
+
+            if(surahName.match(regex)) return surah
+        })
+
+        this.setState({
+            surahList: surahFiltered
+        })
+    }
+
     ToTopOnLoad = () =>
     {
         window.scrollTo({ top: 0 })
@@ -54,6 +83,8 @@ class SurahList extends Component
     {
         const surah = this.state
 
+        console.log('Daftar Surat:', surah)
+
         return (
             <>
                 <div className="header-background">
@@ -64,6 +95,7 @@ class SurahList extends Component
                         </div>
                     </div>
                 </div>
+
                 <div className="pick-surah">
                     <select name="pick-surah" id="pick-surah" onChange={this.handlePickSurah}>
                         <option value="" target="empty">-Pilih Surat-</option>
@@ -81,6 +113,10 @@ class SurahList extends Component
                         }
                     </select>
                 </div>
+
+                {/* <input type="text" name="search" onChange={this.handleSearch} />
+                <button onClick={this.submitSearch}>Search</button> */}
+
                 <div className="content">
                     {
                         surah.surahList.map(surah =>

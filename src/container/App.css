@@ -620,15 +620,15 @@ b
     .card-about p a,
     .card-about p b
     {
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 14px;
+        line-height: 24px;
     }
 
     .footer-wrapper p,
     .footer-wrapper a
     {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 12px;
+        line-height: 19px;
     }
 
     .footer-wrapper svg
