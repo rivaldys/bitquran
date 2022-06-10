@@ -26,7 +26,16 @@ class ChangeLog extends Component
             <div className="content-bg content-margin">
                 <div className="card-about">
                     <h3>Riwayat Pembaruan</h3>
-                    <p className="label">Versi 1.1</p>
+                    <p className="label">Versi 1.1.1</p>
+                    <ul>
+                        <li>Mengubah <i>endpoint API</i>.</li>
+                        <li>Menambahkan gambar pratinjau (<i>preview image</i>) ketika <i>link</i> situs ini dibagikan di media sosial.</li>
+                        <li>Tahun <i>copyright</i> dinamis sesuai tahun berjalan.</li>
+                    </ul>
+                </div>
+
+                <div className="card-about">
+                    <p className="label">Versi 1.1.0</p>
                     <ul>
                         <li>
                             Menubar pada versi <i>mobile</i> dipindahkan menjadi <i>sidebar menu</i> yang dapat dimunculkan dengan
@@ -37,9 +46,9 @@ class ChangeLog extends Component
                 </div>
 
                 <div className="card-about">
-                    <p className="label">Versi 1.0</p>
+                    <p className="label">Versi 1.0.0</p>
                     <ul>
-                        <li>Rilis versi pertama</li>
+                        <li>Rilis awal</li>
                     </ul>
                 </div>
             </div>

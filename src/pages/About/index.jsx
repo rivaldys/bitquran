@@ -56,7 +56,7 @@ class About extends Component
                         sebagai penyempurna dari kitab-kitab sebelumnya. Sehingga bentuk kesalahan yang terdapat pada aplikasi ini murni
                         disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu,
                         bila menemukan kesalahan/<i>bug</i> seperti misalnya audio <i>murottal</i> tertukar antara
-                        ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di <b>hi@rivaldy.net</b>.
+                        ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di <b>me@rivaldy.net</b>.
                         Namun selain itu, bila ada saran yang ingin diberikan untuk aplikasi ini silakan sampaikan
                         juga melalui surel yang sama.
                     </p>

@@ -25,7 +25,7 @@ untuk ayat-ayat, meta data ayat, dan audio *murottal*, [**Al-Quran-ID-API**](htt
 Sebagaimana hasil buatan manusia pada umumnya, aplikasi ini pun memiliki kekurangan dan mungkin terdapat kesalahan teknis yang terlewat dalam proses pengembangannya. 
 Tentunya Al Qur'an-nya itu sendiri telah diturunkan dengan sempurna sebagai penyempurna dari kitab-kitab sebelumnya. Sehingga bentuk kesalahan yang terdapat pada aplikasi ini 
 murni disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu, bila menemukan kesalahan/bug seperti misalnya audio murottal tertukar 
-antara ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di hi@rivaldy.net. Namun selain itu, 
+antara ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di me@rivaldy.net. Namun selain itu, 
 bila ada saran yang ingin diberikan untuk aplikasi ini silakan sampaikan juga melalui surel yang sama.
 
 ## Author
