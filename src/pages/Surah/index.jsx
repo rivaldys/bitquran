@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { AyahCard } from '../../components'
 import QuranAPI from '../../services'
+import { setPageTitle } from '../../utils'
 import './index.css'
 
 class Surah extends Component
@@ -117,12 +118,12 @@ class Surah extends Component
 
     componentDidUpdate()
     {
-        document.title = `${this.state.name} – Bitquran`
+        document.title = setPageTitle(this.state.name, 'Bitquran')
     }
 
     componentWillUnmount()
     {
-        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
+        document.title = setPageTitle('Bitquran', 'Baca Al-Qur\'an secara Daring')
     }
     
     render()

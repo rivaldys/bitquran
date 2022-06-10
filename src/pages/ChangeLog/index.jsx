@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { setPageTitle } from '../../utils'
 import './index.css'
 
 class ChangeLog extends Component
@@ -10,13 +11,13 @@ class ChangeLog extends Component
 
     componentDidMount()
     {
-        document.title = 'Riwayat Pembaruan – Bitquran'
+        document.title = setPageTitle('Riwayat Pembaruan', 'Bitquran')
         this.ToTopOnLoad()
     }
 
     componentWillUnmount()
     {
-        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
+        document.title = setPageTitle('Bitquran', 'Baca Al-Qur\'an secara Daring')
     }
 
     render()

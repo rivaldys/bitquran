@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { AyahCard } from '../../components'
 import QuranAPI from '../../services'
+import { setPageTitle } from '../../utils'
 import './index.css'
 
 class Tafsir extends Component
@@ -139,12 +140,12 @@ class Tafsir extends Component
 
     componentDidUpdate()
     {
-        document.title = `Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number} – Bitquran`
+        document.title = setPageTitle(`Tafsir ${this.state.surah.name} Ayat ${this.state.ayah.number}`, 'Bitquran')
     }
 
     componentWillUnmount()
     {
-        document.title = 'Bitquran – Baca Al-Qur\'an secara Daring'
+        document.title = setPageTitle('Bitquran', 'Baca Al-Qur\'an secara Daring')
     }
 
     render()
