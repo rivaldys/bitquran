@@ -13,7 +13,7 @@
 ## :memo: Tentang
 Bitquran adalah aplikasi berbasis web yang menyajikan kitab suci Al-Qur'an secara digital dalam bentuk *website*. Dibangunnya aplikasi ini diharapkan dapat memunculkan ketertarikan untuk membaca Al-Qur'an karena dapat diakses dengan mudah.
 
-Aplikasi ini dibangun dalam bentuk *website* dan tidak dibangun dalam bentuk aplikasi *mobile*/ponsel alasannya adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat, sehingga tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan untuk diakses dari berbagai perangkat yang berbeda (*cross-platform*), entah itu dari komputer, ponsel, ataupun tablet. Akses langsung di [bitquran.net](https://bitquran.net).
+Aplikasi ini dibangun dalam bentuk *website* dan tidak dibangun dalam bentuk aplikasi *mobile*/ponsel alasannya adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat, sehingga tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan untuk diakses dari berbagai perangkat yang berbeda (*cross-platform*), entah itu dari komputer, ponsel, ataupun *tablet*. Akses langsung di [bitquran.net](https://bitquran.net).
 
 ## :zap: Fitur
 * Cari surat berdasarkan nama

@@ -28,14 +28,14 @@ class About extends Component
                     <h3>Tentang</h3>
                     <p>
                         Bitquran adalah aplikasi berbasis web yang menyajikan kitab suci Al-Qur'an
-                        secara digital dalam bentuk website. Dibangunnya aplikasi ini diharapkan dapat memunculkan
+                        secara digital dalam bentuk <i>website</i>. Dibangunnya aplikasi ini diharapkan dapat memunculkan
                         ketertarikan untuk membaca Al-Qur'an karena dapat diakses dengan mudah.
                     </p>
                     <p>
-                        Aplikasi ini dibangun dalam bentuk website dan tidak dibangun dalam bentuk aplikasi <i>mobile</i>/ponsel
+                        Aplikasi ini dibangun dalam bentuk <i>website</i> dan tidak dibangun dalam bentuk aplikasi <i>mobile</i>/ponsel
                         alasannya adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat,
                         sehingga tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan
-                        untuk diakses dari berbagai perangkat yang berbeda (<i>cross-platform</i>), entah itu dari komputer, ponsel, ataupun tablet.
+                        untuk diakses dari berbagai perangkat yang berbeda (<i>cross-platform</i>), entah itu dari komputer, ponsel, ataupun <i>tablet</i>.
                     </p>
                 </div>
 
@@ -56,7 +56,7 @@ class About extends Component
                         sebagai penyempurna dari kitab-kitab sebelumnya. Sehingga bentuk kesalahan yang terdapat pada aplikasi ini murni
                         disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu,
                         bila menemukan kesalahan/<i>bug</i> seperti misalnya audio <i>murottal</i> tertukar antara
-                        ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di <b>me@rivaldy.net</b>.
+                        ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di <a href="mailto:me@rivaldy.net"><b>me@rivaldy.net</b></a>.
                         Namun selain itu, bila ada saran yang ingin diberikan untuk aplikasi ini silakan sampaikan
                         juga melalui surel yang sama.
                     </p>
