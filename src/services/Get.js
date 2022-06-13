@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-// const baseURL = 'https://api.quran.sutanlab.id'
 const baseURL = process.env.REACT_APP_API_URL
 
 const Get = (path) =>
