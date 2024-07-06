@@ -1,0 +1,33 @@
+{
+    "compilerOptions":
+    {
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "baseUrl": "src/",
+        "paths":
+        {
+            "bitquran/assets": ["assets"],
+            "bitquran/images": ["assets/images"],
+            "bitquran/styles/*": ["assets/css/*"],
+            "bitquran/components": ["components"],
+            "bitquran/pages": ["pages"],
+            "bitquran/services/actions": ["services/actions"],
+            "bitquran/services/*": ["services/*"],
+            "bitquran/types": ["types"],
+            "bitquran/utils": ["utils"],
+            "bitquran/package": ["../package.json"],
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,11 @@
+@import url('./font-config.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .content-container {
+        @apply w-[1024px] px-[15px] mx-auto
+    }
+}
