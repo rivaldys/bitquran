@@ -1,7 +1,7 @@
 import Footer from './Footer'
-import NavigationBar from './NavigationBar'
+import Header from './Header'
 
 export {
     Footer,
-    NavigationBar
+    Header
 }
