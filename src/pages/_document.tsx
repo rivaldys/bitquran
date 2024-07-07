@@ -4,7 +4,10 @@ export default function Document()
 {
     return (
         <Html lang="id">
-            <Head />
+            <Head>
+                <link rel="icon" type="image/png" href="/logo.png" />
+                <link rel="apple-touch-icon" type="image/png" href="/logo192.png" />
+            </Head>
             <body className="text-[#757575] font-rubik font-light text-base leading-[23px] p-0 m-0">
                 <Main />
                 <NextScript />

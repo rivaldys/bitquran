@@ -1,4 +1,4 @@
-import { Footer, NavigationBar } from 'bitquran/components'
+import { Footer, Header } from 'bitquran/components'
 import { AppLayoutProps } from 'bitquran/types'
 import Head from 'next/head'
 
@@ -21,11 +21,9 @@ export default function AppLayout({ children }: AppLayoutProps)
                 <meta property="og:image" content="/cover-image.png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <link rel="icon" type="image/png" href="/logo.png" />
-                <link rel="apple-touch-icon" type="image/png" href="/logo192.png" />
             </Head>
 
-            <NavigationBar />
+            <Header />
 
             <main className="content-container min-h-[calc(100vh-150px)] mt-[75px] bg-[#eaeaea]">
                 {children}
