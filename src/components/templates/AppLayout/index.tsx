@@ -25,7 +25,7 @@ export default function AppLayout({ children }: AppLayoutProps)
 
             <Header />
 
-            <main className="content-container min-h-[calc(100vh-150px)] mt-[75px] bg-[#eaeaea]">
+            <main className="content-container min-h-[calc(100vh-210px)] mt-[105px]">
                 {children}
             </main>
 
