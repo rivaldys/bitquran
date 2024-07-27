@@ -4,13 +4,13 @@ const nextConfig = {
     redirects() {
         return [
             {
-                source: '/surah',
+                source: '/surat',
                 destination: '/',
                 permanent: true
             },
             {
-                source: '/surah/:id/tafsir',
-                destination: '/surah/:id',
+                source: '/surat/:id/tafsir',
+                destination: '/surat/:id',
                 permanent: true
             }
           ]
