@@ -1,4 +1,4 @@
-import Surah from './surah'
+import Surah from './surat'
 
 export default function Main()
 {

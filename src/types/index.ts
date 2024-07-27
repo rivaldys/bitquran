@@ -20,6 +20,16 @@ export interface AppLogoProps {
     className?: string
 }
 
+export interface SurahItemProps {
+    number: string | number
+    title: string
+    description: string
+    label: string
+    containerClassName?: string
+    className?: string
+    href: string
+}
+
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string
 }
@@ -27,6 +37,16 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 export interface SectionTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
     children: ReactNode
     className?: string
+}
+
+export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+    children: ReactNode
+    className?: string
+    disabled?: boolean
+}
+
+export interface SelectOptionProps extends React.OptionHTMLAttributes<HTMLOptionElement> {
+    children: ReactNode
 }
 
 export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
@@ -44,4 +64,39 @@ export interface TextLinkProps extends LinkProps {
     className?: string
     rel?: string
     target?: string
+}
+
+export interface ToolbarProps {
+    className?: string
+    number?: string | number
+    audioButton?: {
+        src: string
+        onClick: React.MouseEventHandler<HTMLButtonElement>
+        title?: string
+    }
+    docButton?: {
+        onClick: React.MouseEventHandler<HTMLButtonElement>
+        title?: string
+    }
+}
+
+export interface VerseItemProps {
+    className?: string
+    toolbar?: {
+        number?: string | number
+        audioButton?: {
+            src: string
+            onClick: React.MouseEventHandler<HTMLButtonElement>
+            title?: string
+        }
+        docButton?: {
+            onClick: React.MouseEventHandler<HTMLButtonElement>
+            title?: string
+        }
+    }
+    verse: {
+        ar: string
+        id: string
+    }
+    disableBottomSepartor?: boolean
 }

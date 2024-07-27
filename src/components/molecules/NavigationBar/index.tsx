@@ -23,8 +23,8 @@ export default function NavigationBar()
     return (
         <nav>
             <ul className="flex list-none overflow-hidden mb-0">
-                {navigations.map(navigation => (
-                    <li>
+                {navigations.map((navigation, index) => (
+                    <li key={`link-${index+1}`}>
                         <Link
                             className="block transition duration-300 text-[#757575] text-sm leading-[21px] font-normal px-5 py-[5px] hover:text-[#4CAF50] hover:cursor-pointer"
                             href={navigation.path}
