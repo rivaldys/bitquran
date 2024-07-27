@@ -9,7 +9,8 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                rubik: ['Rubik', 'sans-serif']
+                rubik: ['Rubik', 'sans-serif'],
+                'saleem-quran': ['Saleem Quran', 'sans-serif']
             }
         }
     },
