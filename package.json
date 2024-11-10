@@ -4,6 +4,7 @@
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "author": "Ahmad Rivaldy S",
     "private": true,
+    "homepage": "https://bitquran.net/",
     "scripts":
     {
         "dev": "next dev -p 3005",
