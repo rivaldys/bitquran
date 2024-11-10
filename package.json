@@ -1,6 +1,7 @@
 {
-  "name": "quran-web",
-  "version": "1.0.0",
+  "name": "bitquran",
+  "version": "1.1.2",
+  "homepage": "https://bitquran.net/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
