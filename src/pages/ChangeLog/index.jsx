@@ -26,6 +26,13 @@ class ChangeLog extends Component
             <div className="content-bg content-margin">
                 <div className="card-about">
                     <h3>Riwayat Pembaruan</h3>
+                    <p className="label">Versi 1.1.2</p>
+                    <ul>
+                        <li>Menambahkan konfigurasi <i>base url/public url</i>.</li>
+                    </ul>
+                </div>
+
+                <div className="card-about">
                     <p className="label">Versi 1.1.1</p>
                     <ul>
                         <li>Mengubah <i>endpoint API</i>.</li>
