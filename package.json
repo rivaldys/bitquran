@@ -2,30 +2,40 @@
     "name": "bitquran",
     "version": "1.2.0",
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
+    "main": "./src/pages/index.tsx",
+    "keywords": [],
     "author": "Ahmad Rivaldy S",
+    "license": "ISC",
     "private": true,
     "homepage": "https://bitquran.net/",
-    "scripts":
-    {
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rivaldys/bitquran.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rivaldys/bitquran/issues"
+    },
+    "scripts": {
         "dev": "next dev -p 3005",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
-    "dependencies":
-    {
-        "class-variance-authority": "^0.7.0",
+    "dependencies": {
+        "class-variance-authority": "^0.7.1",
         "next": "14.2.4",
         "react": "^18",
         "react-dom": "^18"
     },
-    "devDependencies":
-    {
+    "devDependencies": {
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "postcss": "^8",
         "tailwindcss": "^3.4.7",
         "typescript": "^5"
+    },
+    "engines": {
+        "node": ">=22.0.0"
     }
 }
