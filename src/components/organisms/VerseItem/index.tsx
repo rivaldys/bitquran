@@ -1,6 +1,26 @@
 import { Toolbar } from 'bitquran/components'
-import { VerseItemProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
+
+export interface VerseItemProps {
+    className?: string
+    toolbar?: {
+        number?: string | number
+        audioButton?: {
+            src: string
+            onClick: React.MouseEventHandler<HTMLButtonElement>
+            title?: string
+        }
+        docButton?: {
+            onClick: React.MouseEventHandler<HTMLButtonElement>
+            title?: string
+        }
+    }
+    verse: {
+        ar: string
+        id: string
+    }
+    disableBottomSepartor?: boolean
+}
 
 const containerVerseItemStyle = cva('relative w-full transition duration-500 box-border')
 

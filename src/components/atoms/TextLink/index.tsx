@@ -1,6 +1,13 @@
-import { TextLinkProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
+import { ReactNode } from 'react'
+
+export interface TextLinkProps extends LinkProps {
+    children: ReactNode
+    className?: string
+    rel?: string
+    target?: string
+}
 
 const textLabelStyle = cva('text-[#4caf50] transition duration-300 hover:opacity-50')
 

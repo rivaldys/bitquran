@@ -1,6 +1,9 @@
 import { ILLogoWide } from 'bitquran/images'
-import { AppLogoProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
+
+export interface AppLogoProps {
+    className?: string
+}
 
 const appLogoStyle = cva('bg-[length:100%] bg-no-repeat bg-center')
 

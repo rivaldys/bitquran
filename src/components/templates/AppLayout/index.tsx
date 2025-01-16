@@ -1,6 +1,10 @@
 import { Footer, Header } from 'bitquran/components'
-import { AppLayoutProps } from 'bitquran/types'
 import Head from 'next/head'
+import { ReactNode } from 'react'
+
+export interface AppLayoutProps {
+    children: ReactNode
+}
 
 export default function AppLayout({ children }: AppLayoutProps)
 {

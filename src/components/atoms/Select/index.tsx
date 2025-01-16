@@ -1,5 +1,15 @@
-import { SelectOptionProps, SelectProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
+import { ReactNode } from 'react'
+
+export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+    children: ReactNode
+    className?: string
+    disabled?: boolean
+}
+
+export interface SelectOptionProps extends React.OptionHTMLAttributes<HTMLOptionElement> {
+    children: ReactNode
+}
 
 const selectStyle = cva('w-full border-none rounded-[7px] p-[10px]', {
     variants:

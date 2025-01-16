@@ -1,5 +1,18 @@
-import { ToolbarProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
+
+export interface ToolbarProps {
+    className?: string
+    number?: string | number
+    audioButton?: {
+        src: string
+        onClick: React.MouseEventHandler<HTMLButtonElement>
+        title?: string
+    }
+    docButton?: {
+        onClick: React.MouseEventHandler<HTMLButtonElement>
+        title?: string
+    }
+}
 
 const toolbarStyle = cva('flex items-center justify-between bg-[#e0f2f1] rounded-[5px] box-border p-[10px]')
 const iconButtonSyle = cva('w-[25px] h-[25px] flex justify-center items-center border-none bg-transparent box-border transition duration-500 hover:cursor-pointer hover:opacity-55')

@@ -1,5 +1,10 @@
-import { TextProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
+import { ReactNode } from 'react'
+
+export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
+    children: ReactNode
+    className?: string
+}
 
 const textStyle = cva('text-[15px] leading-[25px] mb-[10px]')
 

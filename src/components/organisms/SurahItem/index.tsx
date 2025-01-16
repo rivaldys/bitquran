@@ -1,6 +1,15 @@
-import { SurahItemProps } from 'bitquran/types'
 import { cva } from 'class-variance-authority'
 import Link from 'next/link'
+
+export interface SurahItemProps {
+    number: string | number
+    title: string
+    description: string
+    label: string
+    containerClassName?: string
+    className?: string
+    href: string
+}
 
 const containerSurahItemStyle = cva('w-full flex items-center')
 const surahItemStyle = cva('w-[calc(100%-65px)] h-[85px] flex justify-between items-center px-[25px] rounded-[7px] box-border border-b-2 border-b-[#81c784] bg-white shadow-[0_0_10px_rgba(235,235,235,0.8)] [background-size:200%_100%] [background-image:linear-gradient(to_right,_#fff_50%,_#E0F2F1_50%)] transition-all duration-500 hover:[background-position:-100%_0] hover:cursor-pointer')
