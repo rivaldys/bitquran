@@ -1,7 +1,8 @@
 import { Input, SurahItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/images'
+import { SurahProps } from 'bitquran/types'
 
-export default function Surah()
+export default function Surah({ surahs }: SurahProps)
 {
     return (
         <div>
@@ -19,230 +20,18 @@ export default function Surah()
 
             <Input className="mb-[30px]" placeholder="Cari nama surat" />
 
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
-            <SurahItem
-                containerClassName="mb-[15px]"
-                number="1"
-                title="Nama Surat"
-                description="Deskripsi Surat"
-                label="Label Surat"
-                href="/surat/1"
-            />
+            {surahs &&
+                surahs.data.map(surah => (
+                    <SurahItem
+                        containerClassName="mb-[15px]"
+                        number={surah.number}
+                        title={surah.name.transliteration.id}
+                        description={surah.name.translation.id}
+                        label={surah.name.short}
+                        href={`/surat/${surah.number}`}
+                        key={`surah-${surah.number}`}
+                    />
+                ))}
         </div>
     )
 }
