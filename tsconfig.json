@@ -23,7 +23,8 @@
             "bitquran/pages": ["pages"],
             "bitquran/services/actions": ["services/actions"],
             "bitquran/services/*": ["services/*"],
-            "bitquran/types": ["types"],
+            "bitquran/hooks": ["utils/@hooks"],
+            "bitquran/types": ["utils/@types"],
             "bitquran/utils": ["utils"],
             "bitquran/package": ["../package.json"],
         }
