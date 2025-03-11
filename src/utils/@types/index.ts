@@ -24,10 +24,28 @@ export interface ActionResponse {
     succeed?: (params: object) => void
 }
 
-export interface SurahProps {
+export interface SurahsProps {
     surahs: {
         code: number
         data: SurahItem[]
+        message: string
+        status: string
+    }
+}
+
+export interface SurahProps {
+    surah: {
+        code: number
+        data: SurahItem
+        message: string
+        status: string
+    }
+}
+
+export interface SurahTafsirProps {
+    verse: {
+        code: number
+        data: VerseItem
         message: string
         status: string
     }
@@ -55,6 +73,46 @@ export interface SurahItem {
     }
     sequence: number
     tafsir: {
+        id: string
+    },
+    verses?: VerseItem[]
+}
+
+export interface VerseItem {
+    audio: {
+        primary: string,
+        secondary: string[]
+    },
+    meta: {
+        hizbQuarter: number,
+        juz: number,
+        manzil: number,
+        page: number,
+        ruku: number,
+        sajda: {
+            obligatory: boolean,
+            recommended: boolean
+        }
+    },
+    number: {
+        inQuran: number,
+        inSurah: number
+    },
+    surah?: SurahItem,
+    tafsir: {
+        id: {
+            long: string,
+            short: string
+        }
+    },
+    text: {
+        arab: string,
+        transliteration: {
+            en: string
+        }
+    },
+    translation: {
+        en: string,
         id: string
     }
 }
