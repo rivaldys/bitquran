@@ -1,8 +1,8 @@
 import { Input, SurahItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/images'
-import { SurahProps } from 'bitquran/types'
+import { SurahsProps } from 'bitquran/types'
 
-export default function Surah({ surahs }: SurahProps)
+export default function Surah({ surahs }: SurahsProps)
 {
     return (
         <div>
