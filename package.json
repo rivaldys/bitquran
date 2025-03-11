@@ -3,7 +3,7 @@
     "version": "1.2.0",
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "main": "./src/pages/index.tsx",
-    "keywords": [],
+    "keywords": ["alquran", "al-quran", "alquran-web", "quran", "quran-web"],
     "author": "Ahmad Rivaldy S",
     "license": "ISC",
     "private": true,
@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "class-variance-authority": "^0.7.1",
-        "next": "14.2.4",
+        "next": "14.2.24",
         "react": "^18",
         "react-dom": "^18"
     },
@@ -32,7 +32,7 @@
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "postcss": "^8",
-        "tailwindcss": "^3.4.7",
+        "tailwindcss": "^3.4.17",
         "typescript": "^5"
     },
     "engines": {
