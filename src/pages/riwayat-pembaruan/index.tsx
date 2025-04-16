@@ -8,10 +8,24 @@ export default function ChangeLog()
             <Head>
                 <title>Riwayat Pembaruan &#8211; Bitquran</title>
             </Head>
-            
+
             <PageContentLayout>
                 <ContentSection>
                     <SectionTitle>Riwayat Pembaruan</SectionTitle>
+                    <TextLabel>Versi 1.2.0</TextLabel>
+                    <ul className="pl-[30px] list-disc">
+                        <li>Pemutakhiran teknologi utama situs ini dari React v17 ke Next.js v14 (React v18) dan beberapa teknologi pendukung lainnya.</li>
+                    </ul>
+                </ContentSection>
+
+                <ContentSection>
+                    <TextLabel>Versi 1.1.2</TextLabel>
+                    <ul className="pl-[30px] list-disc">
+                        <li>Menambahkan konfigurasi <i>base url/public url</i>.</li>
+                    </ul>
+                </ContentSection>
+
+                <ContentSection>
                     <TextLabel>Versi 1.1.1</TextLabel>
                     <ul className="pl-[30px] list-disc">
                         <li>Mengubah <i>endpoint API</i>.</li>
