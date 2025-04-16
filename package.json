@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "class-variance-authority": "^0.7.1",
-        "next": "14.2.24",
+        "next": "14.2.28",
         "react": "^18",
         "react-dom": "^18"
     },
