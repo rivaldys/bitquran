@@ -24,6 +24,12 @@ export interface ActionResponse {
     succeed?: (params: object) => void
 }
 
+export interface IconProps {
+    name?: string
+    size?: number
+    color?: string
+}
+
 export interface SurahsProps {
     surahs: {
         code: number

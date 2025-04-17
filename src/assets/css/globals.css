@@ -6,6 +6,12 @@
 
 @layer components {
     .content-container {
-        @apply w-[1024px] px-[15px] mx-auto
+        @apply w-screen px-[15px] mx-auto;
+    }
+
+    @screen sm {
+        .content-container {
+            @apply w-[1024px];
+        }
     }
 }

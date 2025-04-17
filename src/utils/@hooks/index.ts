@@ -1,3 +1,5 @@
+export * from './useDeviceTypeWatcher'
 export * from './useEventListener'
 export * from './useForm'
 export * from './useNetworkStatus'
+export * from './useWindowDimensions'

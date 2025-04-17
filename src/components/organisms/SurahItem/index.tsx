@@ -12,13 +12,13 @@ export interface SurahItemProps {
 }
 
 const containerSurahItemStyle = cva('w-full flex items-center')
-const surahItemStyle = cva('w-[calc(100%-65px)] h-[85px] flex justify-between items-center px-[25px] rounded-[7px] box-border border-b-2 border-b-[#81c784] bg-white shadow-[0_0_10px_rgba(235,235,235,0.8)] [background-size:200%_100%] [background-image:linear-gradient(to_right,_#fff_50%,_#E0F2F1_50%)] transition-all duration-500 hover:[background-position:-100%_0] hover:cursor-pointer')
+const surahItemStyle = cva('w-[calc(100%-50px)] sm:w-[calc(100%-65px)] h-[70px] sm:h-[85px] flex justify-between items-center px-[20px] sm:px-[25px] rounded-[5px] sm:rounded-[7px] box-border border-b-2 border-b-[#81c784] bg-white shadow-[0_0_10px_rgba(235,235,235,0.8)] [background-size:200%_100%] [background-image:linear-gradient(to_right,_#fff_50%,_#E0F2F1_50%)] transition-all duration-500 hover:[background-position:-100%_0] hover:cursor-pointer')
 
 export default function SurahItem({ number, title, description, label, containerClassName, className, href }: SurahItemProps)
 {
     return (
         <div className={containerSurahItemStyle({ className: containerClassName })}>
-            <div className="relative w-[50px] h-[50px] flex justify-center items-center fill-[#4caf50] mr-[15px]">
+            <div className="relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] flex justify-center items-center fill-[#4caf50] mr-[15px]">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.84 282.84">
                     <g id="Layer_2" data-name="Layer 2">
                         <g id="Layer_1-2" data-name="Layer 1">
@@ -26,15 +26,15 @@ export default function SurahItem({ number, title, description, label, container
                         </g>
                     </g>
                 </svg>
-                <p className="absolute">{number}</p>
+                <p className="absolute text-sm leading-[21px] sm:text-base sm:leading-[23px]">{number}</p>
             </div>
 
             <Link href={href} className={surahItemStyle({ className })}>
                 <div>
-                    <p className="text-[rgb(117,117,117)] font-medium text-base leading-[23px]">{title}</p>
-                    <label className="text-[#999999] font-light text-sm leading-[21px]">{description}</label>
+                    <p className="text-[rgb(117,117,117)] font-medium text-sm leading-[21px] sm:text-base sm:leading-[23px]">{title}</p>
+                    <label className="text-[#999999] font-light text-xs leading-[19px] sm:text-sm sm:leading-[21px]">{description}</label>
                 </div>
-                <p className="text-[#757575] font-normal text-[28px] font-saleem-quran">{label}</p>
+                <p className="text-[#757575] font-normal text-[26px] sm:text-[28px] font-saleem-quran">{label}</p>
             </Link>
         </div>
     )

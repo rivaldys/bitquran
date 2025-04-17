@@ -1,5 +1,9 @@
 import Link from 'next/link'
 
+export interface NavigationBarProps {
+    type?: string
+}
+
 const navigations = [
     {
         id: 1,
@@ -18,8 +22,13 @@ const navigations = [
     },
 ]
 
-export default function NavigationBar()
+export default function NavigationBar({ type }: NavigationBarProps)
 {
+    if(type === 'drawer')
+    {
+        return ""
+    }
+
     return (
         <nav>
             <ul className="flex list-none overflow-hidden mb-0">
