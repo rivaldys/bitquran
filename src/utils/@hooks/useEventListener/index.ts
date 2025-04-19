@@ -2,7 +2,7 @@ import { MutableRefObject, useEffect, useRef } from 'react'
 
 type EventHandler = (event: Event) => void
 
-export const useEventListener = (eventName: string, handler: EventHandler, element: HTMLElement | Window = window): void =>
+const useEventListener = (eventName: string, handler: EventHandler, element: HTMLElement | Window = window): void =>
 {
     const savedHandler: MutableRefObject<EventHandler | undefined> = useRef()
 
@@ -29,3 +29,5 @@ export const useEventListener = (eventName: string, handler: EventHandler, eleme
         }
     }, [eventName, element])
 }
+
+export default useEventListener

@@ -1,5 +1,13 @@
-export * from './useDeviceTypeWatcher'
-export * from './useEventListener'
-export * from './useForm'
-export * from './useNetworkStatus'
-export * from './useWindowDimensions'
+import useDeviceTypeWatcher from './useDeviceTypeWatcher'
+import useEventListener from './useEventListener'
+import useForm from './useForm'
+import useNetworkStatus from './useNetworkStatus'
+import useWindowDimensions from './useWindowDimensions'
+
+export {
+    useDeviceTypeWatcher,
+    useEventListener,
+    useForm,
+    useNetworkStatus,
+    useWindowDimensions
+}

@@ -29,4 +29,6 @@ const remember = (key: string, { protect }: rememberOptions = {}) =>
     if(value != null) return JSON.parse(value)
 }
 
-export const browserMind = (() => ({ memorize, remember }))()
+const browserMind = (() => ({ memorize, remember }))()
+
+export default browserMind

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
-import { useWindowDimensions } from '../useWindowDimensions'
+import useWindowDimensions from '../useWindowDimensions'
 
-export const useDeviceTypeWatcher = () =>
+const useDeviceTypeWatcher = () =>
 {
     const { windowWidth } = useWindowDimensions()
     const mobileModeMinWidth = 768
@@ -13,3 +13,5 @@ export const useDeviceTypeWatcher = () =>
 
     return deviceType
 }
+
+export default useDeviceTypeWatcher

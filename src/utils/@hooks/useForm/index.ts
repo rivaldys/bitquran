@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 type FormValue = string | number | boolean | object | Array<object>
 
-export const useForm = (initialValue: any) =>
+const useForm = (initialValue: any) =>
 {
     const [value, setValue] = useState(initialValue)
 
@@ -34,3 +34,5 @@ export const useForm = (initialValue: any) =>
 
     return [value, onChangeHandler]
 }
+
+export default useForm

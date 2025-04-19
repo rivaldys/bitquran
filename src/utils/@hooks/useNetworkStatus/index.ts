@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const useNetworkStatus = (): 'online' | 'offline' =>
+const useNetworkStatus = (): 'online' | 'offline' =>
 {
     const [status, setStatus] = useState<'online' | 'offline'>(window.navigator.onLine ? 'online' : 'offline')
 
@@ -21,3 +21,5 @@ export const useNetworkStatus = (): 'online' | 'offline' =>
 
     return status
 }
+
+export default useNetworkStatus
