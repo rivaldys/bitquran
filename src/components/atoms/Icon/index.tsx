@@ -1,4 +1,4 @@
-import { IcArrowUp } from 'bitquran/icons'
+import { IcArrowUp, IcMenu, IcMugHot } from 'bitquran/icons'
 import { IconProps } from 'bitquran/types'
 
 export default function Icon({ name, size, color }: IconProps)
@@ -7,6 +7,8 @@ export default function Icon({ name, size, color }: IconProps)
     const currentColor = color ? color : '#999999'
 
     if(name === 'arrow-up') return <IcArrowUp size={currentSize} color={currentColor} />
+    if(name === 'menu') return <IcMenu size={currentSize} color={currentColor} />
+    if(name === 'mug-hot') return <IcMugHot size={currentSize} color={currentColor} />
 
     return <IcArrowUp size={currentSize} color={currentColor} />
 }
