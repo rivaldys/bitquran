@@ -1,4 +1,4 @@
-import { BackToTop, Footer, Header } from 'bitquran/components'
+import { BackToTop, Footer, NavigationBar } from 'bitquran/components'
 import Head from 'next/head'
 import { ReactNode } from 'react'
 
@@ -28,7 +28,7 @@ export default function AppLayout({ children }: AppLayoutProps)
                 <meta property="og:site_name" content="Bitquran" />
             </Head>
 
-            <Header />
+            <NavigationBar />
 
             <main className="content-container min-h-[calc(100vh-210px)] mt-[85px] sm:mt-[105px]">
                 {children}
