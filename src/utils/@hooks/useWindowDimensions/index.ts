@@ -21,9 +21,9 @@ const getWindowDimensions = (): WindowDimensions =>
     }
 }
 
-const useWindowDimensions = (): WindowDimensions =>
+const useWindowDimensions = (): WindowDimensions | null =>
 {
-    const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>(getWindowDimensions())
+    const [windowDimensions, setWindowDimensions] = useState<WindowDimensions | null>(null)
 
     useEffect(() =>
     {
@@ -31,7 +31,9 @@ const useWindowDimensions = (): WindowDimensions =>
             setWindowDimensions(getWindowDimensions())
         }, 300)
 
+        setWindowDimensions(getWindowDimensions())
         window.addEventListener('resize', handleResize)
+
         return () => {
             window.removeEventListener('resize', handleResize)
             handleResize.cancel()
