@@ -6,5 +6,5 @@ interface BackdropProps {
 
 export default function Backdrop({ isShown }: BackdropProps)
 {
-    return <div className={`${styles.backdrop}${isShown ? ` ${styles.show}` : ''}`} />
+    return <div data-role="backdrop" className={`${styles.backdrop}${isShown ? ` ${styles.show}` : ''}`} />
 }
