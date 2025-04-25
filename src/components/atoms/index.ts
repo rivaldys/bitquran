@@ -1,4 +1,5 @@
 import AppLogo from './AppLogo'
+import Backdrop from './Backdrop'
 import BackToTop from './BackToTop'
 import Icon from './Icon'
 import Input from './Input'
@@ -10,6 +11,7 @@ import TextLink from './TextLink'
 
 export {
     AppLogo,
+    Backdrop,
     BackToTop,
     Icon,
     Input,
