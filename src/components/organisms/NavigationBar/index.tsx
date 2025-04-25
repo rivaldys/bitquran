@@ -1,5 +1,5 @@
+import { AppLogo, Backdrop, Icon } from 'bitquran/components'
 import { useDeviceTypeWatcher } from 'bitquran/utils'
-import { AppLogo, Icon } from 'components/atoms'
 import Link from 'next/link'
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
 
@@ -39,13 +39,14 @@ function Drawer({ isShown, setIsShown }: DrawerProps)
 {
     return (
         <>
-            <div className={`bg-[rgba(0,0,0,0.5)] h-full fixed right-0 top-0 transition-[visibility,opacity,transform] duration-300 w-full z-10 ${
-                isShown ? 'block opacity-1 scale-100 delay-[0s,0s,0s] visibility-visible' : 'hidden opacity-0 scale-[1.1] delay-[0s,0s,250ms] visibility-hidden'
-            }`} />
+            <Backdrop isShown={isShown} />
 
-            <div className={`bg-white h-full overflow-x-hidden pt-[52px] fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
-                isShown ? 'mr-0' : '-mr-[250px]'
-            }`}>
+            <aside
+                data-role="sidebar"
+                className={`bg-white h-full overflow-x-hidden pt-[52px] fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
+                    isShown ? 'mr-0' : '-mr-[250px]'
+                }`}
+            >
                 <button
                     className="flex items-center justify-center bg-[#f2f2f2] text-[#c1c1c1] text-[20px] w-[45px] h-[45px] rounded-bl-[15px] cursor-pointer absolute top-0 right-0"
                     onClick={() => setIsShown(false)}
@@ -69,7 +70,7 @@ function Drawer({ isShown, setIsShown }: DrawerProps)
                         ))}
                     </ul>
                 </nav>
-            </div>
+            </aside>
         </>
     )
 }
