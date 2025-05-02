@@ -1,5 +1,5 @@
+import { Icon } from 'bitquran/components'
 import packageInfo from 'bitquran/package'
-import { Icon } from 'components/atoms'
 
 export default function Footer()
 {

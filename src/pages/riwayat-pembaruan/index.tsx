@@ -1,4 +1,4 @@
-import { ContentSection, PageContentLayout, SectionTitle, Text, TextLabel } from 'bitquran/components'
+import { ContentSection, PageContentLayout, SectionTitle, TextLabel } from 'bitquran/components'
 import Head from 'next/head'
 
 export default function ChangeLog()
