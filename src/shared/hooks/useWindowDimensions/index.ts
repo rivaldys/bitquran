@@ -1,4 +1,4 @@
-import { debounce } from 'bitquran/utils'
+import { debounce } from 'shared/utils'
 import { useEffect, useState } from 'react'
 
 interface WindowDimensions {

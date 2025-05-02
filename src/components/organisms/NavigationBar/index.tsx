@@ -1,5 +1,5 @@
 import { AppLogo, Backdrop, Icon } from 'bitquran/components'
-import { useDeviceTypeWatcher } from 'bitquran/utils'
+import { useDeviceTypeWatcher } from 'bitquran/shared/hooks'
 import Link from 'next/link'
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
 

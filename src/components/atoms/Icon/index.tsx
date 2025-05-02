@@ -1,5 +1,5 @@
 import { IcArrowUp, IcMenu, IcMugHot } from 'bitquran/icons'
-import { IconProps } from 'bitquran/types'
+import { IconProps } from 'shared/types'
 
 export default function Icon({ name, size, color }: IconProps)
 {

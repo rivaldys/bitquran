@@ -1,6 +1,6 @@
 import { PageContentLayout, Select, VerseItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/images'
-import { SurahProps } from 'bitquran/types'
+import type { SurahProps } from 'bitquran/shared/types'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'

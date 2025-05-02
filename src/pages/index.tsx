@@ -1,4 +1,4 @@
-import { SurahsProps } from 'bitquran/types'
+import type { SurahsProps } from 'bitquran/shared/types'
 import Surah from './surat'
 
 export async function getServerSideProps()

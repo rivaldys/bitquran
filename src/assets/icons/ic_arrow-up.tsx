@@ -1,4 +1,4 @@
-import { IconProps } from 'bitquran/types'
+import { IconProps } from 'bitquran/shared/types'
 
 export default function IcArrowUp({ size, color }: IconProps)
 {

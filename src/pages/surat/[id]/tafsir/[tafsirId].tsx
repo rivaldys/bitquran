@@ -1,5 +1,5 @@
 import { PageContentLayout, Select, TextLink, VerseItem } from 'bitquran/components'
-import { SurahTafsirProps } from 'bitquran/types'
+import type { SurahTafsirProps } from 'bitquran/shared/types'
 import { cva } from 'class-variance-authority'
 import { GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
