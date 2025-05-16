@@ -42,7 +42,7 @@ function Drawer({ isShown, setIsShown }: DrawerProps)
             <Backdrop isShown={isShown} />
 
             <aside
-                data-role="sidebar"
+                data-role="drawer"
                 className={`bg-white h-full overflow-x-hidden pt-[52px] fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
                     isShown ? 'mr-0' : '-mr-[250px]'
                 }`}
