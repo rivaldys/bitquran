@@ -1,44 +1,55 @@
 {
-  "name": "bitquran",
-  "version": "1.1.2",
-  "homepage": "https://bitquran.net/",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "web-vitals": "^1.1.2"
-  },
-  "devDependencies": {
-    "react-scripts": "5.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "bitquran",
+    "version": "1.2.0",
+    "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
+    "keywords": [
+        "alquran",
+        "al-quran",
+        "alquran-web",
+        "quran",
+        "quran-web"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "author": "Ahmad Rivaldy S",
+    "license": "ISC",
+    "type": "module",
+    "private": true,
+    "homepage": "https://bitquran.net",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rivaldys/bitquran.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rivaldys/bitquran/issues"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.1.11",
+        "axios": "^1.10.0",
+        "class-variance-authority": "^0.7.1",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "tailwindcss": "^4.1.11"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.29.0",
+        "@types/node": "^24.0.7",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@vitejs/plugin-react": "^4.5.2",
+        "eslint": "^9.29.0",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.20",
+        "globals": "^16.2.0",
+        "typescript": "~5.8.3",
+        "typescript-eslint": "^8.34.1",
+        "vite": "^7.0.0"
+    },
+    "engines": {
+        "node": ">=22.0.0"
+    }
 }

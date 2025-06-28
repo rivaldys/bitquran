@@ -1,0 +1,14 @@
+@import url('./assets/css/font-config.css');
+@import "tailwindcss";
+
+@layer components {
+    .content-container {
+        @apply w-screen px-[15px] mx-auto;
+    }
+
+    @screen sm {
+        .content-container {
+            @apply w-[1024px];
+        }
+    }
+}

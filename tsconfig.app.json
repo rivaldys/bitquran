@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "ES2022",
+        "useDefineForClassFields": true,
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "erasableSyntaxOnly": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+
+        /* Absolute imports */
+        "baseUrl": "src",
+        "paths": {
+            "bitquran/assets": ["assets"],
+            "bitquran/icons": ["assets/icons"],
+            "bitquran/images": ["assets/images"],
+            "bitquran/components": ["components"],
+            "bitquran/pages": ["pages"],
+            "bitquran/router": ["router"],
+            "bitquran/router/core": ["router/core"],
+            "bitquran/services/api": ["services/api"],
+            "bitquran/services/slices": ["services/slices"],
+            "bitquran/services/store": ["services/store"],
+            "bitquran/shared/constants": ["shared/constants"],
+            "bitquran/shared/hooks": ["shared/hooks"],
+            "bitquran/shared/lib": ["shared/lib"],
+            "bitquran/shared/types": ["shared/types"],
+            "bitquran/shared/utils": ["shared/utils"],
+            "bitquran/package": ["../package.json"],
+        }
+    },
+    "include": ["src"]
+}
