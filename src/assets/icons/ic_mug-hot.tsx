@@ -1,9 +1,10 @@
-import { IconProps } from 'bitquran/shared/types'
+import type { IconProps } from 'bitquran/shared/types'
 
-export default function IcMugHot({ size, color }: IconProps)
+export default function IcMugHot({ className, size, color }: IconProps)
 {
     return (
         <svg
+            className={className}
             width={size}
             height={size}
             xmlns="http://www.w3.org/2000/svg"
