@@ -1,6 +1,8 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 import { type ConfigEnv, defineConfig, loadEnv } from 'vite'
+import packageInfo from './package.json'
 
 // https://vite.dev/config/
 export default ({ mode }: ConfigEnv) => {
@@ -8,6 +10,9 @@ export default ({ mode }: ConfigEnv) => {
     
     return defineConfig({
         plugins: [react(), tailwindcss()],
+        define:  {
+            'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageInfo.version)
+        },
         resolve: {
             alias: {
                 "bitquran/assets": "/src/assets",
@@ -25,7 +30,7 @@ export default ({ mode }: ConfigEnv) => {
                 "bitquran/shared/lib": "/src/shared/lib",
                 "bitquran/shared/types": "/src/shared/types",
                 "bitquran/shared/utils": "/src/shared/utils",
-                "bitquran/package": "./package.json"
+                "bitquran/package": resolve(__dirname, "./package.json")
             }
         },
         server: {
