@@ -1,13 +1,18 @@
 import { AppLogo, Backdrop, Icon } from 'bitquran/components'
+import { routes } from 'bitquran/router'
+import { getNavbarRoutes } from 'bitquran/router/core'
 import { useDeviceTypeWatcher } from 'bitquran/shared/hooks'
+import type { Route } from 'bitquran/shared/types'
+import { type Dispatch, type SetStateAction, useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react'
 
-const navigations = [
-    { id: 1, name: 'Beranda', path: '/' },
-    { id: 2, name: 'Tentang', path: '/tentang' },
-    { id: 3, name: 'Riwayat Pembaruan', path: '/riwayat-pembaruan' },
-]
+let _cachedNavbarRoutes: Route[] | null = null
+const getCachedNavbarRoutes = (): Route[] =>
+{
+    if(!_cachedNavbarRoutes) _cachedNavbarRoutes = getNavbarRoutes(routes)
+
+    return _cachedNavbarRoutes
+}
 
 interface DrawerProps {
     isShown: boolean,
@@ -16,17 +21,21 @@ interface DrawerProps {
 
 function Regular()
 {
+    const navbarRoutes = getCachedNavbarRoutes()
+
     return (
         <nav>
             <ul className="flex list-none overflow-hidden mb-0">
-                {navigations.map((navigation, index) => (
+                {navbarRoutes
+                    .filter(route => route.path)
+                    .map((route, index) => (
                     <li key={`link-${index+1}`}>
                         <Link
                             className="block transition duration-300 text-[#757575] text-sm leading-[21px] font-normal px-5 py-[5px] hover:text-[#4CAF50] hover:cursor-pointer"
-                            to={navigation.path}
-                            key={navigation.id}
+                            to={route.path!}
+                            key={`route-${index+1}`}
                         >
-                            {navigation.name}
+                            {route.name}
                         </Link>
                     </li>
                 ))}
@@ -37,6 +46,8 @@ function Regular()
 
 function Drawer({ isShown, setIsShown }: DrawerProps)
 {
+    const navbarRoutes = getCachedNavbarRoutes()
+
     return (
         <>
             <Backdrop isShown={isShown} />
@@ -57,14 +68,16 @@ function Drawer({ isShown, setIsShown }: DrawerProps)
 
                 <nav>
                     <ul className="list-none overflow-hidden mx-[15px] mb-0">
-                        {navigations.map((navigation, index) => (
+                        {navbarRoutes
+                            .filter(route => route.path)
+                            .map((route, index) => (
                             <li key={`link-${index+1}`}>
                                 <Link
                                     className="block transition duration-300 text-[#757575] text-sm leading-[21px] font-light px-[15px] py-[10px] rounded-lg border-b-[1px] border-b-[#f5f5f5] hover:text-[#4CAF50] hover:cursor-pointer hover:bg-[#f5f5f5]"
-                                    to={navigation.path}
-                                    key={navigation.id}
+                                    to={route.path!}
+                                    key={`route-${index+1}`}
                                 >
-                                    {navigation.name}
+                                    {route.name}
                                 </Link>
                             </li>
                         ))}
@@ -115,6 +128,5 @@ export default function NavigationBar()
                 )}
             </div>
         </header>
-
     )
 }

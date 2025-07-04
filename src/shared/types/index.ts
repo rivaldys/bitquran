@@ -10,12 +10,18 @@ export type RouteComponent = LazyExoticComponent<ComponentType<{}>>
 
 export type RouteType = 'page' | 'group' | 'redirect'
 
+interface MetaNavbar {
+    icon?: IconName
+    order?: number
+}
+
 interface BaseRoute {
     name: string
     path?: string
     index?: true
     meta?: {
         isProtectedRoute?: boolean
+        navbar?: MetaNavbar
         navbarIcon?: IconName
         order?: number
         redirection?: string

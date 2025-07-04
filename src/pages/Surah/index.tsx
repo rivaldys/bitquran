@@ -1,8 +1,37 @@
 import { Input, SurahItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/images'
-import type { SurahsProps } from 'bitquran/shared/types'
 
-export default function Surah({ surahs }: SurahsProps)
+const surahs = {
+    data: [
+        {
+            name: {
+                long: '',
+                short: '',
+                translation: {
+                    en: '',
+                    id: ''
+                },
+                transliteration: {
+                    en: '',
+                    id: ''
+                }
+            },
+            number: 0,
+            numberOfVerses: 0,
+            revelation: {
+                arab: '',
+                en: '',
+                id: '',
+            },
+            sequence: 0,
+            tafsir: {
+                id: ''
+            }
+        }
+    ]
+}
+
+export default function Surah()
 {
     return (
         <>

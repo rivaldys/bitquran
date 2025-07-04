@@ -1,12 +1,17 @@
 @import url('./assets/css/font-config.css');
 @import "tailwindcss";
 
+@theme {
+    --font-rubik: Rubik, sans-serif
+    --font-saleem-quran: 'Saleem Quran', sans-serif
+}
+
 @layer components {
     .content-container {
         @apply w-screen px-[15px] mx-auto;
     }
 
-    @screen sm {
+    @variant sm {
         .content-container {
             @apply w-[1024px];
         }

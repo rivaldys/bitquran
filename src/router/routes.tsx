@@ -53,7 +53,7 @@ import { lazy } from 'react'
 
 const About = lazy(() => import('../pages/About'))
 const ChangeLog = lazy(() => import('../pages/ChangeLog'))
-// const Surah = lazy(() => import('../pages/Surah'))
+const Surah = lazy(() => import('../pages/Surah'))
 const NotFound = lazy(() => import('../pages/NotFound'))
 
 /**
@@ -63,37 +63,43 @@ const NotFound = lazy(() => import('../pages/NotFound'))
  */
 const routes: Route[] = [
     {
-        name: 'Main',
+        name: 'Beranda',
         path: '/',
         type: 'page',
-        element: ChangeLog,
+        element: Surah,
+        meta: {
+            navbar: {
+                order: 1
+            }
+        }
+    },
+    {
+        name: 'Surah',
+        path: '/surah',
+        type: 'page',
+        element: Surah,
         meta: {}
     },
-    // {
-    //     name: 'Surah',
-    //     path: '/surah',
-    //     type: 'page',
-    //     element: Surah,
-    //     meta: {
-    //         order: 1
-    //     }
-    // },
     {
-        name: 'About',
+        name: 'Tentang',
         path: '/tentang',
         type: 'page',
         element: About,
         meta: {
-            order: 2
+            navbar: {
+                order: 2
+            }
         }
     },
     {
-        name: 'ChangeLog',
+        name: 'Riwayat Pembaruan',
         path: '/riwayat-pembaruan',
         type: 'page',
         element: ChangeLog,
         meta: {
-            order: 3
+            navbar: {
+                order: 3
+            }
         }
     },
     {
