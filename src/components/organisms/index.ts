@@ -1,11 +1,4 @@
-import Footer from './Footer'
-import NavigationBar from './NavigationBar'
-import SurahItem from './SurahItem'
-import VerseItem from './VerseItem'
-
-export {
-    Footer,
-    NavigationBar,
-    SurahItem,
-    VerseItem
-}
+export { default as Footer } from './Footer'
+export { default as NavigationBar } from './NavigationBar'
+export { default as SurahItem } from './SurahItem'
+export { default as VerseItem } from './VerseItem'

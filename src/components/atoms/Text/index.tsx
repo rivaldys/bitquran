@@ -8,10 +8,9 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const textStyle = cva('text-[15px] leading-[25px] mb-[10px]')
 
-export default function Text({ children, className }: TextProps)
-{
+export default function Text({ children, className, ...rest }: TextProps) {
     return (
-        <p className={textStyle({ className })}>
+        <p className={textStyle({ className })} {...rest}>
             {children}
         </p>
     )

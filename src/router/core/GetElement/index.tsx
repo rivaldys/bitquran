@@ -1,40 +1,24 @@
 import { AppLayout } from 'bitquran/components'
-import type { Route, RouteComponentProps } from 'bitquran/shared/types'
-import { type ComponentType, createElement } from 'react'
-import { Navigate, Outlet, useNavigate } from 'react-router-dom'
+import type { Route } from 'bitquran/shared/types'
+import type { ComponentType } from 'react'
+import { Navigate, Outlet } from 'react-router'
 
 interface GetElementProps {
     route: Route
 }
 
-export default function GetElement({ route }: GetElementProps)
-{
-    const navigate = useNavigate()
-
-    if(route.type === 'group')
-    {
-        return (
-            <AppLayout>
-                <Outlet />
-            </AppLayout>
-        )
+export default function GetElement({ route }: GetElementProps) {
+    if (route.type === 'group') {
+        return <AppLayout><Outlet /></AppLayout>
     }
 
-    if(route.type === 'redirect')
-    {
-        const to = route.meta?.redirection ?? '/'
-        return <Navigate to={to} replace />
+    if (route.type === 'redirect') {
+        return <Navigate to={route.meta?.redirection ?? '/'} replace />
     }
 
-    if(route.type === 'page')
-    {
-        const element = createElement(route.element as ComponentType<RouteComponentProps>, { navigate })
-
-        return (
-            <AppLayout>
-                {element}
-            </AppLayout>
-        )
+    if (route.type === 'page') {
+        const Component = route.element as ComponentType<object>
+        return <AppLayout><Component /></AppLayout>
     }
 
     return null

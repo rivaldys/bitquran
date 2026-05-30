@@ -1,18 +1,15 @@
 import { useMemo } from 'react'
 import useWindowDimensions from '../useWindowDimensions'
 
-const useDeviceTypeWatcher = (): 'desktop' | 'mobile' =>
-{
+const MOBILE_BREAKPOINT = 768
+
+const useDeviceTypeWatcher = (): 'desktop' | 'mobile' => {
     const dimensions = useWindowDimensions()
-    const mobileModeMinWidth = 768
 
-    const deviceType = useMemo(() =>
-    {
-        if(!dimensions) return 'mobile'
-        return dimensions.windowWidth > mobileModeMinWidth ? 'desktop' : 'mobile'
-    }, [dimensions, mobileModeMinWidth])
-
-    return deviceType
+    return useMemo(() => {
+        if (!dimensions) return 'mobile'
+        return dimensions.windowWidth > MOBILE_BREAKPOINT ? 'desktop' : 'mobile'
+    }, [dimensions])
 }
 
 export default useDeviceTypeWatcher

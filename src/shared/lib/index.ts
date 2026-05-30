@@ -1,5 +1,1 @@
-import Head from './Head'
-
-export {
-    Head
-}
+export { default as Head } from './Head'

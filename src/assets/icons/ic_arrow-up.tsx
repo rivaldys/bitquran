@@ -1,7 +1,6 @@
 import type { IconProps } from 'bitquran/shared/types'
 
-export default function IcArrowUp({ className, size, color }: IconProps)
-{
+export default function IcArrowUp({ className, size, color }: IconProps) {
     return (
         <svg
             className={className}
@@ -11,7 +10,7 @@ export default function IcArrowUp({ className, size, color }: IconProps)
             viewBox="0 0 512 512"
             stroke={color}
         >
-            <path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M112 244l144-144 144 144M256 120v292"></path>
+            <path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M112 244l144-144 144 144M256 120v292" />
         </svg>
     )
 }

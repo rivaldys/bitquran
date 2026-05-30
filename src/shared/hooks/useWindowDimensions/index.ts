@@ -6,27 +6,15 @@ interface WindowDimensions {
     windowHeight: number
 }
 
-const getWindowDimensions = (): WindowDimensions =>
-{
-    if(typeof window === 'undefined')
-    {
-        return { windowWidth: 0, windowHeight: 0 }
-    }
-
-    const { innerWidth: windowWidth, innerHeight: windowHeight } = window
-
-    return {
-        windowWidth,
-        windowHeight
-    }
+const getWindowDimensions = (): WindowDimensions => {
+    if (typeof window === 'undefined') return { windowWidth: 0, windowHeight: 0 }
+    return { windowWidth: window.innerWidth, windowHeight: window.innerHeight }
 }
 
-const useWindowDimensions = (): WindowDimensions | null =>
-{
+const useWindowDimensions = (): WindowDimensions | null => {
     const [windowDimensions, setWindowDimensions] = useState<WindowDimensions | null>(null)
 
-    useEffect(() =>
-    {
+    useEffect(() => {
         const handleResize = debounce(() => {
             setWindowDimensions(getWindowDimensions())
         }, 300)

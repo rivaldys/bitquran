@@ -1,25 +1,11 @@
-import AppLogo from './AppLogo'
-import Backdrop from './Backdrop'
-import BackToTop from './BackToTop'
-import Icon, { type IconName } from './Icon'
-import Input from './Input'
-import SectionTitle from './SectionTitle'
-import Select from './Select'
-import Text from './Text'
-import TextLabel from './TextLabel'
-import TextLink from './TextLink'
-
-export {
-    AppLogo,
-    Backdrop,
-    BackToTop,
-    Icon,
-    Input,
-    SectionTitle,
-    Select,
-    Text,
-    TextLabel,
-    TextLink
-}
-
-export type { IconName }
+export { default as AppLogo } from './AppLogo'
+export { default as Backdrop } from './Backdrop'
+export { default as BackToTop } from './BackToTop'
+export { default as Icon } from './Icon'
+export type { IconName } from './Icon'
+export { default as Input } from './Input'
+export { default as SectionTitle } from './SectionTitle'
+export { default as Select } from './Select'
+export { default as Text } from './Text'
+export { default as TextLabel } from './TextLabel'
+export { default as TextLink } from './TextLink'
