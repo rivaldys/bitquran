@@ -7,19 +7,19 @@ interface HeadProps {
 /**
  * <Head>
  *
- * Custom React component that mimics the behavior of Next.js's <Head>.
- * This component allows declarative manipulation of <head> elements such as <title>, <meta>, and <link>
+ * Custom React component that mimics the behavior of Next.js's `<Head>`.
+ * This component allows declarative manipulation of `<head>` elements such as `<title>`, `<meta>`, and `<link>`
  * from within a React component tree.
  *
  * Features:
  * - Supports only specific HTML head tags: `title`, `meta`, `link`, `base`, `style`.
- * - Updates `document.title` when a <title> tag with a string child is provided.
- * - For other valid tags, it will update the attributes or create new elements in <head> if none exist.
+ * - Updates `document.title` when a `<title>` tag with a string child is provided.
+ * - For other valid tags, it will update the attributes or create new elements in `<head>` if none exist.
  * - Cleans up (removes) any dynamically created elements on unmount.
  * - In development mode, warns the developer when an unsupported tag is used.
  *
  * ⚠️ Notes:
- * - Only supports plain string content for <title>.
+ * - Only supports plain string content for `<title>`.
  * - Uniqueness of elements is determined by attributes like `name`, `property`, or `rel`.
  * - Runs every time the `children` prop changes.
  *

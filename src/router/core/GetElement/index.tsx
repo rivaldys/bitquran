@@ -18,7 +18,7 @@ export default function GetElement({ route }: GetElementProps) {
 
     if (route.type === 'page') {
         const Component = route.element as ComponentType<object>
-        return <AppLayout><Component /></AppLayout>
+        return <Component />
     }
 
     return null
