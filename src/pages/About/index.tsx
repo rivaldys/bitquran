@@ -34,11 +34,11 @@ export default function About() {
                     </Text>
                 </ContentSection>
 
-                <ContentSection className="!border-b-0 !mb-0">
+                <ContentSection className="border-b-0! mb-0!">
                     <SectionTitle>Laporkan Kesalahan/Beri Saran</SectionTitle>
                     <Text>
                         Sebagaimana hasil buatan manusia pada umumnya, aplikasi ini pun memiliki kekurangan dan mungkin terdapat kesalahan teknis yang terlewat dalam proses pengembangannya. Tentunya Al Qur'an-nya itu sendiri telah diturunkan dengan sempurna sebagai penyempurna dari kitab-kitab sebelumnya. Sehingga bentuk kesalahan yang terdapat pada aplikasi ini murni disebabkan karena kelalaian dalam proses pengembangan atau kecacatan pada desain sistem. Oleh karena itu, bila menemukan kesalahan/<i>bug</i> seperti misalnya audio <i>murottal</i> tertukar antara ayat satu dengan yang lain atau tidak bisa diputar, terjemahan terpotong, dan lain sebagainya mohon sampaikan via surel di{' '}
-                        <TextLink to="mailto:hi@bitquran.net"><b>hi@bitquran.net</b></TextLink>.{' '}
+                        <TextLink to="mailto:info@bitquran.net"><b>info@bitquran.net</b></TextLink>.{' '}
                         Namun selain itu, bila ada saran yang ingin diberikan untuk aplikasi ini silakan sampaikan juga melalui surel yang sama.
                     </Text>
                 </ContentSection>

@@ -23,21 +23,31 @@ Controlled by **oxfmt** (`.oxfmtrc.json`). Run `pnpm fmt` before committing.
 
 ## Files & Folders
 
-- **One unit per folder**, entry point is `index.ts` / `index.tsx`.
-  - Components: `PascalCase/` folder → `src/components/atoms/Icon/index.tsx`
-  - Hooks: `camelCase/` folder → `src/shared/hooks/useWindowDimensions/index.ts`
-  - Utils: `camelCase/` folder → `src/shared/utils/debounce/index.ts`
+- **One unit per folder**, with separate implementation and barrel files — applies to
+  every layer: components, hooks, utils, and lib.
+  - Components: `PascalCase/` folder → `ComponentName.tsx` (implementation) + `index.ts` (barrel)
+    - e.g. `src/components/atoms/Icon/Icon.tsx` + `src/components/atoms/Icon/index.ts`
+  - Hooks: `camelCase/` folder → `useHookName.ts` (implementation) + `index.ts` (barrel)
+    - e.g. `src/shared/hooks/useWindowDimensions/useWindowDimensions.ts` + `index.ts`
+  - Utils: `camelCase/` folder → `utilName.ts` (implementation) + `index.ts` (barrel)
+    - e.g. `src/shared/utils/debounce/debounce.ts` + `index.ts`
+  - Lib: same as components — `Name.tsx` + `index.ts` (barrel exports default + Props type)
+- Every component folder has an **`index.ts` barrel** that re-exports the default and any public named exports:
+  ```ts
+  export { default } from './ComponentName'
+  export type { ComponentNameProps } from './ComponentName'
+  ```
 - Every layer exposes a **barrel** `index.ts` that re-exports its members.
   Update the barrel immediately after adding a file.
 - Co-located CSS is allowed when Tailwind can't express it
-  (e.g. `Backdrop/index.css`), imported from the component's `index.tsx`.
+  (e.g. `Backdrop/Backdrop.css`), imported from the component's `ComponentName.tsx`.
 
 ---
 
 ## Components
 
 ```tsx
-// src/components/molecules/Example/index.tsx
+// src/components/molecules/Example/Example.tsx
 import { cva } from 'class-variance-authority'
 import type { ReactNode } from 'react'
 
@@ -53,15 +63,43 @@ export default function Example({ children, className }: ExampleProps) {
 }
 ```
 
+```ts
+// src/components/molecules/Example/index.ts
+export { default } from './Example'
+export type { ExampleProps } from './Example'
+```
+
 - Components are **default-exported function declarations**
   (`export default function Name(...)`). Do not convert these to arrow consts.
-- The **Props interface is declared and exported from the same `index.tsx`**
-  (`export interface NameProps`). There is no separate `.types.ts` file.
+- The **Props interface is declared and exported from `ComponentName.tsx`**
+  (`export interface NameProps`). Avoid separate `.types.ts` files for simple
+  components. Exception: when a component folder contains multiple files that
+  all share the same types (e.g. `Icon/items/*.tsx` all needing `SvgIconProps`),
+  a co-located `ComponentName.types.ts` is appropriate. The barrel `index.ts`
+  re-exports those types so consumers never import from `.types` directly.
+- **`index.ts` is always the barrel** — it re-exports the default and any public types.
+  Never put implementation in `index.ts`.
 - Extend the right HTML attributes when wrapping an element, e.g.
   `interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>`.
 - Import domain types from `bitquran/shared/types` — never redefine them.
 - A compound component attaches sub-parts to the function
   (e.g. `Select.Option = Option`) — see `src/components/atoms/Select`.
+- **`React.memo`** — wrap the function declaration directly to keep the name
+  visible in DevTools:
+  ```tsx
+  export default memo(function HeavyList({ items }: HeavyListProps) {
+      return <ul>{items.map(…)}</ul>
+  })
+  ```
+- **`forwardRef`** — the API requires a callback, so use an arrow function and
+  set `displayName` explicitly so DevTools still shows the component name:
+  ```tsx
+  const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+      return <input ref={ref} {...props} />
+  })
+  Input.displayName = 'Input'
+  export default Input
+  ```
 
 ---
 
@@ -138,7 +176,7 @@ export default debounce
 ## Testing
 
 - Vitest + Testing Library, `jsdom` environment, globals enabled
-  (setup in `src/test/setup.ts`).
-- Co-locate tests with the unit: `Name.test.tsx` / `useName.test.ts`.
+  (setup in `vitest.setup.ts`).
+- Co-locate tests with the unit: `ComponentName.test.tsx` / `useName.test.ts`.
 - Test behaviour, not class strings or internal variable names. Wrap query-hook
   tests in a `QueryClientProvider`. See `.claude/commands/test.md`.

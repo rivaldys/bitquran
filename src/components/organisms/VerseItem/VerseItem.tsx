@@ -22,10 +22,10 @@ export default function VerseItem({ className, verse, disableBottomSeparator, to
     const { isPlaying, toggle } = useAudioPlayer(toolbar?.audioSrc ?? '')
 
     return (
-        <div className={containerStyle({ className: disableBottomSeparator ? className : `border-b-[1px] border-b-[#dedede] pb-[20px] mb-[20px] ${className ?? ''}` })}>
+        <div className={containerStyle({ className: disableBottomSeparator ? className : `border-b border-b-[#dedede] mb-8.75 ${className ?? ''}` })}>
             {toolbar && (
                 <Toolbar
-                    className="mb-[10px]"
+                    className="mb-2.5"
                     number={toolbar.number}
                     audioButton={toolbar.audioSrc ? { isPlaying, onToggle: toggle } : undefined}
                     docButton={toolbar.onTafsir ? { onClick: toolbar.onTafsir } : undefined}
@@ -33,12 +33,12 @@ export default function VerseItem({ className, verse, disableBottomSeparator, to
             )}
 
             {verse.ar && (
-                <p className="w-full text-[#757575] text-[30px] leading-[50px] sm:text-[34px] sm:leading-[55px] font-saleem-quran font-normal text-right">
+                <p className="w-full text-[#757575] text-[30px] leading-12.5 font-saleem-quran font-normal text-right">
                     {verse.ar}
                 </p>
             )}
             {verse.id && (
-                <p className="w-full text-[#757575] italic py-[15px] text-sm sm:text-base">
+                <p className="w-full text-[#757575] italic py-3.75 text-sm sm:text-base">
                     {verse.id}
                 </p>
             )}

@@ -1,6 +1,6 @@
 import { Children, isValidElement, type ReactElement, type ReactNode, useEffect } from 'react'
 
-interface HeadProps {
+export interface HeadProps {
     children: ReactNode
 }
 
@@ -48,7 +48,7 @@ export default function Head({ children }: HeadProps) {
             const tagName = typeof tagType === 'string' ? tagType : null
 
             if (!tagName || !validTags.includes(tagName)) {
-                if(import.meta.env.DEV) {
+                if (import.meta.env.DEV) {
                     console.warn(
                         `<${tagName}> is not supported by <Head>. ` +
                         `Only the following tags are allowed: ${validTags.join(', ')}.`
@@ -64,7 +64,10 @@ export default function Head({ children }: HeadProps) {
             }
 
             if (tagName === 'title') {
-                if (typeof tagChildren === 'string') document.title = tagChildren
+                const title = Array.isArray(tagChildren)
+                    ? tagChildren.map(c => (typeof c === 'string' || typeof c === 'number' ? String(c) : '')).join('')
+                    : typeof tagChildren === 'string' || typeof tagChildren === 'number' ? String(tagChildren) : ''
+                if (title) document.title = title
                 return
             }
 

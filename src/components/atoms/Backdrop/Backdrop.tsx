@@ -1,4 +1,4 @@
-import './index.css'
+import './Backdrop.css'
 
 interface BackdropProps {
     isShown: boolean

@@ -49,13 +49,6 @@ export interface RedirectRoute extends BaseRoute {
 
 export type Route = IndexRoute | IndexRedirectRoute | PageRoute | GroupRoute | RedirectRoute
 
-export interface IconProps {
-    className?: string
-    size?: number
-    color?: string
-    variant?: string
-}
-
 export interface SurahItem {
     name: {
         long: string

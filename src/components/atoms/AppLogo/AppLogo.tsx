@@ -1,4 +1,4 @@
-import { ILLogoWide } from 'bitquran/images'
+import { ILLogoWide } from 'bitquran/assets/images'
 import { cva } from 'class-variance-authority'
 
 export interface AppLogoProps {

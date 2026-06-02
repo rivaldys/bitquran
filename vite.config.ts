@@ -12,8 +12,7 @@ export default ({ mode }: ConfigEnv) => {
         resolve: {
             alias: {
                 'bitquran/assets': resolve(__dirname, 'src/assets'),
-                'bitquran/icons': resolve(__dirname, 'src/assets/icons'),
-                'bitquran/images': resolve(__dirname, 'src/assets/images'),
+                'bitquran/assets/images': resolve(__dirname, 'src/assets/images'),
                 'bitquran/components': resolve(__dirname, 'src/components'),
                 'bitquran/pages': resolve(__dirname, 'src/pages'),
                 'bitquran/router': resolve(__dirname, 'src/router'),
@@ -35,7 +34,7 @@ export default ({ mode }: ConfigEnv) => {
         test: {
             environment: 'jsdom',
             globals: true,
-            setupFiles: ['./src/test/setup.ts'],
+            setupFiles: ['./vitest.setup.ts'],
             coverage: {
                 provider: 'v8',
                 reporter: ['text', 'json', 'html']

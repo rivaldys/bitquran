@@ -25,8 +25,7 @@
         /* Absolute imports */
         "paths": {
             "bitquran/assets": ["./src/assets"],
-            "bitquran/icons": ["./src/assets/icons"],
-            "bitquran/images": ["./src/assets/images"],
+            "bitquran/assets/images": ["./src/assets/images"],
             "bitquran/components": ["./src/components"],
             "bitquran/pages": ["./src/pages"],
             "bitquran/router": ["./src/router"],

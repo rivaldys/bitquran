@@ -1,5 +1,5 @@
 import { Select, Skeleton, VerseItem } from 'bitquran/components'
-import { ILQuran } from 'bitquran/images'
+import { ILQuran } from 'bitquran/assets/images'
 import { useSurah } from 'bitquran/services/queries'
 import { useAudioPlayer } from 'bitquran/shared/hooks'
 import { Head } from 'bitquran/shared/lib'
@@ -62,24 +62,25 @@ export default function Surah() {
             </Head>
 
             {/* Surah Header */}
-            <div className="relative rounded-[7px] sm:rounded-[10px] bg-[linear-gradient(150deg,#c5e1a5,#009688)] mb-5 sm:mb-8.75 min-h-57.5 sm:min-h-75 shadow-[10px_25px_30px_rgba(117,117,117,0.45)]">
-                {/* Ilustrasi — tanpa opacity reduction agar lebih solid */}
+            <div className="relative rounded-[7px] sm:rounded-[10px] bg-[linear-gradient(150deg,#c5e1a5,#009688)] mb-12.5 min-h-57.5 sm:min-h-75 shadow-[10px_25px_30px_rgba(117,117,117,0.45)]">
                 <div
-                    className="absolute inset-0 rounded-[7px] sm:rounded-[10px] bg-no-repeat bg-position-[bottom_-25px_right_25px] sm:bg-position-[bottom_-50px_right_50px] bg-size-[45%] sm:bg-size-[35%]"
+                    className="absolute inset-0 rounded-[7px] sm:rounded-[10px] bg-no-repeat bg-position-[bottom_-25px_right_25px] sm:bg-position-[bottom_-50px_right_50px] bg-size-[45%] sm:bg-size-[35%] opacity-35"
                     style={{ backgroundImage: `url(${ILQuran})` }}
                 />
 
-                {/* Konten teks */}
-                <div className="relative flex flex-col items-center justify-center w-full h-full min-h-57.5 sm:min-h-75 px-6.25 sm:px-3.75 py-7.5 box-border *:text-white text-center">
-                    <p className="text-[26px] sm:text-[28px] font-saleem-quran mb-2.5">
+                {/* Text Content */}
+                <div className="relative flex flex-col items-center justify-center w-full h-full min-h-57.5 sm:min-h-75 px-6.25 sm:px-3.75 py-3.75 box-border *:text-white text-center">
+                    <p className="text-[26px] sm:text-[28px] font-normal font-saleem-quran mb-2.5 leading-7.25 sm:leading-8.75">
                         {surah.name.long}
                     </p>
-                    <h1 className="text-[22px] sm:text-[28px] font-semibold leading-7.25 sm:leading-8.75">
+                    <h1 className="text-[22px] sm:text-[28px] font-medium leading-7.25 sm:leading-8.75">
                         {surah.name.transliteration.id}
                     </h1>
-                    <p className="text-[14px] sm:text-[18px] mt-1.25">{surah.name.translation.id}</p>
+                    <p className="text-[14px] sm:text-[18px] leading-5 sm:leading-6.25">
+                        {surah.name.translation.id}
+                    </p>
                     <hr className="border-0 h-px w-full mt-3.75 mb-3.75 bg-[linear-gradient(to_right,transparent,#fff,transparent)]" />
-                    <h5 className="text-[14px] sm:text-[16px] font-normal">
+                    <h5 className="text-[14px] sm:text-[16px] font-light    ">
                         {surah.revelation.id} &middot; {surah.numberOfVerses} Ayat
                     </h5>
 
@@ -106,7 +107,7 @@ export default function Surah() {
             </Select>
 
             {/* Verses */}
-            <div className="bg-white rounded-[7px] sm:rounded-[10px] shadow-[0_0_10px_rgba(234,234,234,0.8)] p-3.75 sm:p-5">
+            <div className="bg-white rounded-[7px] sm:rounded-[10px] shadow-[0_0_10px_rgba(234,234,234,0.8)] p-3.75 sm:p-3.75">
                 {surah.verses?.map((verse, idx) => (
                     <div key={verse.number.inSurah} id={`${surah.number}-${verse.number.inSurah}`}>
                         <VerseItem

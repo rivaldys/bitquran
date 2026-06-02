@@ -1,5 +1,5 @@
 import { Input, Skeleton, SurahItem } from 'bitquran/components'
-import { ILQuran } from 'bitquran/images'
+import { ILQuran } from 'bitquran/assets/images'
 import { useSurahList } from 'bitquran/services/queries'
 import { Head } from 'bitquran/shared/lib'
 import { useMemo, useState } from 'react'
