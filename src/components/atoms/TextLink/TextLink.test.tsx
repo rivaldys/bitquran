@@ -18,7 +18,10 @@ describe('TextLink', () => {
                 <TextLink to="https://example.com">External</TextLink>
             </MemoryRouter>
         )
-        expect(screen.getByRole('link', { name: 'External' })).toHaveAttribute('href', 'https://example.com')
+        expect(screen.getByRole('link', { name: 'External' })).toHaveAttribute(
+            'href',
+            'https://example.com'
+        )
     })
 
     it('renders an anchor with the href for a mailto link', () => {
@@ -27,6 +30,9 @@ describe('TextLink', () => {
                 <TextLink to="mailto:hello@example.com">Email</TextLink>
             </MemoryRouter>
         )
-        expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute('href', 'mailto:hello@example.com')
+        expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute(
+            'href',
+            'mailto:hello@example.com'
+        )
     })
 })

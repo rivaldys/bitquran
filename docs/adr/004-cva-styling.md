@@ -19,12 +19,12 @@ conflicting Tailwind utilities.
   composes class strings outside CVA. It wraps **`clsx`** (conditional joining)
   and **`tailwind-merge`** (last conflicting utility wins):
 
-  ```ts
-  import { type ClassValue, clsx } from 'clsx'
-  import { twMerge } from 'tailwind-merge'
-  const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs))
-  export default cn
-  ```
+    ```ts
+    import { type ClassValue, clsx } from 'clsx'
+    import { twMerge } from 'tailwind-merge'
+    const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs))
+    export default cn
+    ```
 
 - `cn` lives in `shared/utils` (pure helper), **not** `shared/lib` (which is for
   third-party/platform wrappers such as `Head`).

@@ -4,6 +4,6 @@ import { IcArrowUp, IcMenu, IcMugHot } from './items'
 
 export const iconMap: Record<IconName, ComponentType<SvgIconProps>> = {
     'arrow-up': IcArrowUp,
-    'menu': IcMenu,
+    menu: IcMenu,
     'mug-hot': IcMugHot
 }

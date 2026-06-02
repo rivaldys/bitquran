@@ -14,7 +14,8 @@ export interface SelectOptionProps extends React.OptionHTMLAttributes<HTMLOption
 const selectStyle = cva('w-full border-none rounded-[7px] p-[10px]', {
     variants: {
         variant: {
-            enabled: 'bg-[#80cbc4] text-white focus:outline-none focus:shadow-[0px_0px_10px_rgba(178,223,219,0.85)]',
+            enabled:
+                'bg-[#80cbc4] text-white focus:outline-none focus:shadow-[0px_0px_10px_rgba(178,223,219,0.85)]',
             disabled: 'bg-gray-50'
         }
     },

@@ -18,11 +18,22 @@ export interface VerseItemProps {
 
 const containerStyle = cva('relative w-full transition duration-500 box-border')
 
-export default function VerseItem({ className, verse, disableBottomSeparator, toolbar }: VerseItemProps) {
+export default function VerseItem({
+    className,
+    verse,
+    disableBottomSeparator,
+    toolbar
+}: VerseItemProps) {
     const { isPlaying, toggle } = useAudioPlayer(toolbar?.audioSrc ?? '')
 
     return (
-        <div className={containerStyle({ className: disableBottomSeparator ? className : `border-b border-b-[#dedede] mb-8.75 ${className ?? ''}` })}>
+        <div
+            className={containerStyle({
+                className: disableBottomSeparator
+                    ? className
+                    : `border-b border-b-[#dedede] mb-8.75 ${className ?? ''}`
+            })}
+        >
             {toolbar && (
                 <Toolbar
                     className="mb-2.5"

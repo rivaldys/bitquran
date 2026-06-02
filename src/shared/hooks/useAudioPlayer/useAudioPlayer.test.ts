@@ -18,13 +18,18 @@ function createMockAudio(): MockAudio {
         pause: vi.fn(),
         paused: true,
         addEventListener: vi.fn(),
-        removeEventListener: vi.fn(),
+        removeEventListener: vi.fn()
     }
 }
 
 beforeEach(() => {
     mockAudio = createMockAudio()
-    vi.stubGlobal('Audio', vi.fn(function() { return mockAudio }))
+    vi.stubGlobal(
+        'Audio',
+        vi.fn(function () {
+            return mockAudio
+        })
+    )
 })
 
 afterEach(() => {

@@ -14,8 +14,20 @@ vi.mock('bitquran/router', () => ({
             name: 'App',
             type: 'group',
             children: [
-                { name: 'Beranda', path: '/', type: 'page', element: null, meta: { navbar: { order: 1 } } },
-                { name: 'Tentang', path: '/tentang', type: 'page', element: null, meta: { navbar: { order: 2 } } }
+                {
+                    name: 'Beranda',
+                    path: '/',
+                    type: 'page',
+                    element: null,
+                    meta: { navbar: { order: 1 } }
+                },
+                {
+                    name: 'Tentang',
+                    path: '/tentang',
+                    type: 'page',
+                    element: null,
+                    meta: { navbar: { order: 2 } }
+                }
             ]
         }
     ]
@@ -27,19 +39,31 @@ describe('NavigationBar', () => {
     })
 
     it('renders the logo image', () => {
-        render(<MemoryRouter><NavigationBar /></MemoryRouter>)
+        render(
+            <MemoryRouter>
+                <NavigationBar />
+            </MemoryRouter>
+        )
         expect(screen.getByAltText('Bitquran logo')).toBeInTheDocument()
     })
 
     it('renders navbar links on desktop', () => {
-        render(<MemoryRouter><NavigationBar /></MemoryRouter>)
+        render(
+            <MemoryRouter>
+                <NavigationBar />
+            </MemoryRouter>
+        )
         expect(screen.getByRole('link', { name: 'Beranda' })).toBeInTheDocument()
         expect(screen.getByRole('link', { name: 'Tentang' })).toBeInTheDocument()
     })
 
     it('renders the hamburger button on mobile', () => {
         vi.mocked(sharedHooks.useDeviceTypeWatcher).mockReturnValue('mobile')
-        render(<MemoryRouter><NavigationBar /></MemoryRouter>)
+        render(
+            <MemoryRouter>
+                <NavigationBar />
+            </MemoryRouter>
+        )
         expect(screen.getByLabelText(/buka menu/i)).toBeInTheDocument()
     })
 })

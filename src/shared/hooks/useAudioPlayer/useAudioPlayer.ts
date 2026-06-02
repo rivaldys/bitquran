@@ -26,7 +26,10 @@ const useAudioPlayer = (src: string) => {
         const audio = audioRef.current
         if (!audio) return
         if (audio.paused) {
-            audio.play().then(() => setIsPlaying(true)).catch(console.error)
+            audio
+                .play()
+                .then(() => setIsPlaying(true))
+                .catch(console.error)
         } else {
             audio.pause()
         }

@@ -51,7 +51,7 @@ export default function Head({ children }: HeadProps) {
                 if (import.meta.env.DEV) {
                     console.warn(
                         `<${tagName}> is not supported by <Head>. ` +
-                        `Only the following tags are allowed: ${validTags.join(', ')}.`
+                            `Only the following tags are allowed: ${validTags.join(', ')}.`
                     )
                 }
                 return
@@ -65,8 +65,14 @@ export default function Head({ children }: HeadProps) {
 
             if (tagName === 'title') {
                 const title = Array.isArray(tagChildren)
-                    ? tagChildren.map(c => (typeof c === 'string' || typeof c === 'number' ? String(c) : '')).join('')
-                    : typeof tagChildren === 'string' || typeof tagChildren === 'number' ? String(tagChildren) : ''
+                    ? tagChildren
+                          .map(c =>
+                              typeof c === 'string' || typeof c === 'number' ? String(c) : ''
+                          )
+                          .join('')
+                    : typeof tagChildren === 'string' || typeof tagChildren === 'number'
+                      ? String(tagChildren)
+                      : ''
                 if (title) document.title = title
                 return
             }
@@ -94,7 +100,9 @@ export default function Head({ children }: HeadProps) {
             if (typeof tagChildren === 'string') element.textContent = tagChildren
         })
 
-        return () => { createdTags.forEach(el => el.remove()) }
+        return () => {
+            createdTags.forEach(el => el.remove())
+        }
     }, [children])
 
     return null

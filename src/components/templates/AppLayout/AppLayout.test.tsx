@@ -15,7 +15,9 @@ describe('AppLayout', () => {
     it('renders the children', () => {
         render(
             <MemoryRouter>
-                <AppLayout><p>Page content</p></AppLayout>
+                <AppLayout>
+                    <p>Page content</p>
+                </AppLayout>
             </MemoryRouter>
         )
         expect(screen.getByText('Page content')).toBeInTheDocument()
@@ -24,7 +26,9 @@ describe('AppLayout', () => {
     it('renders the footer landmark', () => {
         render(
             <MemoryRouter>
-                <AppLayout><span>Content</span></AppLayout>
+                <AppLayout>
+                    <span>Content</span>
+                </AppLayout>
             </MemoryRouter>
         )
         expect(screen.getByRole('contentinfo')).toBeInTheDocument()

@@ -12,9 +12,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             <NavigationBar />
 
             <main className="content-container min-h-[calc(100vh-210px)] mt-[85px] sm:mt-[105px]">
-                <Suspense fallback={<Skeleton height={400} />}>
-                    {children}
-                </Suspense>
+                <Suspense fallback={<Skeleton height={400} />}>{children}</Suspense>
             </main>
 
             <BackToTop />

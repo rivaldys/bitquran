@@ -1,7 +1,4 @@
-export type IconName = 
-    | 'arrow-up'
-    | 'menu'
-    | 'mug-hot'
+export type IconName = 'arrow-up' | 'menu' | 'mug-hot'
 
 export interface SvgIconProps {
     width: number

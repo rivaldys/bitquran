@@ -9,15 +9,15 @@ surrounding code; when in doubt, copy the closest existing example.
 
 Controlled by **oxfmt** (`.oxfmtrc.json`). Run `pnpm fmt` before committing.
 
-| Rule | Value |
-|---|---|
-| Indentation | 4 spaces |
-| Semicolons | none |
-| Quotes | single |
-| Trailing comma | none |
-| `arrowParens` | avoid (`x => …`, not `(x) => …`) |
-| `bracketSpacing` | true (`{ foo }`) |
-| `jsxBracketSameLine` | true |
+| Rule                 | Value                            |
+| -------------------- | -------------------------------- |
+| Indentation          | 4 spaces                         |
+| Semicolons           | none                             |
+| Quotes               | single                           |
+| Trailing comma       | none                             |
+| `arrowParens`        | avoid (`x => …`, not `(x) => …`) |
+| `bracketSpacing`     | true (`{ foo }`)                 |
+| `jsxBracketSameLine` | true                             |
 
 ---
 
@@ -25,18 +25,18 @@ Controlled by **oxfmt** (`.oxfmtrc.json`). Run `pnpm fmt` before committing.
 
 - **One unit per folder**, with separate implementation and barrel files — applies to
   every layer: components, hooks, utils, and lib.
-  - Components: `PascalCase/` folder → `ComponentName.tsx` (implementation) + `index.ts` (barrel)
-    - e.g. `src/components/atoms/Icon/Icon.tsx` + `src/components/atoms/Icon/index.ts`
-  - Hooks: `camelCase/` folder → `useHookName.ts` (implementation) + `index.ts` (barrel)
-    - e.g. `src/shared/hooks/useWindowDimensions/useWindowDimensions.ts` + `index.ts`
-  - Utils: `camelCase/` folder → `utilName.ts` (implementation) + `index.ts` (barrel)
-    - e.g. `src/shared/utils/debounce/debounce.ts` + `index.ts`
-  - Lib: same as components — `Name.tsx` + `index.ts` (barrel exports default + Props type)
+    - Components: `PascalCase/` folder → `ComponentName.tsx` (implementation) + `index.ts` (barrel)
+        - e.g. `src/components/atoms/Icon/Icon.tsx` + `src/components/atoms/Icon/index.ts`
+    - Hooks: `camelCase/` folder → `useHookName.ts` (implementation) + `index.ts` (barrel)
+        - e.g. `src/shared/hooks/useWindowDimensions/useWindowDimensions.ts` + `index.ts`
+    - Utils: `camelCase/` folder → `utilName.ts` (implementation) + `index.ts` (barrel)
+        - e.g. `src/shared/utils/debounce/debounce.ts` + `index.ts`
+    - Lib: same as components — `Name.tsx` + `index.ts` (barrel exports default + Props type)
 - Every component folder has an **`index.ts` barrel** that re-exports the default and any public named exports:
-  ```ts
-  export { default } from './ComponentName'
-  export type { ComponentNameProps } from './ComponentName'
-  ```
+    ```ts
+    export { default } from './ComponentName'
+    export type { ComponentNameProps } from './ComponentName'
+    ```
 - Every layer exposes a **barrel** `index.ts` that re-exports its members.
   Update the barrel immediately after adding a file.
 - Co-located CSS is allowed when Tailwind can't express it
@@ -86,20 +86,20 @@ export type { ExampleProps } from './Example'
   (e.g. `Select.Option = Option`) — see `src/components/atoms/Select`.
 - **`React.memo`** — wrap the function declaration directly to keep the name
   visible in DevTools:
-  ```tsx
-  export default memo(function HeavyList({ items }: HeavyListProps) {
-      return <ul>{items.map(…)}</ul>
-  })
-  ```
+    ```tsx
+    export default memo(function HeavyList({ items }: HeavyListProps) {
+        return <ul>{items.map(…)}</ul>
+    })
+    ```
 - **`forwardRef`** — the API requires a callback, so use an arrow function and
   set `displayName` explicitly so DevTools still shows the component name:
-  ```tsx
-  const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-      return <input ref={ref} {...props} />
-  })
-  Input.displayName = 'Input'
-  export default Input
-  ```
+    ```tsx
+    const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
+        return <input ref={ref} {...props} />
+    })
+    Input.displayName = 'Input'
+    export default Input
+    ```
 
 ---
 

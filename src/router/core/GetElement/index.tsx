@@ -9,7 +9,11 @@ interface GetElementProps {
 
 export default function GetElement({ route }: GetElementProps) {
     if (route.type === 'group') {
-        return <AppLayout><Outlet /></AppLayout>
+        return (
+            <AppLayout>
+                <Outlet />
+            </AppLayout>
+        )
     }
 
     if (route.type === 'redirect') {

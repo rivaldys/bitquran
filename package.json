@@ -1,26 +1,26 @@
 {
     "name": "bitquran",
     "version": "1.2.0",
+    "private": true,
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "keywords": [
-        "alquran",
         "al-quran",
+        "alquran",
         "alquran-web",
         "quran",
         "quran-web"
     ],
-    "author": "Ahmad Rivaldy S",
-    "license": "ISC",
-    "type": "module",
-    "private": true,
     "homepage": "https://bitquran.net",
+    "bugs": {
+        "url": "https://github.com/rivaldys/bitquran/issues"
+    },
+    "license": "ISC",
+    "author": "Ahmad Rivaldy S",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rivaldys/bitquran.git"
     },
-    "bugs": {
-        "url": "https://github.com/rivaldys/bitquran/issues"
-    },
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
@@ -31,7 +31,8 @@
         "preview": "vite preview",
         "test": "vitest",
         "test:ui": "vitest --ui",
-        "test:coverage": "vitest run --coverage"
+        "test:coverage": "vitest run --coverage",
+        "prepare": "husky"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.3.0",
@@ -60,12 +61,24 @@
         "eslint-plugin-react-hooks": "^7.1.1",
         "eslint-plugin-react-refresh": "^0.5.2",
         "globals": "^17.6.0",
+        "husky": "^9.1.7",
         "jsdom": "^29.1.1",
+        "lint-staged": "^17.0.7",
         "oxfmt": "^0.52.0",
         "oxlint": "^1.67.0",
         "typescript": "~6.0.2",
         "vite": "^8.0.12",
         "vitest": "^4.1.7"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "oxlint",
+            "eslint --no-warn-ignored",
+            "oxfmt --check"
+        ],
+        "*.{css,json}": [
+            "oxfmt --check"
+        ]
     },
     "engines": {
         "node": ">=24"

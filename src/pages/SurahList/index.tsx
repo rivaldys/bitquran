@@ -67,7 +67,9 @@ export default function SurahList() {
                         />
                     ))}
                     {filtered.length === 0 && (
-                        <p className="text-center text-[#999999] py-[30px]">Surat tidak ditemukan</p>
+                        <p className="text-center text-[#999999] py-[30px]">
+                            Surat tidak ditemukan
+                        </p>
                     )}
                 </div>
             )}

@@ -98,9 +98,13 @@ export default function NavigationBar() {
     }, [handleScroll])
 
     return (
-        <header className={`h-[65px] sm:h-[75px] w-full flex items-center fixed top-0 z-10 bg-white border-b-[1px] border-b-[#eaeaea] box-border ${
-            isScrolled ? 'shadow-[0_0_10px_hsla(0,_0%,_50%,_0.3)] transition-[box-shadow] duration-300 ease-linear' : ''
-        }`}>
+        <header
+            className={`h-[65px] sm:h-[75px] w-full flex items-center fixed top-0 z-10 bg-white border-b-[1px] border-b-[#eaeaea] box-border ${
+                isScrolled
+                    ? 'shadow-[0_0_10px_hsla(0,_0%,_50%,_0.3)] transition-[box-shadow] duration-300 ease-linear'
+                    : ''
+            }`}
+        >
             <div className="content-container flex justify-between items-center">
                 <Link className="outline-none" to="/">
                     <AppLogo className="w-[110px] sm:w-[142px] mb-[5px] sm:mb-[10px]" />
@@ -110,10 +114,7 @@ export default function NavigationBar() {
                     <Regular />
                 ) : (
                     <>
-                        <button
-                            onClick={() => setIsDrawerShown(true)}
-                            aria-label="Buka menu"
-                        >
+                        <button onClick={() => setIsDrawerShown(true)} aria-label="Buka menu">
                             <Icon name="menu" size={30} color="#c1c1c1" />
                         </button>
 
