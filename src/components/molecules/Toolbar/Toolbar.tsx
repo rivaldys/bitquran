@@ -24,7 +24,7 @@ const iconButtonStyle = cva(
 export default function Toolbar({ className, number, audioButton, docButton }: ToolbarProps) {
     return (
         <div className={toolbarStyle({ className })}>
-            <div className="w-[35px] h-[35px] flex items-center justify-center bg-[#80cbc4] rounded-full text-white text-sm leading-[21px]">
+            <div className="w-7.5 sm:w-8.75 h-7.5 sm:h-8.75 flex items-center justify-center bg-[#80cbc4] rounded-full text-white text-xs sm:text-sm leading-4.75 sm:leading-5.25">
                 {number}
             </div>
 
@@ -32,7 +32,7 @@ export default function Toolbar({ className, number, audioButton, docButton }: T
                 <div className="flex items-center">
                     {audioButton && (
                         <button
-                            className={iconButtonStyle({ className: 'mr-[5px]' })}
+                            className={iconButtonStyle({ className: 'mr-1.25' })}
                             onClick={audioButton.onToggle}
                             title={audioButton.title ?? 'Audio Ayat/Murottal'}
                             aria-label={audioButton.isPlaying ? 'Jeda audio' : 'Putar audio'}
@@ -40,7 +40,7 @@ export default function Toolbar({ className, number, audioButton, docButton }: T
                             {audioButton.isPlaying ? (
                                 <svg
                                     aria-hidden="true"
-                                    className="h-[18px] fill-[#80cbc4]"
+                                    className="h-3.75 sm:h-4.5 fill-[#80cbc4]"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512"
                                 >
@@ -49,7 +49,7 @@ export default function Toolbar({ className, number, audioButton, docButton }: T
                             ) : (
                                 <svg
                                     aria-hidden="true"
-                                    className="h-[18px] fill-[#80cbc4]"
+                                    className="h-3.75 sm:h-4.5 fill-[#80cbc4]"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512"
                                 >
@@ -68,7 +68,7 @@ export default function Toolbar({ className, number, audioButton, docButton }: T
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-[22px] fill-none stroke-[#80cbc4]"
+                                className="h-4.75 sm:h-5.5 fill-none stroke-[#80cbc4]"
                                 viewBox="0 0 512 512"
                             >
                                 <rect

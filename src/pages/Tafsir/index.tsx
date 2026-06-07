@@ -3,30 +3,29 @@ import { useAyah } from 'bitquran/services/queries'
 import { Head } from 'bitquran/shared/lib'
 import { Link, useNavigate, useParams } from 'react-router'
 
-function NavButton({
-    onClick,
-    disabled,
-    direction
-}: {
+interface NavButtonProps {
     onClick: () => void
     disabled: boolean
     direction: 'prev' | 'next'
-}) {
+}
+
+function NavButton({ onClick, disabled, direction }: NavButtonProps) {
     const isPrev = direction === 'prev'
+
     return (
         <button
             onClick={onClick}
             disabled={disabled}
-            className={`flex items-center justify-center w-10 h-10 rounded-full transition ${
+            className={`flex items-center justify-center w-8.75 h-8.75 rounded-[5px] transition duration-300 ${
                 disabled
-                    ? 'text-[#cccccc] cursor-not-allowed'
-                    : 'text-[#757575] hover:bg-[#e0f2f1] hover:text-[#4CAF50]'
+                    ? 'text-[#cccccc] bg-[#eaeaea] cursor-not-allowed'
+                    : 'text-[#80cbc4] bg-[#e0f2f1] hover:bg-[#e0f2f1]/50 hover:cursor-pointer'
             }`}
             aria-label={isPrev ? 'Ayat sebelumnya' : 'Ayat berikutnya'}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-5"
+                className="w-6.25 h-6.25"
                 viewBox="0 0 512 512"
                 stroke="currentColor"
             >
@@ -91,9 +90,9 @@ export default function Tafsir() {
                 </title>
             </Head>
 
-            <div className="bg-white rounded-[7px] sm:rounded-[10px] shadow-[0_0_10px_rgba(234,234,234,0.8)] p-[15px] sm:p-[20px]">
+            <div className="bg-white rounded-[7px] sm:rounded-[10px] shadow-[0_0_10px_rgba(234,234,234,0.8)] p-3.75">
                 {/* Navigation Header */}
-                <div className="flex items-center justify-between mb-[15px]">
+                <div className="flex items-center justify-between border-b border-[#dedede] pb-3.75 mb-3.75">
                     <NavButton
                         onClick={() => goTo(currentAyah - 1)}
                         disabled={!hasPrev}
@@ -101,11 +100,13 @@ export default function Tafsir() {
                     />
 
                     <div className="text-center">
-                        <p className="text-[#999999] text-xs leading-[19px]">Tafsir</p>
-                        <h3 className="text-[#757575] text-base sm:text-[20px] font-normal leading-[23px] sm:leading-[27px]">
+                        <p className="text-[#757575] text-[16px] sm:text-[20px] font-normal leading-5.75 sm:leading-6.75">
+                            Tafsir
+                        </p>
+                        <h3 className="text-[#757575] text-base sm:text-[20px] font-normal leading-5.75 sm:leading-6.75">
                             {surahName}
                         </h3>
-                        <span className="text-[#999999] text-sm leading-[21px]">
+                        <span className="text-[#757575] text-sm sm:text-base font-light leading-5.25 sm:leading-5.75">
                             Ayat {verse.number.inSurah}
                         </span>
                     </div>
@@ -118,19 +119,26 @@ export default function Tafsir() {
                 </div>
 
                 {/* Jump to Tafsir */}
-                <Select className="mb-[15px]" onChange={handlePickTafsir} value="">
-                    <Select.Option value="">-Lompat ke Tafsir Lain-</Select.Option>
-                    {Array.from({ length: totalAyahs }).map((_, i) => (
-                        <Select.Option key={i + 1} value={String(i + 1)}>
-                            Tafsir {i + 1}
-                        </Select.Option>
-                    ))}
-                </Select>
+                <div className="box-border m-auto mb-3.75 text-center">
+                    <Select
+                        id="tafsir-jump"
+                        className="w-full sm:w-62.5! text-xs sm:text-sm leading-4.75 sm:leading-5.25"
+                        onChange={handlePickTafsir}
+                        value={tafsirId}
+                    >
+                        <Select.Option value="">-Lompat ke Tafsir Lain-</Select.Option>
+                        {Array.from({ length: totalAyahs }).map((_, i) => (
+                            <Select.Option key={i + 1} value={String(i + 1)}>
+                                Tafsir {i + 1}
+                            </Select.Option>
+                        ))}
+                    </Select>
+                </div>
 
                 {/* Back link */}
                 <Link
                     to={`/surat/${id}`}
-                    className="inline-block text-[#4CAF50] text-xs sm:text-sm leading-[19px] sm:leading-[21px] mb-[20px] hover:opacity-75 transition"
+                    className="inline-block text-[#80cbc4] text-xs sm:text-sm leading-4.75 sm:leading-5.25 mb-3.75 hover:opacity-75 hover:underline transition duration-300"
                 >
                     &larr; Kembali ke Surat
                 </Link>
@@ -142,11 +150,10 @@ export default function Tafsir() {
                         audioSrc: verse.audio.primary
                     }}
                     verse={{ ar: verse.text.arab, id: verse.translation.id }}
-                    disableBottomSeparator
                 />
 
                 {/* Tafsir Text */}
-                <div className="mt-[20px] bg-[#fafafa] rounded-[5px] sm:rounded-[7px] p-[15px] sm:p-[20px] text-[#757575] text-sm sm:text-base leading-[24px] sm:leading-[28px]">
+                <div className="bg-[#f7f7f7] rounded-[5px] sm:rounded-[7px] p-3.75 sm:p-3.75 text-[#757575] text-sm sm:text-base leading-6 sm:leading-6.5 mb-3.75">
                     {verse.tafsir.id.long}
                 </div>
             </div>

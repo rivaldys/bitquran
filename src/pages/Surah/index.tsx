@@ -1,5 +1,5 @@
-import { Select, Skeleton, VerseItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/assets/images'
+import { Select, Skeleton, VerseItem } from 'bitquran/components'
 import { useSurah } from 'bitquran/services/queries'
 import { useAudioPlayer } from 'bitquran/shared/hooks'
 import { Head } from 'bitquran/shared/lib'
@@ -9,15 +9,15 @@ function BismillahPlayer({ text, src }: { text: string; src: string }) {
     const { isPlaying, toggle } = useAudioPlayer(src)
 
     return (
-        <div className="mt-3.75 flex flex-col items-center gap-2.5">
+        <div className="mt-5 sm:mt-8.75 mb-3.75 flex items-center gap-3.75">
             <button
                 onClick={toggle}
                 aria-label={isPlaying ? 'Jeda bismillah' : 'Putar bismillah'}
-                className="w-8.75 h-8.75 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition"
+                className="w-7.5 h-7.5 sm:w-8.75 sm:h-8.75 flex items-center justify-center rounded-full mt-2 bg-white/85 hover:bg-white/70 hover:cursor-pointer transition"
             >
                 {isPlaying ? (
                     <svg
-                        className="h-3.5 sm:h-4 fill-white"
+                        className="h-3 sm:h-4 fill-[salmon]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                     >
@@ -25,7 +25,7 @@ function BismillahPlayer({ text, src }: { text: string; src: string }) {
                     </svg>
                 ) : (
                     <svg
-                        className="h-3.5 sm:h-4 fill-white"
+                        className="h-3 sm:h-4 fill-[salmon]"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
                     >
@@ -33,7 +33,7 @@ function BismillahPlayer({ text, src }: { text: string; src: string }) {
                     </svg>
                 )}
             </button>
-            <p className="text-white text-[26px] sm:text-[30px] font-saleem-quran">{text}</p>
+            <p className="text-white text-[26px] sm:text-[42px] font-saleem-quran">{text}</p>
         </div>
     )
 }
@@ -72,7 +72,7 @@ export default function Surah() {
             </Head>
 
             {/* Surah Header */}
-            <div className="relative rounded-[7px] sm:rounded-[10px] bg-[linear-gradient(150deg,#c5e1a5,#009688)] mb-12.5 min-h-57.5 sm:min-h-75 shadow-[10px_25px_30px_rgba(117,117,117,0.45)]">
+            <div className="relative rounded-[7px] sm:rounded-[10px] bg-[linear-gradient(150deg,#c5e1a5,#009688)] mb-8.75 sm:mb-12.5 min-h-57.5 sm:min-h-75 shadow-[10px_25px_30px_rgba(117,117,117,0.45)]">
                 <div
                     className="absolute inset-0 rounded-[7px] sm:rounded-[10px] bg-no-repeat bg-position-[bottom_-25px_right_25px] sm:bg-position-[bottom_-50px_right_50px] bg-size-[45%] sm:bg-size-[35%] opacity-35"
                     style={{ backgroundImage: `url(${ILQuran})` }}
@@ -80,17 +80,17 @@ export default function Surah() {
 
                 {/* Text Content */}
                 <div className="relative flex flex-col items-center justify-center w-full h-full min-h-57.5 sm:min-h-75 px-6.25 sm:px-3.75 py-3.75 box-border *:text-white text-center">
-                    <p className="text-[26px] sm:text-[28px] font-normal font-saleem-quran mb-2.5 leading-7.25 sm:leading-8.75">
+                    <p className="text-[26px] sm:text-[28px] font-normal font-saleem-quran mb-2.5 leading-8.25 sm:leading-8.75">
                         {surah.name.long}
                     </p>
                     <h1 className="text-[22px] sm:text-[28px] font-medium leading-7.25 sm:leading-8.75">
                         {surah.name.transliteration.id}
                     </h1>
-                    <p className="text-[14px] sm:text-[18px] leading-5 sm:leading-6.25">
+                    <p className="text-[14px] sm:text-[18px] leading-5.25 sm:leading-6.25">
                         {surah.name.translation.id}
                     </p>
-                    <hr className="border-0 h-px w-full mt-3.75 mb-3.75 bg-[linear-gradient(to_right,transparent,#fff,transparent)]" />
-                    <h5 className="text-[14px] sm:text-[16px] font-light    ">
+                    <hr className="border-0 h-px w-full mt-1.75 sm:mt-3.75 mb-1.75 sm:mb-3.75 bg-[linear-gradient(to_right,transparent,#fff,transparent)]" />
+                    <h5 className="text-[14px] sm:text-[16px] font-light leading-5.25 sm:leading-5.75">
                         {surah.revelation.id} &middot; {surah.numberOfVerses} Ayat
                     </h5>
 
@@ -104,7 +104,12 @@ export default function Surah() {
             </div>
 
             {/* Jump to Verse */}
-            <Select className="mb-5 sm:mb-7.5" onChange={handlePickVerse} defaultValue="">
+            <Select
+                id="verse-select"
+                className="text-sm sm:text-base leading-5.25 sm:leading-5.75 mb-5 sm:mb-7.5"
+                onChange={handlePickVerse}
+                defaultValue=""
+            >
                 <Select.Option value="">-Pilih Ayat-</Select.Option>
                 {surah.verses?.map(verse => (
                     <Select.Option

@@ -6,7 +6,7 @@ export interface SectionTitleProps extends React.HTMLAttributes<HTMLHeadingEleme
     className?: string
 }
 
-const sectionTitleStyle = cva('text-[20px] leading-[27px] font-normal mb-[10px]')
+const sectionTitleStyle = cva('text-[18px] sm:text-[20px] leading-[27px] font-normal mb-[10px]')
 
 export default function SectionTitle({ children, className, ...rest }: SectionTitleProps) {
     return (

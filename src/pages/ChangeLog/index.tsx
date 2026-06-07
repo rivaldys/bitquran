@@ -12,7 +12,7 @@ export default function ChangeLog() {
                 <ContentSection>
                     <SectionTitle>Riwayat Pembaruan</SectionTitle>
                     <TextLabel>Versi 1.2.0</TextLabel>
-                    <ul className="pl-[30px] list-disc text-[15px] leading-[25px]">
+                    <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>
                             Pemutakhiran teknologi utama situs ini ke React v19 + Vite v8 dan
                             beberapa teknologi pendukung lainnya.
@@ -22,7 +22,7 @@ export default function ChangeLog() {
 
                 <ContentSection>
                     <TextLabel>Versi 1.1.2</TextLabel>
-                    <ul className="pl-[30px] list-disc text-[15px] leading-[25px]">
+                    <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>
                             Menambahkan konfigurasi <i>base url/public url</i>.
                         </li>
@@ -31,7 +31,7 @@ export default function ChangeLog() {
 
                 <ContentSection>
                     <TextLabel>Versi 1.1.1</TextLabel>
-                    <ul className="pl-[30px] list-disc text-[15px] leading-[25px]">
+                    <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>
                             Mengubah <i>endpoint API</i>.
                         </li>
@@ -47,7 +47,7 @@ export default function ChangeLog() {
 
                 <ContentSection>
                     <TextLabel>Versi 1.1.0</TextLabel>
-                    <ul className="pl-[30px] list-disc text-[15px] leading-[25px]">
+                    <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>
                             Menubar pada versi <i>mobile</i> dipindahkan menjadi <i>sidebar menu</i>{' '}
                             yang dapat dimunculkan dengan mengklik tombol menu yang ada di sudut
@@ -59,7 +59,7 @@ export default function ChangeLog() {
 
                 <ContentSection className="!border-b-0 !mb-0">
                     <TextLabel>Versi 1.0.0</TextLabel>
-                    <ul className="pl-[30px] list-disc text-[15px] leading-[25px]">
+                    <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>Rilis awal</li>
                     </ul>
                 </ContentSection>

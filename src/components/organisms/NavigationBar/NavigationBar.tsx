@@ -49,8 +49,8 @@ function Drawer({ isShown, setIsShown }: DrawerProps) {
 
             <aside
                 data-role="drawer"
-                className={`bg-white h-full overflow-x-hidden pt-[52px] fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
-                    isShown ? 'mr-0' : '-mr-[250px]'
+                className={`bg-white h-full overflow-x-hidden pt-13 fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
+                    isShown ? 'mr-0' : '-mr-62.5'
                 }`}
             >
                 <button
@@ -62,7 +62,7 @@ function Drawer({ isShown, setIsShown }: DrawerProps) {
                 </button>
 
                 <nav>
-                    <ul className="list-none overflow-hidden mx-[15px] mb-0">
+                    <ul className="list-none overflow-hidden mx-3.75 mb-0">
                         {navbarRoutes
                             .filter(route => route.path)
                             .map((route, index) => (
@@ -99,15 +99,15 @@ export default function NavigationBar() {
 
     return (
         <header
-            className={`h-[65px] sm:h-[75px] w-full flex items-center fixed top-0 z-10 bg-white border-b-[1px] border-b-[#eaeaea] box-border ${
+            className={`h-16.25 sm:h-18.75 w-full flex items-center fixed top-0 z-10 bg-white border-b border-b-[#eaeaea] box-border ${
                 isScrolled
-                    ? 'shadow-[0_0_10px_hsla(0,_0%,_50%,_0.3)] transition-[box-shadow] duration-300 ease-linear'
+                    ? 'shadow-[0_0_10px_hsla(0,0%,50%,0.3)] transition-shadow duration-300 ease-linear'
                     : ''
             }`}
         >
             <div className="content-container flex justify-between items-center">
                 <Link className="outline-none" to="/">
-                    <AppLogo className="w-[110px] sm:w-[142px] mb-[5px] sm:mb-[10px]" />
+                    <AppLogo className="w-27.5 sm:w-35.5 mb-1.25 sm:mb-2.5" />
                 </Link>
 
                 {deviceType === 'desktop' ? (

@@ -31,7 +31,7 @@ export default function VerseItem({
             className={containerStyle({
                 className: disableBottomSeparator
                     ? className
-                    : `border-b border-b-[#dedede] mb-8.75 ${className ?? ''}`
+                    : `border-b border-b-[#dedede] mb-6.25 sm:mb-8.75 ${className ?? ''}`
             })}
         >
             {toolbar && (
@@ -44,10 +44,11 @@ export default function VerseItem({
             )}
 
             {verse.ar && (
-                <p className="w-full text-[#757575] text-[30px] leading-12.5 font-saleem-quran font-normal text-right">
+                <p className="w-full text-[#757575] text-[26px] sm:text-[30px] leading-11.5 sm:leading-12.5 font-saleem-quran font-normal text-right">
                     {verse.ar}
                 </p>
             )}
+
             {verse.id && (
                 <p className="w-full text-[#757575] italic py-3.75 text-sm sm:text-base">
                     {verse.id}

@@ -6,7 +6,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
     className?: string
 }
 
-const textStyle = cva('text-[15px] leading-[25px] mb-[10px]')
+const textStyle = cva('text-sm sm:text-[15px] leading-6 sm:leading-[25px] mb-[10px]')
 
 export default function Text({ children, className, ...rest }: TextProps) {
     return (

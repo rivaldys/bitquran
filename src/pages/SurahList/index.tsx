@@ -1,5 +1,5 @@
-import { Input, Skeleton, SurahItem } from 'bitquran/components'
 import { ILQuran } from 'bitquran/assets/images'
+import { Input, Skeleton, SurahItem } from 'bitquran/components'
 import { useSurahList } from 'bitquran/services/queries'
 import { Head } from 'bitquran/shared/lib'
 import { useMemo, useState } from 'react'
@@ -22,16 +22,16 @@ export default function SurahList() {
             </Head>
 
             {/* Header */}
-            <div className="rounded-[7px] sm:rounded-[10px] [background-image:linear-gradient(150deg,_#c5e1a5,_#009688)] mb-[20px] sm:mb-[30px]">
+            <div className="rounded-[7px] sm:rounded-[10px] bg-[linear-gradient(150deg,#c5e1a5,#009688)] mb-5 sm:mb-7.5">
                 <div
-                    className="flex items-center h-[150px] sm:h-[250px] bg-no-repeat [background-position:bottom_-25px_right_-10px] sm:[background-position:bottom_-50px_right_-20px] [background-size:35%] sm:[background-size:30%]"
+                    className="flex items-center h-37.5 sm:h-62.5 bg-no-repeat bg-position-[bottom_-25px_right_-10px] sm:bg-position-[bottom_-50px_right_-20px] bg-size-[35%] sm:bg-size-[30%]"
                     style={{ backgroundImage: `url(${ILQuran})` }}
                 >
-                    <div className="ml-[25px] sm:ml-[50px] box-border [&>*]:text-white">
-                        <h1 className="text-[22px] leading-[29px] sm:text-[36px] sm:leading-[43px] font-semibold">
+                    <div className="ml-6.25 sm:ml-12.5 box-border *:text-white">
+                        <h1 className="text-[22px] leading-7.25 sm:text-[36px] sm:leading-10.75 font-semibold">
                             Daftar Surat dalam Al-Qur'an
                         </h1>
-                        <p className="text-[14px] leading-[21px] sm:text-[20px] sm:leading-[27px]">
+                        <p className="text-[14px] leading-5.25 sm:text-[20px] sm:leading-6.75">
                             114 Surat &middot; Makkiyah &middot; Madaniyah
                         </p>
                     </div>
@@ -40,7 +40,7 @@ export default function SurahList() {
 
             {/* Search */}
             <Input
-                className="mb-[20px] sm:mb-[30px]"
+                className="mb-5 sm:mb-7.5"
                 type="text"
                 placeholder="Cari nama surat"
                 value={search}
@@ -49,13 +49,13 @@ export default function SurahList() {
 
             {/* List */}
             {isLoading ? (
-                <div className="flex flex-col gap-[15px]">
+                <div className="flex flex-col gap-3.75">
                     {Array.from({ length: 8 }).map((_, i) => (
                         <Skeleton key={i} height={85} />
                     ))}
                 </div>
             ) : (
-                <div className="flex flex-col gap-[15px]">
+                <div className="flex flex-col gap-3.75">
                     {filtered.map(surah => (
                         <SurahItem
                             key={surah.number}
@@ -67,9 +67,7 @@ export default function SurahList() {
                         />
                     ))}
                     {filtered.length === 0 && (
-                        <p className="text-center text-[#999999] py-[30px]">
-                            Surat tidak ditemukan
-                        </p>
+                        <p className="text-center text-[#999999] py-7.5">Surat tidak ditemukan</p>
                     )}
                 </div>
             )}
