@@ -28,7 +28,7 @@ function Regular() {
                     .map((route, index) => (
                         <li key={`link-${index + 1}`}>
                             <Link
-                                className="block transition duration-300 text-[#757575] text-sm leading-[21px] font-normal px-5 py-[5px] hover:text-[#4CAF50] hover:cursor-pointer"
+                                className="block transition duration-300 text-[#757575] text-sm leading-5.25 font-normal px-5 py-1.25 hover:text-[#4CAF50] hover:cursor-pointer"
                                 to={route.path!}
                             >
                                 {route.name}
@@ -49,12 +49,12 @@ function Drawer({ isShown, setIsShown }: DrawerProps) {
 
             <aside
                 data-role="drawer"
-                className={`bg-white h-full overflow-x-hidden pt-13 fixed right-0 top-0 transition-[margin-right] duration-300 w-[250px] z-20 ${
+                className={`bg-white h-full overflow-x-hidden pt-13 fixed right-0 top-0 transition-[margin-right] duration-300 w-62.5 z-20 ${
                     isShown ? 'mr-0' : '-mr-62.5'
                 }`}
             >
                 <button
-                    className="flex items-center justify-center bg-[#f2f2f2] text-[#c1c1c1] text-[20px] w-[45px] h-[45px] rounded-bl-[15px] cursor-pointer absolute top-0 right-0"
+                    className="flex items-center justify-center bg-[#f2f2f2] text-[#c1c1c1] text-[20px] w-11.25 h-11.25 rounded-bl-[15px] cursor-pointer absolute top-0 right-0"
                     onClick={() => setIsShown(false)}
                     aria-label="Tutup menu"
                 >
@@ -68,7 +68,7 @@ function Drawer({ isShown, setIsShown }: DrawerProps) {
                             .map((route, index) => (
                                 <li key={`link-${index + 1}`}>
                                     <Link
-                                        className="block transition duration-300 text-[#757575] text-sm leading-[21px] font-light px-[15px] py-[10px] rounded-lg border-b-[1px] border-b-[#f5f5f5] hover:text-[#4CAF50] hover:cursor-pointer hover:bg-[#f5f5f5]"
+                                        className="block transition duration-300 text-[#757575] text-sm leading-5.25 font-light px-3.75 py-2.5 rounded-lg border-b border-b-[#f5f5f5] hover:text-[#4CAF50] hover:cursor-pointer hover:bg-[#f5f5f5]"
                                         to={route.path!}
                                         onClick={() => setIsShown(false)}
                                     >

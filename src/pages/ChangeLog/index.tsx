@@ -57,7 +57,7 @@ export default function ChangeLog() {
                     </ul>
                 </ContentSection>
 
-                <ContentSection className="!border-b-0 !mb-0">
+                <ContentSection className="border-b-0! mb-0!">
                     <TextLabel>Versi 1.0.0</TextLabel>
                     <ul className="pl-7.5 list-disc text-[15px] leading-6.25">
                         <li>Rilis awal</li>
