@@ -1,7 +1,21 @@
 # Folder Structure
 
 ```
-bitquran-new/
+bitquran/
+├── .husky/
+│   └── pre-commit                   # Runs lint-staged before commit
+|
+├── docs/                            # Project documentation
+│   ├── adr/                         # Architecture Decision Records
+│   │   ├── 001-tanstack-query-staletime.md
+│   │   ├── 002-global-audio-context.md
+│   │   ├── 003-arabic-text-atom.md
+│   │   └── 004-cva-styling.md
+│   ├── architecture.md
+│   ├── conventions.md
+│   ├── data-model.md
+│   └── folder-structure.md          # (this file)
+│
 ├── public/                          # Static public assets
 │   ├── cover-image.png
 │   ├── logo.png
@@ -103,31 +117,16 @@ bitquran-new/
 │   ├── index.css                    # Tailwind v4 @theme config
 │   └── main.tsx                     # Entry point
 │
-├── docs/                            # Project documentation
-│   ├── adr/                         # Architecture Decision Records
-│   │   ├── 001-tanstack-query-staletime.md
-│   │   ├── 002-global-audio-context.md
-│   │   ├── 003-arabic-text-atom.md
-│   │   └── 004-cva-styling.md
-│   ├── architecture.md
-│   ├── conventions.md
-│   ├── data-model.md
-│   └── folder-structure.md          # (this file)
-│
-├── .husky/
-│   └── pre-commit                   # Runs lint-staged before commit
-│
-├── .claude/                         # Claude Code configuration
-│   └── personas/
-│       └── senior-dev.md
-│
 ├── .env.example
+├── .gitignore
 ├── .oxfmtrc.json                    # oxfmt formatter config
 ├── .oxlintrc.json                   # oxlint linter config
+├── CHANGELOG.md
 ├── eslint.config.js                 # ESLint (react-hooks + react-refresh only)
 ├── index.html
 ├── package.json
 ├── pnpm-lock.yaml
+├── README.md
 ├── tsconfig.json
 ├── tsconfig.app.json
 ├── tsconfig.node.json
@@ -135,15 +134,15 @@ bitquran-new/
 └── vitest.setup.ts
 ```
 
-## Konvensi Per Folder
+## Per-folder Conventions
 
-Setiap komponen, hook, dan util mengikuti pola **named-impl + barrel**:
+Each component, hook, and util follows the **named-impl + barrel** pattern:
 
 ```
 ComponentName/
-├── ComponentName.tsx    # Implementasi + export interface Props
+├── ComponentName.tsx    # Implementation + exported Props interface
 ├── ComponentName.test.tsx
 └── index.ts            # Barrel: export { default } from './ComponentName'
 ```
 
-Folder PascalCase untuk komponen, camelCase untuk hook dan util.
+PascalCase folders for components, camelCase for hooks and utils.

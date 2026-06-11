@@ -16,6 +16,17 @@ Bitquran adalah aplikasi berbasis web yang menyajikan kitab suci Al-Qur'an secar
 
 Aplikasi ini dibangun dalam bentuk _website_ dan tidak dibangun dalam bentuk aplikasi _mobile_/ponsel alasannya adalah agar dapat digunakan tanpa harus memasang aplikasi pada perangkat, sehingga tidak memakan ruang penyimpanan yang ada. Karena berbasis web, aplikasi ini juga memungkinkan untuk diakses dari berbagai perangkat yang berbeda (_cross-platform_), entah itu dari komputer, ponsel, ataupun _tablet_. Akses langsung di [bitquran.net](https://bitquran.net).
 
+## :hammer_and_wrench: Teknologi yang Digunakan
+
+- [React v19](https://react.dev/) — _library_ untuk membuat _UI component_
+- [TypeScript v6](https://www.typescriptlang.org/) — _superset_ JavaScript
+- [Vite v8](https://vite.dev/) — _build tool_ dan _dev server_
+- [TailwindCSS v4](https://tailwindcss.com/) — _framework_ CSS untuk _styling_ tampilan
+- [React Router v7](https://reactrouter.com/) — _routing_ untuk navigasi/berpindah antar halaman
+- [TanStack Query v5](https://tanstack.com/query) — manajemen _state_ dan _caching_ data server
+- [Axios v1](https://axios-http.com/) — _HTTP client_ untuk _fetching_ data dari API
+- [Vitest v4](https://vitest.dev/) — _framework_ untuk _unit testing_
+
 ## :zap: Fitur
 
 - Cari surat berdasarkan nama
