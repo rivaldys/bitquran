@@ -1,44 +1,86 @@
 {
-  "name": "bitquran",
-  "version": "1.1.2",
-  "homepage": "https://bitquran.net/",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "web-vitals": "^1.1.2"
-  },
-  "devDependencies": {
-    "react-scripts": "5.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "bitquran",
+    "version": "1.2.0",
+    "private": true,
+    "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
+    "keywords": [
+        "al-quran",
+        "alquran",
+        "alquran-web",
+        "quran",
+        "quran-web"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "homepage": "https://bitquran.net",
+    "bugs": {
+        "url": "https://github.com/rivaldys/bitquran/issues"
+    },
+    "license": "ISC",
+    "author": "Ahmad Rivaldy S",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rivaldys/bitquran.git"
+    },
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build",
+        "fmt": "oxfmt",
+        "fmt:check": "oxfmt --check",
+        "lint": "oxlint && eslint src",
+        "lint:fix": "oxlint --fix && eslint src --fix",
+        "preview": "vite preview",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:coverage": "vitest run --coverage",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.3.0",
+        "@tanstack/react-query": "^5.100.14",
+        "axios": "^1.16.1",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
+        "react-router": "^7.16.0",
+        "tailwind-merge": "^3.6.0",
+        "tailwindcss": "^4.3.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/node": "^24.12.3",
+        "@types/react": "^19.2.14",
+        "@types/react-dom": "^19.2.3",
+        "@typescript-eslint/parser": "^8.60.0",
+        "@vitejs/plugin-react": "^6.0.1",
+        "@vitest/coverage-v8": "^4.1.7",
+        "@vitest/ui": "^4.1.7",
+        "eslint": "^10.3.0",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-react-refresh": "^0.5.2",
+        "globals": "^17.6.0",
+        "husky": "^9.1.7",
+        "jsdom": "^29.1.1",
+        "lint-staged": "^17.0.7",
+        "oxfmt": "^0.52.0",
+        "oxlint": "^1.67.0",
+        "typescript": "~6.0.2",
+        "vite": "^8.0.12",
+        "vitest": "^4.1.7"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "oxlint",
+            "eslint --no-warn-ignored",
+            "oxfmt --check"
+        ],
+        "*.{css,json}": [
+            "oxfmt --check"
+        ]
+    },
+    "engines": {
+        "node": ">=24"
+    }
 }

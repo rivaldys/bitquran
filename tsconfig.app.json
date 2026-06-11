@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "target": "es2023",
+        "lib": ["ES2023", "DOM"],
+        "module": "esnext",
+        "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "resolveJsonModule": true,
+
+        /* Linting */
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "erasableSyntaxOnly": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /* Absolute imports */
+        "paths": {
+            "bitquran/assets": ["./src/assets"],
+            "bitquran/assets/images": ["./src/assets/images"],
+            "bitquran/components": ["./src/components"],
+            "bitquran/pages": ["./src/pages"],
+            "bitquran/router": ["./src/router"],
+            "bitquran/router/core": ["./src/router/core"],
+            "bitquran/services/api": ["./src/services/api"],
+            "bitquran/services/queries": ["./src/services/queries"],
+            "bitquran/shared": ["./src/shared"],
+            "bitquran/shared/constants": ["./src/shared/constants"],
+            "bitquran/shared/hooks": ["./src/shared/hooks"],
+            "bitquran/shared/lib": ["./src/shared/lib"],
+            "bitquran/shared/types": ["./src/shared/types"],
+            "bitquran/shared/utils": ["./src/shared/utils"],
+            "bitquran/package": ["./package.json"]
+        }
+    },
+    "include": ["src"]
+}
