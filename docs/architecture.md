@@ -19,7 +19,7 @@ Browser (React SPA)
 
 ```
 pages/            Route-level screens, lazy-loaded, assemble templates + organisms
-components/        Atomic Design system (atoms → molecules → organisms → templates)
+components/       Atomic Design system (atoms → molecules → organisms → templates)
 router/           Route table (routes.tsx) + mapping logic (core/)
 services/         Data layer: api/ (axios instance) + queries/ (TanStack hooks)
 shared/           Cross-cutting non-UI code: constants, hooks, lib, types, utils
@@ -54,13 +54,13 @@ React Router v7 via `createBrowserRouter`. The route table is data-driven:
 Current routes:
 
 ```
-/                          Beranda — surah list        (SurahList)
-/surat                     → redirect to /
-/surat/:id                 Detail Surat                (Surah)
-/surat/:id/tafsir/:tafsirId  Tafsir                    (Tafsir)
-/tentang                   Tentang                     (About)
-/riwayat-pembaruan         Riwayat Pembaruan           (ChangeLog)
-*                          404                         (NotFound)
+/                            Beranda — surah list        (SurahList)
+/surat                       → redirect to /
+/surat/:id                   Detail Surat                (Surah)
+/surat/:id/tafsir/:tafsirId  Tafsir                      (Tafsir)
+/tentang                     Tentang                     (About)
+/riwayat-pembaruan           Riwayat Pembaruan           (ChangeLog)
+*                            404                         (NotFound)
 ```
 
 ---
