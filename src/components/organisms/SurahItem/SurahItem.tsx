@@ -27,8 +27,13 @@ export default function SurahItem({
 }: SurahItemProps) {
     return (
         <div className={containerStyle({ className: containerClassName })}>
-            <div className="relative w-10 h-10 sm:w-12.5 sm:h-12.5 flex justify-center items-center fill-[#4caf50] mr-3.75">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.84 282.84">
+            <div className="relative w-10 h-10 sm:w-12.5 sm:h-12.5 flex justify-center items-center mr-3.75">
+                <svg
+                    fill="#4caf50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 282.84 282.84"
+                    className="w-full h-full"
+                >
                     <g>
                         <path d="M141.42,9.9l36.47,36.47,2.05,2.05h54.48V102.9l2.05,2,36.47,36.47-36.47,36.47-2.05,2.05v54.48H179.94l-2.05,2.05-36.47,36.47L105,236.47l-2-2.05H48.42V179.94l-2.05-2.05L9.9,141.42,46.37,105l2.05-2V48.42H102.9l2-2.05L141.42,9.9m0-9.9L100,41.42H41.42V100L0,141.42l41.42,41.42v58.58H100l41.42,41.42,41.42-41.42h58.58V182.84l41.42-41.42L241.42,100V41.42H182.84L141.42,0Z" />
                     </g>
