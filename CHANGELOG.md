@@ -2,6 +2,10 @@
 
 Dokumen ini berfungsi untuk mencatat informasi mengenai riwayat pembaruan dari aplikasi **Bitquran**.
 
+## v1.2.1
+
+- Pembaruan dan reorganisasi dependensi teknis.
+
 ## v1.2.0
 
 - Pemutakhiran teknologi utama situs ini dari `React v17` ke `React v19` (`Vite`) dan beberapa teknologi pendukung lainnya.

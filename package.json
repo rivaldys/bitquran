@@ -1,6 +1,6 @@
 {
     "name": "bitquran",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "private": true,
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "keywords": [
@@ -35,18 +35,14 @@
         "prepare": "husky"
     },
     "dependencies": {
-        "@tailwindcss/vite": "^4.3.0",
         "@tanstack/react-query": "^5.100.14",
-        "axios": "^1.16.1",
-        "class-variance-authority": "^0.7.1",
-        "clsx": "^2.1.1",
+        "axios": "^1.18.1",
         "react": "^19.2.6",
         "react-dom": "^19.2.6",
-        "react-router": "^7.16.0",
-        "tailwind-merge": "^3.6.0",
-        "tailwindcss": "^4.3.0"
+        "react-router": "^8.0.1"
     },
     "devDependencies": {
+        "@tailwindcss/vite": "^4.3.1",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^16.3.2",
         "@testing-library/user-event": "^14.6.1",
@@ -54,21 +50,25 @@
         "@types/react": "^19.2.14",
         "@types/react-dom": "^19.2.3",
         "@typescript-eslint/parser": "^8.60.0",
-        "@vitejs/plugin-react": "^6.0.1",
-        "@vitest/coverage-v8": "^4.1.7",
-        "@vitest/ui": "^4.1.7",
-        "eslint": "^10.3.0",
+        "@vitejs/plugin-react": "^6.0.3",
+        "@vitest/coverage-v8": "^4.1.9",
+        "@vitest/ui": "^4.1.9",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "eslint": "^10.6.0",
         "eslint-plugin-react-hooks": "^7.1.1",
-        "eslint-plugin-react-refresh": "^0.5.2",
-        "globals": "^17.6.0",
+        "eslint-plugin-react-refresh": "^0.5.3",
+        "globals": "^17.7.0",
         "husky": "^9.1.7",
         "jsdom": "^29.1.1",
-        "lint-staged": "^17.0.7",
-        "oxfmt": "^0.52.0",
-        "oxlint": "^1.67.0",
-        "typescript": "~6.0.2",
-        "vite": "^8.0.12",
-        "vitest": "^4.1.7"
+        "lint-staged": "^17.0.8",
+        "oxfmt": "^0.56.0",
+        "oxlint": "^1.71.0",
+        "tailwind-merge": "^3.6.0",
+        "tailwindcss": "^4.3.1",
+        "typescript": "~6.0.3",
+        "vite": "^8.1.0",
+        "vitest": "^4.1.9"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
