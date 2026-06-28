@@ -2,6 +2,10 @@
 
 Dokumen ini berfungsi untuk mencatat informasi mengenai riwayat pembaruan dari aplikasi **Bitquran**.
 
+## v1.2.2
+
+- Pembaruan dependensi teknis untuk menambal celah keamanan pada `form-data` (CRLF injection) dan `undici` (cross-origin request routing, TLS bypass, HTTP header injection, dan lainnya).
+
 ## v1.2.1
 
 - Pembaruan dan reorganisasi dependensi teknis.
