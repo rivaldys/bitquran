@@ -1,6 +1,6 @@
 {
     "name": "bitquran",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "private": true,
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "keywords": [
@@ -82,5 +82,11 @@
     },
     "engines": {
         "node": ">=24"
+    },
+    "pnpm": {
+        "overrides": {
+            "form-data": "4.0.6",
+            "undici": "7.28.0"
+        }
     }
 }
