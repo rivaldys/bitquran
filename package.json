@@ -1,6 +1,6 @@
 {
     "name": "bitquran",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "private": true,
     "description": "Aplikasi Qur'an Berbasis Web – Baca Al-Qur'an secara Daring",
     "keywords": [
@@ -35,40 +35,40 @@
         "prepare": "husky"
     },
     "dependencies": {
-        "@tanstack/react-query": "^5.100.14",
-        "axios": "^1.18.1",
-        "react": "^19.2.6",
-        "react-dom": "^19.2.6",
-        "react-router": "^8.0.1"
+        "@tanstack/react-query": "^5.101.4",
+        "axios": "^1.19.0",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "react-router": "^8.3.0"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.3.1",
-        "@testing-library/jest-dom": "^6.9.1",
+        "@tailwindcss/vite": "^4.3.3",
+        "@testing-library/jest-dom": "^7.0.1",
         "@testing-library/react": "^16.3.2",
-        "@testing-library/user-event": "^14.6.1",
-        "@types/node": "^24.12.3",
-        "@types/react": "^19.2.14",
-        "@types/react-dom": "^19.2.3",
-        "@typescript-eslint/parser": "^8.60.0",
-        "@vitejs/plugin-react": "^6.0.3",
-        "@vitest/coverage-v8": "^4.1.9",
-        "@vitest/ui": "^4.1.9",
+        "@testing-library/user-event": "^14.6.6",
+        "@types/node": "^26.2.0",
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.4",
+        "@typescript-eslint/parser": "^8.67.0",
+        "@vitejs/plugin-react": "^6.1.0",
+        "@vitest/coverage-v8": "^4.1.11",
+        "@vitest/ui": "^4.1.11",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
-        "eslint": "^10.6.0",
+        "eslint": "^10.9.0",
         "eslint-plugin-react-hooks": "^7.1.1",
-        "eslint-plugin-react-refresh": "^0.5.3",
-        "globals": "^17.7.0",
+        "eslint-plugin-react-refresh": "^0.5.4",
+        "globals": "^17.11.0",
         "husky": "^9.1.7",
-        "jsdom": "^29.1.1",
-        "lint-staged": "^17.0.8",
-        "oxfmt": "^0.56.0",
-        "oxlint": "^1.71.0",
+        "jsdom": "^30.0.1",
+        "lint-staged": "^17.3.0",
+        "oxfmt": "^0.64.0",
+        "oxlint": "^1.79.0",
         "tailwind-merge": "^3.6.0",
-        "tailwindcss": "^4.3.1",
+        "tailwindcss": "^4.3.3",
         "typescript": "~6.0.3",
-        "vite": "^8.1.0",
-        "vitest": "^4.1.9"
+        "vite": "^8.2.2",
+        "vitest": "^4.1.11"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -82,11 +82,5 @@
     },
     "engines": {
         "node": ">=24"
-    },
-    "pnpm": {
-        "overrides": {
-            "form-data": "4.0.6",
-            "undici": "7.28.0"
-        }
     }
 }
