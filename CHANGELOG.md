@@ -2,6 +2,13 @@
 
 Dokumen ini berfungsi untuk mencatat informasi mengenai riwayat pembaruan dari aplikasi **Bitquran**.
 
+## v1.2.3
+
+- Memutakhirkan dependensi utama dan berbagai _development tools_ yang digunakan oleh aplikasi.
+- Menyederhanakan konfigurasi Vite dengan menggunakan resolusi _path_ berbasis `tsconfig`.
+- Menambahkan dukungan laporan _test coverage_ dalam format `LCOV` dan `Cobertura`.
+- Menyesuaikan konfigurasi proyek agar kompatibel dengan `pnpm v11`.
+
 ## v1.2.2
 
 - Pembaruan dependensi teknis untuk menambal celah keamanan pada `form-data` (CRLF injection) dan `undici` (cross-origin request routing, TLS bypass, HTTP header injection, dan lainnya).
