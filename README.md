@@ -7,7 +7,7 @@
 <h1 align="center">Bitquran</h1>
 <p align="center">Baca Al-Qur'an secara Daring</p>
 <div align="center">
-    <img src="https://img.shields.io/badge/Version-v1.2.3-green?style=for-the-badge" alt="App Version" />
+    <img src="https://img.shields.io/badge/Version-v1.2.4-green?style=for-the-badge" alt="App Version" />
 </div>
 
 ## :memo: Tentang
@@ -18,14 +18,14 @@ Aplikasi ini dibangun dalam bentuk _website_ dan tidak dibangun dalam bentuk apl
 
 ## :hammer_and_wrench: Teknologi yang Digunakan
 
-- [React v19](https://react.dev/) — _library_ untuk membuat _UI component_
-- [TypeScript v7](https://www.typescriptlang.org/) — _superset_ JavaScript
-- [Vite v8](https://vite.dev/) — _build tool_ dan _dev server_
-- [TailwindCSS v4](https://tailwindcss.com/) — _framework_ CSS untuk _styling_ tampilan
-- [React Router v8](https://reactrouter.com/) — _routing_ untuk navigasi/berpindah antar halaman
-- [TanStack Query v5](https://tanstack.com/query) — manajemen _state_ dan _caching_ data server
-- [Axios v1](https://axios-http.com/) — _HTTP client_ untuk _fetching_ data dari API
-- [Vitest v4](https://vitest.dev/) — _framework_ untuk _unit testing_
+- [React](https://react.dev/) — _library_ untuk membuat _UI component_
+- [TypeScript](https://www.typescriptlang.org/) — _superset_ JavaScript
+- [Vite](https://vite.dev/) — _build tool_ dan _dev server_
+- [TailwindCSS](https://tailwindcss.com/) — _framework_ CSS untuk _styling_ tampilan
+- [React Router](https://reactrouter.com/) — _routing_ untuk navigasi/berpindah antar halaman
+- [TanStack Query](https://tanstack.com/query) — manajemen _state_ dan _caching_ data server
+- [Axios](https://axios-http.com/) — _HTTP client_ untuk _fetching_ data dari API
+- [Vitest](https://vitest.dev/) — _framework_ untuk _unit testing_
 
 ## :zap: Fitur
 

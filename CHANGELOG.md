@@ -2,6 +2,10 @@
 
 Dokumen ini berfungsi untuk mencatat informasi mengenai riwayat pembaruan dari aplikasi **Bitquran**.
 
+## v1.2.4
+
+- Pembaruan dependensi teknis untuk menambal celah keamanan pada `undici` (cross-user information, downstream response, cookie attribute injection, dan lainnya).
+
 ## v1.2.3
 
 - Memutakhirkan dependensi utama dan berbagai _development tools_ yang digunakan oleh aplikasi.
