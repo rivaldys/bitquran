@@ -1,6 +1,7 @@
 // Libraries
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import { Component } from 'react'
+import { Link, Route, Router } from 'react-router-dom'
 import { Menubar } from '../components'
 
 // Pages
@@ -11,6 +12,27 @@ import './App.css'
 
 class App extends Component
 {
+    constructor(props)
+    {
+        super(props)
+
+        // Detect base path from URL so app works on both /bitquran and /bitquran/v1/v1-1-2
+        const basename = window.location.pathname.startsWith(process.env.PUBLIC_URL)
+            ? process.env.PUBLIC_URL
+            : '/bitquran'
+
+        this.history = createBrowserHistory({ basename })
+
+        // react-router always builds root href/URL as "basename/", strip it back to "basename"
+        this.unlisten = this.history.listen((location) =>
+        {
+            if(location.pathname === '/' && window.location.pathname !== basename)
+            {
+                window.history.replaceState(window.history.state, '', basename + window.location.search + window.location.hash)
+            }
+        })
+    }
+
     addMenubarShadow = () =>
     {
         const menubarWrapper = document.querySelector('.menubar-wrapper')
@@ -73,10 +95,15 @@ class App extends Component
         this.goToTop()
     }
 
+    componentWillUnmount()
+    {
+        this.unlisten()
+    }
+
     render()
     {
         return (
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router history={this.history}>
                 <>
                     {/* Menubar */}
                     <div className="menubar-wrapper">
