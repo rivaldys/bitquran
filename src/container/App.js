@@ -17,8 +17,8 @@ class App extends Component
         super(props)
 
         // Detect base path from URL so app works on both /bitquran and /bitquran/v1/v1-1-2
-        const basename = window.location.pathname.startsWith(process.env.PUBLIC_URL)
-            ? process.env.PUBLIC_URL
+        const basename = window.location.pathname.startsWith(process.env.REACT_APP_BASE_NAME)
+            ? process.env.REACT_APP_BASE_NAME
             : '/bitquran'
 
         this.history = createBrowserHistory({ basename })
