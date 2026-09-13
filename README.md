@@ -7,7 +7,7 @@
 <h1 align="center">Bitquran</h1>
 <p align="center">Baca Al-Qur'an secara Daring</p>
 <div align="center">
-    <img src="https://img.shields.io/badge/Version-v1.2.4-green?style=for-the-badge" alt="App Version" />
+    <img src="https://img.shields.io/badge/Version-v1.2.5-green?style=for-the-badge" alt="App Version" />
 </div>
 
 ## :memo: Tentang

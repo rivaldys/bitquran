@@ -5,8 +5,12 @@ import { defineConfig } from 'vitest/config'
 
 export default ({ mode }: ConfigEnv) => {
     const env = loadEnv(mode, process.cwd())
+    const configuredBaseName = env.VITE_APP_BASE_NAME || '/'
+    const baseName =
+        configuredBaseName === '/' ? '/' : `/${configuredBaseName.replace(/^\/+|\/+$/g, '')}`
 
     return defineConfig({
+        base: baseName,
         plugins: [react(), tailwindcss()],
         resolve: {
             tsconfigPaths: true
